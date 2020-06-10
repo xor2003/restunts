@@ -1,0 +1,1655 @@
+<html>
+<head>
+<title>Original Stunts Track-Format</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<h1>Original Stunts (4D Sports Driving) Track-Format</h1>
+
+A Stunts track-file (*.trk) has 1802 bytes. A Track is composed of 900 (30x30) squares. Each byte represents a square.<br>
+At first, from byte 0 to 899 are the Items on the Track located
+(from left to right and from top to bottom).<br>
+Then comes one byte for the skybox (0=desert; 1=tropical; 2=alpine; 3=city; 4=county)<br>
+Afterwards (byte 901-1800) the terraininformation beginns.
+<i>The Squares are ordered from left to right and from bottom to top!</i><br>
+About the last byte I dont't know anything.
+
+<h3>Terrain (Bytes 901-1800)</h3>
+<table>
+  <tr>
+    <th>Hex &nbsp;</th>
+    <th>Icon</th>
+    <th>Info</th>
+  <tr>
+
+  <tr>
+    <td>0x00</td>
+    <td>
+	<img src="images/terrain/terrain0.png" width="32" height="32">
+    </td>
+    <td>a flat piece of land at sea level</td>
+  </tr>
+
+  <tr>
+    <td>0x01</td>
+    <td>
+	<img src="images/terrain/terrain1.png" width="32" height="32">
+    </td>
+    <td>a square of water at sea level</td>
+  </tr>
+
+  <tr>
+    <td>0x02</td>
+    <td>
+	<img src="images/terrain/terrain2.png" width="32" height="32">
+    </td>
+    <td>an element of coast, with land on the right, water on the left, and a top left to bottom right division</td>
+  </tr>
+
+  <tr>
+    <td>0x03</td>
+    <td>
+	<img src="images/terrain/terrain3.png" width="32" height="32">
+    </td>
+    <td>an element of coast, with land on the left, water on the right, and a top right to bottom left division</td>
+  </tr>
+
+  <tr>
+    <td>0x04</td>
+    <td>
+	<img src="images/terrain/terrain4.png" width="32" height="32">
+    </td>
+    <td>an element of coast, with land on the left, water on the right, and a top left to bottom right division</td>
+  </tr>
+
+  <tr>
+    <td>0x05</td>
+    <td>
+	<img src="images/terrain/terrain5.png" width="32" height="32">
+    </td>
+    <td>an element of coast, with land on the right, water on the left, and a top right to bottom left division</td>
+  </tr>
+
+  <tr>
+    <td>0x06</td>
+    <td>
+	<img src="images/terrain/terrain6.png" width="32" height="32">
+    </td>
+    <td>a flat piece of land at an elevated level</td>
+  </tr>
+
+  <tr>
+    <td>0x07</td>
+    <td>
+	<img src="images/terrain/terrain7.png" width="32" height="32">
+    </td>
+    <td>a horizontal slope, with the low end at the bottom</td>
+  </tr>
+
+  <tr>
+    <td>0x08</td>
+    <td>
+	<img src="images/terrain/terrain8.png" width="32" height="32">
+    </td>
+    <td>a vertical slope, with the low end on the right</td>
+  </tr>
+
+  <tr>
+    <td>0x09</td>
+    <td>
+	<img src="images/terrain/terrain9.png" width="32" height="32">
+    </td>
+    <td>a horizontal slope, with the low end at the top</td>
+  </tr>
+
+  <tr>
+    <td>0x0a</td>
+    <td>
+	<img src="images/terrain/terrain10.png" width="32" height="32">
+    </td>
+    <td>a vertical slope, with the low end on the left</td>
+  </tr>
+
+  <tr>
+    <td>0x0b</td>
+    <td>
+	<img src="images/terrain/terrain11.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners at sea level, the one in the top left being instead elevated</td>
+  </tr>
+
+  <tr>
+    <td>0x0c</td>
+    <td>
+	<img src="images/terrain/terrain12.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners at sea level, the one in the bottom left being instead elevated</td>
+  </tr>
+
+  <tr>
+    <td>0x0d</td>
+    <td>
+	<img src="images/terrain/terrain13.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners at sea level, the one in the bottom right being instead elevated</td>
+  </tr>
+
+  <tr>
+    <td>0x0e</td>
+    <td>
+	<img src="images/terrain/terrain14.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners at sea level, the one in the top right being instead elevated</td>
+  </tr>
+
+  <tr>
+    <td>0x0f</td>
+    <td>
+	<img src="images/terrain/terrain15.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners elevated, the one in the bottom right being instead at sea level</td>
+  </tr>
+
+  <tr>
+    <td>0x10</td>
+    <td>
+	<img src="images/terrain/terrain16.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners elevated, the one in the top right being instead at sea level</td>
+  </tr>
+
+  <tr>
+    <td>0x11</td>
+    <td>
+	<img src="images/terrain/terrain17.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners elevated, the one in the top left being instead at sea level</td>
+  </tr>
+
+  <tr>
+    <td>0x12</td>
+    <td>
+	<img src="images/terrain/terrain18.png" width="32" height="32">
+    </td>
+    <td>a diagonal slope with three corners elevated, the one in the bottom left being instead at sea level</td>
+  </tr>
+</table>
+
+<br>
+
+<h3>Items (Bytes 0-899)</h3>
+
+<table>
+  <tr>
+    <th>Hex &nbsp;</th>
+    <th>Icon</th>
+    <th>Info</th>
+  <tr>
+
+  <tr>
+    <td>0x00</td>
+    <td>
+	<img src="images/_blank_" width="32" height="32">
+    </td>
+    <td>blank field</td>
+  </tr>
+
+  <tr>
+    <td>0x01</td>
+    <td>
+	<img src="images/paved/start_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x04</td>
+    <td>
+	<img src="images/paved/road_v.png" width="32" height="32">
+    </td>
+    <td>a vertical piece of normal road</td>
+  </tr>
+
+  <tr>
+    <td>0x05</td>
+    <td>
+	<img src="images/paved/road_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal piece of normal road</td>
+  </tr>
+
+  <tr>
+    <td>0x06</td>
+    <td>
+	<img src="images/paved/tightcorner_br.png" width="32" height="32">
+    </td>
+    <td>a tight corner of normal road connecting the bottom of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x07</td>
+    <td>
+	<img src="images/paved/tightcorner_bl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of normal road connecting the bottom of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x08</td>
+    <td>
+	<img src="images/paved/tightcorner_tr.png" width="32" height="32">
+    </td>
+    <td>a tight corner of normal road connecting the top of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x09</td>
+    <td>
+	<img src="images/paved/tightcorner_tl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of normal road connecting the top of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x0a</td>
+    <td>
+	<img src="images/paved/corner_br.png" width="64" height="64">
+    </td>
+    <td>a corner of normal road connecting the bottom of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x0b</td>
+    <td>
+	<img src="images/paved/corner_bl.png" width="64" height="64">
+    </td>
+    <td>a corner of normal road connecting the bottom of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x0c</td>
+    <td>
+	<img src="images/paved/corner_tr.png" width="64" height="64">
+    </td>
+    <td>a corner of normal road connecting the top of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x0d</td>
+    <td>
+	<img src="images/paved/corner_tl.png" width="64" height="64">
+    </td>
+    <td>a corner of normal road connecting the top of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x0e</td>
+    <td>
+	<img src="images/dirty/road_v.png" width="32" height="32">
+    </td>
+    <td>a vertical piece of dirty road</td>
+  </tr>
+
+  <tr>
+    <td>0x0f</td>
+    <td>
+	<img src="images/dirty/road_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal piece of dirty road</td>
+  </tr>
+
+  <tr>
+    <td>0x10</td>
+    <td>
+	<img src="images/dirty/tightcorner_br.png" width="32" height="32">
+    </td>
+    <td>a tight corner of dirty road connecting the bottom of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x11</td>
+    <td>
+	<img src="images/dirty/tightcorner_bl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of dirty road connecting the bottom of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x12</td>
+    <td>
+	<img src="images/dirty/tightcorner_tr.png" width="32" height="32">
+    </td>
+    <td>a tight corner of dirty road connecting the top of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x13</td>
+    <td>
+	<img src="images/dirty/tightcorner_tl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of dirty road connecting the top of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x14</td>
+    <td>
+	<img src="images/dirty/corner_br.png" width="64" height="64">
+    </td>
+    <td>a corner of dirty road connecting the bottom of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x15</td>
+    <td>
+	<img src="images/dirty/corner_bl.png" width="64" height="64">
+    </td>
+    <td>a corner of dirty road connecting the bottom of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x16</td>
+    <td>
+	<img src="images/dirty/corner_tr.png" width="64" height="64">
+    </td>
+    <td>a corner of dirty road connecting the top of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x17</td>
+    <td>
+	<img src="images/dirty/corner_tl.png" width="64" height="64">
+    </td>
+    <td>a corner of dirty road connecting the top of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x18</td>
+    <td>
+	<img src="images/icy/road_v.png" width="32" height="32">
+    </td>
+    <td>a vertical piece of icy road</td>
+  </tr>
+
+  <tr>
+    <td>0x19</td>
+    <td>
+	<img src="images/icy/road_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal piece of icy road</td>
+  </tr>
+
+  <tr>
+    <td>0x1a</td>
+    <td>
+	<img src="images/icy/tightcorner_br.png" width="32" height="32">
+    </td>
+    <td>a tight corner of icy road connecting the bottom of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x1b</td>
+    <td>
+	<img src="images/icy/tightcorner_bl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of icy road connecting the bottom of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x1c</td>
+    <td>
+	<img src="images/icy/tightcorner_tr.png" width="32" height="32">
+    </td>
+    <td>a tight corner of icy road connecting the top of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x1d</td>
+    <td>
+	<img src="images/icy/tightcorner_tl.png" width="32" height="32">
+    </td>
+    <td>a tight corner of icy road connecting the top of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x1e</td>
+    <td>
+	<img src="images/icy/corner_br.png" width="64" height="64">
+    </td>
+    <td>a corner of icy road connecting the bottom of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x1f</td>
+    <td>
+	<img src="images/icy/corner_bl.png" width="64" height="64">
+    </td>
+    <td>a corner of icey road connecting the bottom of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x20</td>
+    <td>
+	<img src="images/icy/corner_tr.png" width="64" height="64">
+    </td>
+    <td>a corner of icy road connecting the top of a four square area to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x21</td>
+    <td>
+	<img src="images/icy/corner_tl.png" width="64" height="64">
+    </td>
+    <td>a corner of icy road connecting the top of a four square area to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x22</td>
+    <td>
+	<img src="images/bridges/raisedroad_v.png" width="32" height="32">
+    </td>
+    <td>a vertical section of raised road</td>
+  </tr>
+
+  <tr>
+    <td>0x23</td>
+    <td>
+	<img src="images/bridges/raisedroad_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal section of raised road</td>
+  </tr>
+
+  <tr>
+    <td>0x24</td>
+    <td>
+	<img src="images/bridges/raisedramp_r.png" width="32" height="32">
+    </td>
+    <td>a raised ramp, connecting to a rightward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x25</td>
+    <td>
+	<img src="images/bridges/raisedramp_l.png" width="32" height="32">
+    </td>
+    <td>a raised ramp, connecting to a leftward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x26</td>
+    <td>
+	<img src="images/bridges/raisedramp_t.png" width="32" height="32">
+    </td>
+    <td>a raised ramp, connecting to an upward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x27</td>
+    <td>
+	<img src="images/bridges/raisedramp_b.png" width="32" height="32">
+    </td>
+    <td>a raised ramp, connecting to a downward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x28</td>
+    <td>
+	<img src="images/banked/startbank_vtr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x29</td>
+    <td>
+	<img src="images/banked/startbank_hbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2a</td>
+    <td>
+	<img src="images/banked/startbank_vbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2b</td>
+    <td>
+	<img src="images/banked/startbank_htl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2c</td>
+    <td>
+	<img src="images/banked/startbank_vtl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2d</td>
+    <td>
+	<img src="images/banked/startbank_htr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2e</td>
+    <td>
+	<img src="images/banked/startbank_vbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x2f</td>
+    <td>
+	<img src="images/banked/startbank_hbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x30</td>
+    <td>
+	<img src="images/banked/bankedroad_vr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x31</td>
+    <td>
+	<img src="images/banked/bankedroad_vl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x32</td>
+    <td>
+	<img src="images/banked/bankedroad_hb.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x33</td>
+    <td>
+	<img src="images/banked/bankedroad_ht.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x34</td>
+    <td>
+	<img src="images/banked/bankedcorner_br.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x35</td>
+    <td>
+	<img src="images/banked/bankedcorner_bl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x36</td>
+    <td>
+	<img src="images/banked/bankedcorner_tr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x37</td>
+    <td>
+	<img src="images/banked/bankedcorner_tl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x38</td>
+    <td>
+	<img src="images/bridges/bridge_r.png" width="32" height="32">
+    </td>
+    <td>a bridge, connecting to a rightward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x39</td>
+    <td>
+	<img src="images/bridges/bridge_l.png" width="32" height="32">
+    </td>
+    <td>a bridge, connecting to a leftward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x3a</td>
+    <td>
+	<img src="images/bridges/bridge_t.png" width="32" height="32">
+    </td>
+    <td>a bridge, connecting to an upward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x3b</td>
+    <td>
+	<img src="images/bridges/bridge_b.png" width="32" height="32">
+    </td>
+    <td>a bridge, connecting to a downward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x3c</td>
+    <td>
+	<img src="images/paved/chicane_vr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x3d</td>
+    <td>
+	<img src="images/paved/chicane_hl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x3e</td>
+    <td>
+	<img src="images/paved/chicane_vl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x3f</td>
+    <td>
+	<img src="images/paved/chicane_hr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x40</td>
+    <td>
+	<img src="images/special/loop_v.png" width="32" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x41</td>
+    <td>
+	<img src="images/special/loop_h.png" width="64" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x42</td>
+    <td>
+	<img src="images/special/tunnel_v.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x43</td>
+    <td>
+	<img src="images/special/tunnel_h.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x44</td>
+    <td>
+	<img src="images/special/pipe_v.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x45</td>
+    <td>
+	<img src="images/special/pipe_h.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x46</td>
+    <td>
+	<img src="images/special/startpipe_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x47</td>
+    <td>
+	<img src="images/special/startpipe_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x48</td>
+    <td>
+	<img src="images/special/startpipe_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x49</td>
+    <td>
+	<img src="images/special/startpipe_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x4a</td>
+    <td>
+	<img src="images/paved/cross.png" width="32" height="32">
+    </td>
+    <td>a normal cross road</td>
+  </tr>
+
+  <tr>
+    <td>0x4b</td>
+    <td>
+	<img src="images/paved/tightbifurcation_vbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x4c</td>
+    <td>
+	<img src="images/paved/tightbifurcation_hbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x4d</td>
+    <td>
+	<img src="images/paved/tightbifurcation_vtr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x4e</td>
+    <td>
+	<img src="images/paved/tightbifurcation_htl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x4f</td>
+    <td>
+	<img src="images/paved/tightbifurcation_vbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x50</td>
+    <td>
+	<img src="images/paved/tightbifurcation_htr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x51</td>
+    <td>
+	<img src="images/paved/tightbifurcation_vtl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x52</td>
+    <td>
+	<img src="images/paved/tightbifurcation_hbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x53</td>
+    <td>
+	<img src="images/special/halfpipe_v.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x54</td>
+    <td>
+	<img src="images/special/halfpipe_h.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x55</td>
+    <td>
+	<img src="images/special/corkscrew_v.png" width="32" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x56</td>
+    <td>
+	<img src="images/special/corkscrew_h.png" width="64" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x57</td>
+    <td>
+	<img src="images/paved/bifurcation_vbl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x58</td>
+    <td>
+	<img src="images/paved/bifurcation_hbr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x59</td>
+    <td>
+	<img src="images/paved/bifurcation_vtr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5a</td>
+    <td>
+	<img src="images/paved/bifurcation_htl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5b</td>
+    <td>
+	<img src="images/paved/bifurcation_vbr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5c</td>
+    <td>
+	<img src="images/paved/bifurcation_htr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5d</td>
+    <td>
+	<img src="images/paved/bifurcation_vtl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5e</td>
+    <td>
+	<img src="images/paved/bifurcation_hbl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x5f</td>
+    <td>
+	<img src="images/bridges/solidramp_r.png" width="32" height="32">
+    </td>
+    <td>a solid ramp, connecting to a rightward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x60</td>
+    <td>
+	<img src="images/bridges/solidramp_l.png" width="32" height="32">
+    </td>
+    <td>a solid ramp, connecting to a leftward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x61</td>
+    <td>
+	<img src="images/bridges/solidramp_t.png" width="32" height="32">
+    </td>
+    <td>a solid ramp, connecting to an upward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x62</td>
+    <td>
+	<img src="images/bridges/solidramp_b.png" width="32" height="32">
+    </td>
+    <td>a solid ramp, connecting to a downward raised section</td>
+  </tr>
+
+  <tr>
+    <td>0x63</td>
+    <td>
+	<img src="images/bridges/solidroad_v.png" width="32" height="32">
+    </td>
+    <td>a vertical section of solid road</td>
+  </tr>
+
+  <tr>
+    <td>0x64</td>
+    <td>
+	<img src="images/bridges/solidroad_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal section of solid road</td>
+  </tr>
+
+  <tr>
+    <td>0x65</td>
+    <td>
+	<img src="images/bridges/overpass_v.png" width="32" height="32">
+    </td>
+    <td>a vertical section of elevated span above a horizontal road section</td>
+  </tr>
+
+  <tr>
+    <td>0x66</td>
+    <td>
+	<img src="images/bridges/overpass_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal section of elevated span above a vertical road section</td>
+  </tr>
+
+  <tr>
+    <td>0x67</td>
+    <td>
+	<img src="images/bridges/span_v.png" width="32" height="32">
+    </td>
+    <td>a vertical section of elevated span</td>
+  </tr>
+
+  <tr>
+    <td>0x68</td>
+    <td>
+	<img src="images/bridges/span_h.png" width="32" height="32">
+    </td>
+    <td>a horizontal section of elevated span</td>
+  </tr>
+
+  <tr>
+    <td>0x69</td>
+    <td>
+	<img src="images/bridges/raisedcorner_br.png" width="64" height="64">
+    </td>
+    <td>a raised corner connecting the bottom of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x6a</td>
+    <td>
+	<img src="images/bridges/raisedcorner_bl.png" width="64" height="64">
+    </td>
+    <td>a raised corner connecting the bottom of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x6b</td>
+    <td>
+	<img src="images/bridges/raisedcorner_tr.png" width="64" height="64">
+    </td>
+    <td>a raised corner connecting the top of a square to the right</td>
+  </tr>
+
+  <tr>
+    <td>0x6c</td>
+    <td>
+	<img src="images/bridges/raisedcorner_tl.png" width="64" height="64">
+    </td>
+    <td>a raised corner connecting the top of a square to the left</td>
+  </tr>
+
+  <tr>
+    <td>0x6d</td>
+    <td>
+	<img src="images/paved/dividedhighway_v.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x6e</td>
+    <td>
+	<img src="images/paved/dividedhighway_h.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x6f</td>
+    <td>
+	<img src="images/paved/starthighway_vt.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x70</td>
+    <td>
+	<img src="images/paved/starthighway_hr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x71</td>
+    <td>
+	<img src="images/paved/starthighway_vb.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x72</td>
+    <td>
+	<img src="images/paved/starthighway_hl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x73</td>
+    <td>
+	<img src="images/special/slalom_v.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x74</td>
+    <td>
+	<img src="images/special/slalom_h.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x75</td>
+    <td>
+	<img src="images/bridges/corkscrew_vtl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x76</td>
+    <td>
+	<img src="images/bridges/corkscrew_hbl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x77</td>
+    <td>
+	<img src="images/bridges/corkscrew_vbr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x78</td>
+    <td>
+	<img src="images/bridges/corkscrew_htr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x79</td>
+    <td>
+	<img src="images/bridges/corkscrew_vtr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x7a</td>
+    <td>
+	<img src="images/bridges/corkscrew_htl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x7b</td>
+    <td>
+	<img src="images/bridges/corkscrew_vbl.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x7c</td>
+    <td>
+	<img src="images/bridges/corkscrew_hbr.png" width="64" height="64">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x7d</td>
+    <td>
+	<img src="images/dirty/cross.png" width="32" height="32">
+    </td>
+    <td>a dirty cross road</td>
+  </tr>
+
+  <tr>
+    <td>0x7e</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_vbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x7f</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_hbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x80</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_vtr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x81</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_htl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x82</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_vbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x83</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_htr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x84</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_vtl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x85</td>
+    <td>
+	<img src="images/dirty/tightbifurcation_hbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x86</td>
+    <td>
+	<img src="images/dirty/start_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x87</td>
+    <td>
+	<img src="images/dirty/start_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x88</td>
+    <td>
+	<img src="images/dirty/start_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x89</td>
+    <td>
+	<img src="images/dirty/start_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x8a</td>
+    <td>
+	<img src="images/icy/cross.png" width="32" height="32">
+    </td>
+    <td>an icy cross road</td>
+  </tr>
+
+  <tr>
+    <td>0x8b</td>
+    <td>
+	<img src="images/icy/tightbifurcation_vbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x8c</td>
+    <td>
+	<img src="images/icy/tightbifurcation_hbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x8d</td>
+    <td>
+	<img src="images/icy/tightbifurcation_vtr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x8e</td>
+    <td>
+	<img src="images/icy/tightbifurcation_htl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x8f</td>
+    <td>
+	<img src="images/icy/tightbifurcation_vbr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x90</td>
+    <td>
+	<img src="images/icy/tightbifurcation_htr.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x91</td>
+    <td>
+	<img src="images/icy/tightbifurcation_vtl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x92</td>
+    <td>
+	<img src="images/icy/tightbifurcation_hbl.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x93</td>
+    <td>
+	<img src="images/icy/start_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x94</td>
+    <td>
+	<img src="images/icy/start_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x95</td>
+    <td>
+	<img src="images/icy/start_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x96</td>
+    <td>
+	<img src="images/icy/start_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x97</td>
+    <td>
+	<img src="images/scenery/palm.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x98</td>
+    <td>
+	<img src="images/scenery/cactus.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x99</td>
+    <td>
+	<img src="images/scenery/tree.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9a</td>
+    <td>
+	<img src="images/scenery/tenniscourt.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9b</td>
+    <td>
+	<img src="images/scenery/petrolstation_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9c</td>
+    <td>
+	<img src="images/scenery/petrolstation_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9d</td>
+    <td>
+	<img src="images/scenery/petrolstation_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9e</td>
+    <td>
+	<img src="images/scenery/petrolstation_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0x9f</td>
+    <td>
+	<img src="images/scenery/barn_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa0</td>
+    <td>
+	<img src="images/scenery/barn_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa1</td>
+    <td>
+	<img src="images/scenery/barn_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa2</td>
+    <td>
+	<img src="images/scenery/barn_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa3</td>
+    <td>
+	<img src="images/scenery/house_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa4</td>
+    <td>
+	<img src="images/scenery/house_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa5</td>
+    <td>
+	<img src="images/scenery/house_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa6</td>
+    <td>
+	<img src="images/scenery/house_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa7</td>
+    <td>
+	<img src="images/scenery/mill_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa8</td>
+    <td>
+	<img src="images/scenery/mill_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xa9</td>
+    <td>
+	<img src="images/scenery/mill_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xaa</td>
+    <td>
+	<img src="images/scenery/mill_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xab</td>
+    <td>
+	<img src="images/scenery/ship_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xac</td>
+    <td>
+	<img src="images/scenery/ship_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xad</td>
+    <td>
+	<img src="images/scenery/ship_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xae</td>
+    <td>
+	<img src="images/scenery/ship_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xaf</td>
+    <td>
+	<img src="images/scenery/shop_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb0</td>
+    <td>
+	<img src="images/scenery/shop_t.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb1</td>
+    <td>
+	<img src="images/scenery/shop_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb2</td>
+    <td>
+	<img src="images/scenery/shop_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb3</td>
+    <td>
+	<img src="images/paved/start_b.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb4</td>
+    <td>
+	<img src="images/paved/start_r.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xb5</td>
+    <td>
+	<img src="images/paved/start_l.png" width="32" height="32">
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>0xfd</td>
+    <td>
+	<img src="images/_blank_" width="32" height="32">
+    </td>
+    <td>blank field (the item on the top left needs this space)</td>
+  </tr>
+
+  <tr>
+    <td>0xfe</td>
+    <td>
+	<img src="images/_blank_" width="32" height="32">
+    </td>
+    <td>blank field (the item on the top needs this space)</td>
+  </tr>
+
+  <tr>
+    <td>0xff</td>
+    <td>
+	<img src="images/_blank_" width="32" height="32">
+    </td>
+    <td>blank field (the item on the left needs this space)</td>
+  </tr>
+
+</table>
+</html>

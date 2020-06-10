@@ -1,0 +1,30 @@
+seg001 segment byte public 'STUNTSC' use16
+    extrn opponent_op:proc
+    extrn mat_mul_vector2:proc
+    extrn update_player_state:proc
+    extrn init_carstate_from_simd:proc
+    extrn init_game_state:proc
+    extrn restore_gamestate:proc
+    extrn update_gamestate:proc
+    extrn player_op:proc
+    extrn detect_penalty:proc
+    extrn update_car_speed:proc
+    extrn update_grip:proc
+    extrn car_car_speed_adjust_maybe:proc
+    extrn carState_rc_op:proc
+    extrn upd_statef20_from_steer_input:proc
+    extrn audio_carstate:proc
+    extrn audio_unk3:proc
+    extrn sub_18D06:proc
+    extrn sub_18D60:proc
+    extrn car_car_coll_detect_maybe:proc
+    extrn init_plantrak:proc
+    extrn do_opponent_op:proc
+    extrn update_crash_state:proc
+    extrn plane_rotate_op:proc
+    extrn plane_origin_op:proc
+    extrn vec_normalInnerProduct:proc
+    extrn state_op_unk:proc
+    extrn sub_19BA0:proc
+    extrn setup_aero_trackdata:proc
+seg001 ends

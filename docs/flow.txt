@@ -1,0 +1,61 @@
+
+_main:
+	Setup ppTrakdataNN-pointers
+	call	near ptr SetDefaultCar
+	call	LoadBinaryFile("default.trk" -> trakdata14 and trakdata15)
+	... (intro and menu) .. jmp _lblDoGame0:
+	Setup trakdata20 (copy of trakdata14 + extra stuff)
+	call	SetupTrack
+		- read from trakdata7, trakdata14, trakdata15, trakdata21, trakdata22, 
+		- write to trakdata, trakdata2, trakdata6, trakdata7, trakdata8, trakdata9, trakdata10, trakdata14, trakdata17, trakdata18, trakdata19, trakdata21, trakdata22, trakdata23, 
+	call	InitGameState(0xFFFF)	; set up 20*1120 elements
+	call	ShowWaiting
+	call	RunGame
+		
+RunGame:
+	call	near ptr SetupCarGameEtc
+		call	SetupAeroTrakdata(player)
+			- write to trakdata4, trakdata5
+		call	SetupAeroTrakdata(if opponent)
+		call	SetupOppTrakdata(if opponent)
+			- write to trakdata3
+		call	InitSfxEngine(player)
+		call	InitSfxEngine(if opponent)
+		call	near ptr SetupCarShapes
+		call	near ptr RplyMouseSpriteStuff(0, 0, 0, 0)
+		call	AltLocateShape(plan)
+		call	AltLocateShape(wall)
+		call	LoadSdgame2Shap
+		call	LoadSkybox
+		call	LoadGame3dShpes
+	call InitGameState(0xFFFF)
+	Setup car position
+	call SetupCarShapes(1) ; 1 = roof and dashboard
+	while {
+		call	UpdateGameState
+			call	PlayerOp
+				call UpdateCarState
+				call	near ptr sub_471_40A2
+				call	near ptr CvxOpSimdTrack
+				call TrkPlanSimd
+					call TrkTerrainWall
+					call	near ptr InitCarCvx64_64
+				call Trakdata1_2_17_21_22 ;	this returns something based on	the position
+			call	OpponentOp (if opponent)
+		call UpdateFrame
+		call SetupCarShapes(2)
+	}
+
+
+actually need to port rungame itself
+
+more trakdatas:
+
+	Trakdata11 = runtracksmenu, highscore
+	Trakdata12 = security check
+	Trakdata13 = load replay
+	
+	trakdata16 - her er tastetrykk/recordbuffer??
+
+which covers all bases yes?
+

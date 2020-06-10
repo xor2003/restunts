@@ -1,0 +1,20 @@
+seg007 segment byte public 'STUNTSC' use16
+    extrn audio_add_driver_timer:proc
+    extrn audio_remove_driver_timer:proc
+    extrn pad_id:proc
+    extrn audio_init_engine:proc
+    extrn audio_op_unk:proc
+    extrn audio_function2:proc
+    extrn audio_driver_timer:proc
+    extrn audio_op_unk2:proc
+    extrn nopsub_27220:proc
+    extrn nopsub_2726C:proc
+    extrn nopsub_272B0:proc
+    extrn audio_function2_wrap:proc
+    extrn audio_op_unk3:proc
+    extrn audio_op_unk4:proc
+    extrn audio_op_unk5:proc
+    extrn audio_op_unk6:proc
+    extrn audio_op_unk7:proc
+    extrn nopsub_27489:proc
+seg007 ends

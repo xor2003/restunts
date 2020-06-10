@@ -1,0 +1,43 @@
+seg000.asm(2) : Error A2210: Syntax error: nosmart
+seg000.asm(387) : Error A2028: Instruction prefix not allowed
+seg000.asm(569) : Error A2028: Instruction prefix not allowed
+seg000.asm(2313) : Error A2028: Instruction prefix not allowed
+seg000.asm(2605) : Error A2028: Instruction prefix not allowed
+seg000.asm(2838) : Error A2028: Instruction prefix not allowed
+seg000.asm(2887) : Error A2028: Instruction prefix not allowed
+seg000.asm(2939) : Error A2028: Instruction prefix not allowed
+seg000.asm(3029) : Error A2274: structure field expected
+seg000.asm(3030) : Error A2274: structure field expected
+seg000.asm(3031) : Error A2274: structure field expected
+seg000.asm(3032) : Error A2274: structure field expected
+seg000.asm(3038) : Error A2274: structure field expected
+seg000.asm(3039) : Error A2274: structure field expected
+seg000.asm(3042) : Error A2274: structure field expected
+seg000.asm(3756) : Error A2274: structure field expected
+seg000.asm(3757) : Error A2274: structure field expected
+seg000.asm(3758) : Error A2274: structure field expected
+seg000.asm(3759) : Error A2274: structure field expected
+seg000.asm(3819) : Error A2274: structure field expected
+seg000.asm(3822) : Error A2274: structure field expected
+seg000.asm(3969) : Error A2274: structure field expected
+seg000.asm(3970) : Error A2274: structure field expected
+seg000.asm(3971) : Error A2274: structure field expected
+seg000.asm(3972) : Error A2274: structure field expected
+seg000.asm(3987) : Error A2274: structure field expected
+seg000.asm(3988) : Error A2274: structure field expected
+seg000.asm(3989) : Error A2274: structure field expected
+seg000.asm(3990) : Error A2274: structure field expected
+seg000.asm(4043) : Error A2274: structure field expected
+seg000.asm(4044) : Error A2274: structure field expected
+seg000.asm(4045) : Error A2274: structure field expected
+seg000.asm(4046) : Error A2274: structure field expected
+seg000.asm(4803) : Error A2210: Syntax error: smart
+seg000.asm(4805) : Error A2210: Syntax error: nosmart
+seg000.asm(5886) : Error A2210: Syntax error: smart
+seg000.asm(5888) : Error A2210: Syntax error: nosmart
+seg000.asm(5896) : Error A2210: Syntax error: smart
+seg000.asm(5898) : Error A2210: Syntax error: nosmart
+seg000.asm(5927) : Error A2210: Syntax error: smart
+seg000.asm(5929) : Error A2210: Syntax error: nosmart
+seg000.asm(7271) : Error A2210: Syntax error: smart
+seg000.asm(7273) : Error A2210: Syntax error: nosmart

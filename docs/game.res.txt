@@ -1,0 +1,90 @@
+ 	
+Re: Physics investigations on Stunts
+« Reply #25 on: April 13, 2009, 06:18:25 PM »
+	
+Okay, here we go. First of all I must say "40% of understanding" was an over-estimation by far (as you'll see by the loads of mysterious stuff I can't explain), but hopefully what little was found will be worth the suspense already ( Smiley/ Cheesy).
+
+The new findings are about stuff contained in GAME.PRE (unpacked to GAME.RES, of course). Alongside with some other random pieces of data (crack patterns for the windshield in F1 view and many familiar in-game messages) there is a very large heap of bytes split between two resources with the rather suggestive names of plan and wall. Now, jumping to the first of the final conclusions (I won't follow chronological order in the explanation or else this will get twice as long as it'll get), we can say Stunts employs two different kinds of surfaces for building track elements:
+
+    * Drivable surfaces, to which I'll refer as simply surfaces, and which are defined by plan
+    * Vertical walls, which are undrivable surfaces and are *supposed* to be defined by wall (the reason for the "supposed" will become clear later on)
+
+
+The game then uses the definitions of surfaces and walls in GAME.RES to assemble the track elements, joining them in specific positions according to rules defined *somewhere else*.  Now, on to the nature of the resources themselves, starting with plan...
+
+---
+
+plan is composed of 536 structures of 34 bytes each. Each of these defines a plane in space (thus the name of the resource) which corresponds to one or more drivable surfaces in game. The structures can be described as (in this context WORD = 2-byte signed integer, as usual):
+
+Code:
+
+struct PLANE {
+    WORD angleYZ;
+    WORD angleXY;
+    VECTOR origin;
+    VECTOR normal;
+    VECTOR[3] rotationMatrix;
+};
+
+struct VECTOR {
+    WORD x;
+    WORD y;
+    WORD z;
+};
+
+
+The 'origin' vector is just a regular point coordinate that sets a point belonging to the plane. Usually the origins match vertexes employed on the actual track elements which employ the planes, thus allowing for relatively easy matching between planes and polygons in GAME1.3SH and GAME2.3SH (which contain the track elements 3D shapes). The 'normal' vector is a normal vector to the plane (good guess, Friker and Overdrijf!  Wink), whose length is 8192 (0x2000). A point and a normal through it are enough to define a plane unambiguously, thus 'origin' and 'normal' give full control over the plane attributes - by displacing the origin you can set the height and (to some extent) the position of the plane in the tile, while the normal sets the plane inclination in xy (banked road inclinations, etc.) and yz (ramp slopes, etc.) planes.
+
+After the normal there is a set of three vectors whose length is 16384 (0x4000). Looked as a whole, they look very much like a 3D rotation matrix arranged by columns, though I'm not fully sure if they act strictly like one. Their role is to set the orientation of the car after it makes contact with the surface. The correct values should of course get the car lying on the plane of the surface. The values aren't hard to figure out once you know what the normal is. An interesting observation is to note this way of modelling the landing on a surface is very simple and quite unphysical (no forces, no torques, just a forced change of orientation) and may well be the source of several bugs we're so familiar with (think of this scenario: you are about to land from a jump, and the game is supposed to reorientate the car so it is parallel to the ground. Just as you land, however, the accumulation of rounding errors over the past few seconds makes engine think it still has to reorientate the car, even if it is horizontal already. Then the game over-corrects rotating the car further upwards, and *bam* - magic carpet! Smiley In fact, it is probably possible to make a bouncing track by messing up with the matrix in a consistent way).
+
+Finally, there are the angles in xy and yz planes, which convey much of the same information given by the normal in a different format. These angles are given in fractions of 1/1024 of a circle, thus ranging from 0 to 1023. The thing is, modifying the angles has no visible effect over the surfaces, so I have no clue on what they're doing there (unless these angles interact with stuff contained in the other resource, 'wall', but that's another story).
+
+---
+
+Now, let's return to the macro-organization of 'plan'. After understanding the structure of the planes it becomes obvious that the 536 planes are arranged in blocks of four, planes within each block differing only in xz orientation (like ramps facing different directions). This reduces the actual number of surfaces to identify to 536/4 = 134. For instance, here is the set of ramp/slope surfaces...
+
+Code:
+
+0000516: 0000 4300 7800 0000 00fe 0000 4b1d 21f3 0040 0000 0000 0000 ab3a 6de6 0000 9319 ab3a 
+0000538: 4300 0000 0002 0000 7800 df0c 4b1d 0000 ab3a 6de6 0000 9319 ab3a 0000 0000 0000 0040  
+000055a: 0000 bd03 88ff 0000 0002 0000 4b1d df0c 0040 0000 0000 0000 ab3a 9319 0000 6de6 ab3a 
+000057c: bd03 0000 00fe 0000 88ff 21f3 4b1d 0000 ab3a 9319 0000 6de6 ab3a 0000 0000 0000 0040  
+
+
+and the values "translated" to decimal.
+
+Code:
+
+0	67	120	0	-512	0	7499	-3295	16384	0	0	0	15019	-6547	0	6547	15019
+67	0	512	0	120	3295	7499	0	15019	-6547	0	6547	15019	0	0	0	16384
+0	957	-120	0	512	0	7499	3295	16384	0	0	0	15019	6547	0	-6547	15019
+957	0	-512	0	-120	-3295	7499	0	15019	6547	0	-6547	15019	0	0	0	16384
+
+
+As you can see, axes permutations and sign inversions are the only changes involved. The order on each quartet is predictable: the first one is in S->N orientation (pointing to +z) and the others correspond to counter-clockwise rotations (for pieces of bridge corners and banked roads, the first plane of the quartet is from the corner going S->W, the second one E->S and so on).
+
+By crossing data from GAME.RES and GAME1/2.3SH plus some in-game tests I could identify almost all of the quartets (only for 12 of them I have no clue). It was not a massive amount of work to do, as complex surfaces like corks u/d take a very large number of quartets and are easily recognizable. The identifications (as well as human-readable transcripts of both 'plan' and 'wall') are included in the .xls file attached.
+
+One important point to stress before moving on: nowhere in plan there is any indication of how the surfaces are to be assembled. In fact, many of the surfaces are reused in several elements. For instance all ramps AND hill slopes share the same properties, so do all sorts of flat terrain both on and off hills. More remarkably, the surface of pipes and cork l/r use the exact same planes - the only difference is the walls of corks are shorter in the z direction and aligned properly so the final result looks looks like a spiral, and not like a tube. The differences between hill slopes and ramps, or corks l/r and pipes - namely, where each part of the surface starts and ends - are not in GAME.RES, so we're only looking at half the story here. Hopefully this data is not packed somewhere too hard to reach (the executables...), as we will need to find it in order to make more radical mods to the track elements.
+
+---
+
+Enough speaking of 'plan' already, let us move to 'wall'. 'wall' left me bewildered for the longest time, as I tried to find some correlation between the values there and 'plan', or GAME1/2. Anyway, here is how the vertical walls in game appear to be described:
+
+Code:
+
+struct WALL {
+    WORD angleXZ;
+    WORD x;
+    WORD z;
+};
+
+
+'wall' has 3-integer structures which when combined describe of the xz projection of the wall path (that is, the wall path viewed from above). Each pair of 'x' and 'z' forms an endpoint for the wall segments, and angleXZ is the angle of said segment. Plotting 'x' and 'z' values reveal clearly most of the obstacle structures we know - block houses, bridge corner walls, slalom blocks... (I included some graphs in the .xls file which illustrate this point neatly). This looks clear enough, but there are a few unresolved issues with the description. First of all, trying to make simple changes to wall positions (like displacing slalom blocks from their positions) didn't work, at least for me - all changes to 'x' and 'z' ended up making the wall penetrable or otherwise buggy seemingly without changing the position as intended. Maybe the angles need to be adjusted properly prior to the adjustment to some specific value, or there is some additional info we're not aware of (the obvious possibility of having the physical walls linked to the graphical data in GAME1/2 is ruled out by a few simple tests, however). Furthermore, there is no obvious connection between 'wall' and 'plan' in terms of indices or list positions, so the resources must be called independently by a third entity in order to compose the objects. And the final issue, which I find the most annoying, is that there is no information at all about wall height, and yet we know a block house is much taller than a slalom block (and no, neither of them has a 'plan' surface associated to them). Thus, the 'wall' definitions are less complete than 'plan' ones, to the point of being confusing...
+
+---
+
+In conclusion, with these findings we elucidated quite a bit more of Stunts' data, but there is obviously a big piece of information still missing to complete the puzzle. As of now, we can make minor-to-moderate scale changes to elements, such as modifying bankings, slopes and heights of surfaces, but we cannot reassemble the planes which make an element at will, nor create new elements instead of overwriting them and not even decoupling the elements which share 'plan' surfaces (for instance, all changes made to one kind of ramp will be reflected on all ramps and on hill slopes too). I'm particularly interested in trying to reflect corks l/r and loops through the yz plane (thus changing their handedness), but I'm not very confident that will be possible.
+
+Anyway, it's a beginning  Smiley 
+

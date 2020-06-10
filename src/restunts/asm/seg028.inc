@@ -1,0 +1,24 @@
+seg028 segment byte public 'STUNTSC' use16
+    extrn audiodriver_timer:proc
+    extrn sub_3868A:proc
+    extrn sub_386D6:proc
+    extrn sub_38702:proc
+    extrn off_38A1E:word
+    extrn sub_38AC4:proc
+    extrn sub_38AEA:proc
+    extrn sub_38BEA:proc
+    extrn audio_unk2:proc
+    extrn sub_38CF8:proc
+    extrn sub_38DE6:proc
+    extrn off_38E7E:word
+    extrn sub_39050:proc
+    extrn sub_39088:proc
+    extrn loc_390C8:proc
+    extrn byte_3930E:byte
+    extrn sub_3945A:proc
+    extrn off_395A8:word
+    extrn sub_3963C:proc
+    extrn sub_3968A:proc
+    extrn sub_39700:proc
+    extrn audio_driver_func1E:proc
+seg028 ends

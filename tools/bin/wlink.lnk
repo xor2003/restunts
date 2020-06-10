@@ -1,0 +1,6 @@
+# example linker initialization file.
+system begin dos
+    libpath %WATCOM%/lib
+    libpath %WATCOM%/lib/dos
+    format dos ^
+end

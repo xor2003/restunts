@@ -1,0 +1,5 @@
+build with
+
+qcl empty.c
+qcl hello.c
+

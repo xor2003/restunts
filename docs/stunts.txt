@@ -1,0 +1,1798 @@
+
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+ º            Stunts/4D Sports Driving Frequently Asked Questions             º
+ ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶
+ º                                                Last edited on May 10, 2000 º
+ º            Currently maintained by Robert Riebisch <info@bttr-software.de> º
+ º                    Internet resources by Lukas Loehrer <lukasl@dataway.ch> º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+ º [0.0] INTRODUCTION                                                         º
+ º       [0.1] COPYRIGHT                                                      º
+ º       [0.2] DISCLAIMER                                                     º
+ º       [0.3] TRADEMARKS                                                     º
+ º       [0.4] CONTRIBUTORS                                                   º
+ *       [0.5] UNANSWERED QUESTIONS                                           º
+ º                                                                            º
+ º [1.0] WHAT IS STUNTS/4D SPORTS DRIVING?                                    º
+ º       [1.1] STUNTS/4D SPORTS DRIVING VERSIONS                              º
+ *       [1.2] A WORD ABOUT THE CREATORS                                      º
+ º       [1.3] AN INTERVIEW WITH DON MATTRICK                                 º
+ º       [1.4] ELECTRONIC ARTS BUYS DISTINCTIVE SOFTWARE INC.                 º
+ º       [1.5] A LATE REVIEW                                                  º
+ º       [1.6] A COMPARISON OF DRIVING SPEEDS                                 º
+ *       [1.7] SIMILAR RACING GAMES                                           º
+ º                                                                            º
+ º [2.0] SYSTEM REQUIREMENTS                                                  º
+ º       [2.1] HARDWARE                                                       º
+ º       [2.2] SOFTWARE                                                       º
+ º                                                                            º
+ º [3.0] BUGS & GAME ERRORS                                                   º
+ º       [3.1] STRANGE GRAPHICS                                               º
+ º       [3.2] BUILT-IN TRACK EDITOR BUG                                      º
+ º       [3.3] TOO MANY TRACKS BUG                                            º
+ º       [3.4] SWERVE ABOUT GAME ERROR                                        º
+ º       [3.5] OVERDRIVE BUG                                                  º
+ º       [3.6] ROCKET BOUNCE                                                  º
+ º                                                                            º
+ º [4.0] DRIVING TIPS & TRICKS                                                º
+ º       [4.1] CURVES                                                         º
+ º       [4.2] CORKSCREWS (LEFT/RIGHT)                                        º
+ º       [4.3] PAVED SLALOM ROADS                                             º
+ º                                                                            º
+ º [5.0] CHEATS                                                               º
+ º       [5.1] FALSE START                                                    º
+ º       [5.2] INTERNAL TERRAIN EDITOR                                        º
+ +       [5.3] HARMLESS OBJECTS                                               º
+ º                                                                            º
+ º [6.0] STUNTS/4D SPORTS DRIVING SPECIFIC UTILITIES                          º
+ º       [6.1] 4D SPORTS DRIVING TERRAIN EDITOR (TER3)                        º
+ º       [6.2] CAR BLASTER (CB)                                               º
+ +       [6.3] CAREDIT                                                        º
+ º       [6.4] OPPONENT BLASTER (OB)                                          º
+ º       [6.5] REPLAY ANALYZER (RA)                                           º
+ º       [6.6] REPLAY DATA VIEWER (RPLINFO)                                   º
+ º       [6.7] SCORE BLASTER (SB)                                             º
+ º       [6.8] SCORE VIEWER (SV)                                              º
+ º       [6.9] STEDIT                                                         º
+ º       [6.A] STUNTS HIGHSCORES (STHIGH)                                     º
+ º       [6.B] STUNTS LAND EDITOR (STUNTSED)                                  º
+ º       [6.C] STUNTS MAP EDITOR (MAPED)                                      º
+ º       [6.D] STUNTS SCENERY GENERATOR (SSG)                                 º
+ º       [6.E] STUNTS TERRAIN EDITOR (TERREDIT)                               º
+ º       [6.F] TRACK BLASTER PRO (TB)                                         º
+ º       [6.G] TRACK EDITOR (TE)                                              º
+ º       [6.H] UPDATE.EXE                                                     º
+ +       [6.I] WINEDIT                                                        º
+ º                                                                            º
+ º [7.0] OTHER UTILITIES                                                      º
+ º       [7.1] DAVE'S .TGA ANIMATOR (DTA)                                     º
+ º       [7.2] PICTURE VIEWER (PICTVIEW)                                      º
+ º       [7.3] PROGRAB                                                        º
+ º       [7.4] VIDEOTHIEF (VTHIEF)                                            º
+ +       [7.5] MAKING A MOVIE                                                 º
+ º                                                                            º
+ º [8.0] FILE FORMATS                                                         º
+ º       [8.1] CAR RESOURCE FILES                                             º
+ º       [8.2] HIGHSCORE FILES                                                º
+ º       [8.3] OPPONENT RESOURCE FILES                                        º
+ º       [8.4] REPLAY FILES                                                   º
+ *       [8.5] TRACK FILES                                                    º
+ º                                                                            º
+ * [9.0] INTERNET RESOURCES                                                   º
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+   + = entry added since last version
+   * = entry modified since last version
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [0.0] INTRODUCTION                                                         ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  This  unofficial  document  is about  Frequently  Asked Questions concerning
+  Bríderbund's  Stunts  and Mindscape's 4D Sports  Driving, which are the same
+  game  in  general.  This  FAQ  is still  incomplete,  so  if  you  have more
+  information  about a specific topic or if  you find some errors then contact
+  the authors.
+
+  Revised versions will be available at:
+
+                  http://www.dataway.ch/~lukasl/4dsports.html
+
+  To  view  this file, we recommend to  use  the built-in text viewer from the
+  Norton  Commander for MS-DOS, the Aurora  Editor from nText Research or even
+  "more < stunts.txt".
+
+   [0.1] COPYRIGHT
+
+     This  document  is  copyright by Robert  Riebisch  and Lukas Loehrer. All
+     rights  reserved.  Portions  of  this  document  are  copyright  by their
+     contributors.
+
+   [0.2] DISCLAIMER
+
+     The  authors  make  no warranty of  any  kind, either express or implied,
+     including  but  not limited to  implied warranties of merchantability and
+     fitness for a particular purpose, with respect to this document.
+
+     In  no  event shall the authors be  liable for any damages resulting from
+     the  use of this document, including but not limited to, damages for loss
+     of  business  profits,  business interruption,  loss  of data or business
+     information, incidental or consequential damages, or other financial loss
+     arising  out of the use of or inability to use this document, even if the
+     authors have been advised of the possibility of such damages.
+
+   [0.3] TRADEMARKS
+
+     Trademarks   of   companies  mentioned  in   this   document  appear  for
+     identification  purposes  only and are  the  property of their respective
+     owners.
+
+   [0.4] CONTRIBUTORS
+
+     Robert Riebisch <info@bttr-software.de>
+       Chief Editor
+
+     Lukas Loehrer <lukasl@dataway.ch>
+       Second Editor
+
+     Lynne Henderson, David Leadbetter, Markus Nagelholz, Alan Robinson, Jeff
+     Sember
+
+*  [0.5] UNANSWERED QUESTIONS
+
+     If  you  have  more information about  one  of the following topics, then
+     contact one of the authors. We really need your feedback!
+
+     - What's your opinion about the FAQ?
+     - What information do you miss?
+
+     - Who retains the copyright for Stunts/4D Sports Driving (Bríderbund,
+       Mindscape or Electronic Arts)?
+     - Why did DSI switch from Bríderbund to Mindscape?
+     - Was there ever a version 1.00 of 4D Sports Driving?
+     - Was there ever a version, which contained the small "radar" screen
+       described in the manual? (section "The Opponents")
+     - Did Mindscape ever release the track pack announced in the manual?
+       (section "Your best tracks" on the last page)
+     - What are the real names of the different driver actors and actresses,
+       or were they employees from DSI?
+     - Are there any reviews from gaming magazines?
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [1.0] WHAT IS STUNTS/4D SPORTS DRIVING?                                    ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  (original 4D Sports Driving packing text)
+
+  4D  Sports Driving lets you loose on the most amazing test tracks ever built
+  in  the fastest and best cars the  world's motor industry have ever created.
+  This  is the ultimate proving ground where  you can test these super cars to
+  destruction - literally!
+
+  Take  your  pick from the mechanical stars  of  Road, Racing Circuit or Dirt
+  Track  including  cars  by Porsche,  Ferrari,  Lamborghini, Audi, Lancia and
+  Honda.  Put  these  power cars through  their  paces on stunts including the
+  nerve-rackin'  360ø loop-the-loop, the hair raisin' jumps, the breath takin'
+  topsy turvey tunnels and the heart stoppin' pipe!
+
+  Without  a doubt 4D Sports Driving gives you the best selection of supercars
+  and stunt obstacles ever seen in a driving game!
+
+  4D  Sports  Driving presents you with  a  large selection of 'ready-to-race'
+  tracks  to  really  test  your skills to  the  limit.  In addition 4D Sports
+  Driving  gives  you  a comprehensive editor  to  create your own 'nightmare'
+  track - which you can save for future use or challenge a friend with.
+
+     Race against the clock or 6 different intelligent dare devil racers.
+     Amazing 'seat of the pants' stunt driving simulator.
+     Fast, detailed and smooth polygon graphics.
+     Choose from 11 different performance cars.
+     Select from pre-set tracks or design your own.
+     4D Sports Vision replay system lets you re-live your most perilous
+      crashes and amazing stunts.
+     User selectable camera angles.
+     Digital sound effects and music scores.
+
+   [1.1] STUNTS/4D SPORTS DRIVING VERSIONS
+
+      Release date      ³ Game              ³ Version ³ Verified by ...
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      October  05, 1990 ³ Stunts            ³   1.00  ³ Lukas Loehrer
+                        ³                   ³         ³ Robert Riebisch
+      December 13, 1990 ³ 4D Sports Driving ³   1.10  ³ Lukas Loehrer
+                        ³                   ³         ³ Robert Riebisch
+      February 12, 1991 ³ Stunts            ³   1.10  ³ Lukas Loehrer
+                        ³                   ³         ³ Robert Riebisch
+      February 25, 1991 ³ 4D Sports Driving ³   1.10  ³ Lukas Loehrer
+                        ³                   ³         ³ Robert Riebisch
+
+*  [1.2] A WORD ABOUT THE CREATORS
+
+     Stunts/4D Sports Driving was developed by Distinctive Software Inc. (DSI)
+     in  1990.  DSI  was founded by Don  Mattrick  and Jeff Sember in 1982. At
+     least  from  1988 until 1991 DSI  resided  in Vancouver, British Columbia
+     (Canada). Electronic Arts took over DSI in 1991.
+
+     First  versions of Stunts/4D Sports  Driving were published by Bríderbund
+     Software as Stunts in October 1990. Later ones were brought to the gamers
+     by Mindscape (a Software Toolworks company) as 4D Sports Driving.
+
+     Stunts/4D  Sports  Driving was developed  using Microsoft C version 5.10.
+     Parts  of  the  code are copyright  by  Unlimited Software Inc. (graphics
+     code?) and Voyetra Technologies (sound/music code).
+
+     The following people at DSI created Stunts/4D Sports Driving:
+
+       Design            - Don Mattrick
+                             (Evolution, Grand Prix Circuit, 4D Sports Boxing)
+                         - Kevin Pickell
+                         - Brad Gour
+                             (Grand Prix Circuit, 4D Sports Boxing)
+                         - Rob Martyn
+                         - Stan Chow
+                             (4D Sports Boxing)
+
+       Music & Sound FX  - Michael J. Sokyrka
+                             (4D Sports Boxing)
+                         - Kris Hatlelid
+                             (Grand Prix Circuit)
+                         - Brian Plank
+                             (4D Sports Boxing)
+
+       Programming       - Kevin Pickell
+
+       Technical Support - Brad Gour
+                             (Grand Prix Circuit, 4D Sports Boxing)
+                         - Rick Friesen
+                             (Grand Prix Circuit, 4D Sports Boxing)
+
+       Art               - Mike Smith
+                         - David Adams
+                         - Nicola Swaine
+                         - Kevin Pickell
+
+     At  least  Don  Mattrick, Kevin Pickell,  Brad  Gour, Rob Martyn and Mike
+     Smith work for Electronic Arts:
+
+     Don Mattrick  - Executive Vice President, North American Studios
+
+     Kevin Pickell - Senior Computer Programmer
+
+     Brad Gour     - Programmer on several racing games
+
+     Rob Martyn    - Producer, Executive Producer, Supervising Producer for
+                     several sports games
+
+     Mike Smith    - ?
+
+     Kris  Hatlelid  worked some years for Electronic  Arts too, but now he is
+     the president of ICE Online Inc.
+
+     DSI  developed  several other games,  including  such titles as Evolution
+     (1982/Sydney Development), Grand Prix Circuit (1988/Accolade), Test Drive
+     (1989/Accolade),  Hardball  II (1990/Accolade), The  Duel - Test Drive II
+     (1990/Accolade),  Bill  Elliot's NASCAR  Challenge (1991/Konami), Teenage
+     Mutant  Ninja Turtles (1991/Konami) and 4D Sports Boxing (1991/Electronic
+     Arts).
+
+   [1.3] AN INTERVIEW WITH DON MATTRICK
+
+     (by Lynne Henderson for the Canadian "The Computer Paper", 1990)
+
+     THE GAMES GAME
+
+     Don  Mattrick is in The Games Game. As co-founder of Distinctive Software
+     Inc.,  26-year-old  Mattrick has come a  long  way from his Burnaby North
+     high  school days and his first  business success with the computer game,
+     Evolution.   Now,  as  the  chairman  of  B.C.'s  largest  computer  game
+     development  company, he presently devotes 60 to 70 hours a week to games
+     and  entertainment  software,  his  growing  business  that  yielded $3.2
+     million revenue in 1989.
+
+     NAUTICAL BUT NICE
+
+     His  4th-storey  view  office,  decorated with  a  large  Metal  Art fish
+     sculpture   and  a  spectacular  wall-to-wall   tropical  fish  tank,  is
+     reminiscent of a captain's quarters in a luxury yacht. It is a Nemo-esque
+     haven  apart from the madcap offices of  his R and D group where creative
+     license  is  apparent with high-tech  toys, MIDI equipment, arcade games,
+     and  graffiti  on the "playroom" walls.  Mattrick  speaks modestly of his
+     successes  which have in January 1990 allowed him to take over the entire
+     14,000-square-foot  fourth  floor of his building  - one step toward even
+     greater  future  expansion. "We've had a  lot of successful ventures as a
+     company.  I think some of the most important accomplishments that we have
+     are  the client base that we work  with at this time; companies like Walt
+     Disney,  Konami,  Electronic  Arts,  Accolade,  Bríderbund,  NEC,  IBM  -
+     companies  that publish products throughout the  world and are in the top
+     ten  in  our industry." Mattrick co-founded  DSI  in 1982 with a partner,
+     Jeff  Sember. The two severed their relationship three and one half years
+     ago.  The company has grown steadily in  the past few years and employees
+     number  close to 80 at this time. The average age is only 27. Mattrick is
+     proud   of   his   unique  team.  The   creation   of  software  is  very
+     time-intensive, he explains, and projects take many man-years to complete
+     and  require specialized skills, teamwork,  patience and dedication to be
+     successful.  "We  have  a diverse group  of  people that have specialized
+     skills  and  bring  a spark to the artistic  side  of  what it is we do."
+     Mattrick  emphasizes  the importance of a  good team and notes that every
+     year  that  they are together they  improve  their performance as well as
+     their  products. Part of the success of  the firm is linked to his strong
+     family   ties.   His  mother,  Joan   Mattrick,  is  active  as  manager,
+     administration   services,   while   his   cousin   Bruce   McMillan   is
+     vice-president  of  operations. Mattrick recognizes  that  his success is
+     determined  both  by  how well the products  sell  and are enjoyed by the
+     buying  public,  and  peer  acceptance.  For  example,  the  emergence of
+     Nintendo  has had a dramatic impact on the consumer market. An authorized
+     Nintendo  developer, DSI develops products for the Nintendo Entertainment
+     System  8-bit  system, and Gameboy handheld  and new 16-bit Super Famicon
+     System  in  the future. He announces  that  in the upcoming quarter, some
+     major  Nintendo  titles  will  be released,  with  TV,  print and special
+     promotions.  As  well, Bill Elliot's  NASCAR  Challenge (Konami), Teenage
+     Mutant  Ninja Turtles (Konami) and  4D Sports Boxing (Software Toolworks)
+     are scheduled for release.
+
+     HIGHER AND DEEPER
+
+     Aside  from  the emergence of the  dedicated video game machine, Mattrick
+     addresses  the  fact  that  all products  tend  to  increase  in scope as
+     consumers  become more sophisticated. "So  product quality need be higher
+     and  the  designs need be deeper in terms  of game play and the amount of
+     hours  that  it takes to complete  a product." He recognises that company
+     growth  must  be balanced by maintaining a  cash reserve in the advent of
+     their  market  declining or the economy  cooling in North America. Market
+     share   which  is  dependent  upon   time,  product  and  competition  is
+     unpredictable in many ways.
+
+     DRIVING FORCE
+
+     Mattrick  is proud of his driving products, which have been a focal point
+     for Distinctive Software. They've produced the now-famous Accolade titles
+     Test  Drive,  Grand Prix Circuit and The  Duel  - Test Drive II including
+     various  car  and scenery disks for  those products. Hardball II and Test
+     Drive II continue to sell well and maintain their position within the top
+     twenty  best sellers in North America. Some ten new driving products will
+     be  released  between November 1 and the  first quarter of 1991. One from
+     Bríderbund  called  Stunts  was  just released  within  the  last week. A
+     Ferrari  owner, as well as an aficionado and racer of exotic automobiles,
+     Mattrick's  eyes gleam with intensity as he explains, "It's a combination
+     of  a  bitmap  and  3-D polygon-type  driving  game  where you can select
+     various  cars, various opponents and build  your own race tracks to drive
+     on.  The  race tracks can be normal  tracks  or tracks with stunts like a
+     loop-de-loop  or  a corkscrew or jumps and it  tends to make for a lot of
+     excitement." However, he is quick to specify that DSI is more than just a
+     games developer. It has diversified into the educational software market.
+     Mickey's  ABCs  and Mickey's 123s, which were  developed on the IBM PC as
+     the  lead format, are two products  recently released with Disney for the
+     Christmas season. He explains, "(It) comes with some specialized hardware
+     that  allows  your  IBM  to have  digitized  speech  coming  back. So our
+     software  is bundled with a hardware package and all that is coupled with
+     a  fairly extensive advertising campaign with Disney targeted at families
+     and  learning." Three or four years ago DSI worked with the government in
+     the  area  of computer-aided  instruction programs. Mattrick acknowledges
+     that  it was a different type of process as opposed to working with movie
+     companies and private industry. Although rewarding in its own way, it was
+     more  time-consuming. With the popularity his  company now enjoys, it can
+     pick  and choose from virtually any  number of opportunities. "We've been
+     in discussions with companies like Philips and various movie companies on
+     new  development of intellectual property  [based on] movies and consumer
+     goods,  on a frequent basis. The structure of the deals that we can do is
+     anything from just a purely contractual relationship to shared investment
+     and  risk."  Mattrick emphatically denies any  plans to go public at this
+     time.  He states that DSI has been able  to grow and develop its own cash
+     reserves without having to raise money from venture capitalists. Whatever
+     the strategies are, revenues exceed $5M so far this year.
+
+     FUTURE DIRECTIONS
+
+     DSI  has  undergone a significant management  shift in the last year with
+     the  appointment  of  Tarrnie  Williams  as  president.  Why did Mattrick
+     appoint to the Number One Office the former CEO of Sydney Developments, a
+     man  who  had received such notoriety  both  during and subsequent to his
+     resignation  in  1984? Mattrick explains  that Williams had been involved
+     with  DSI  over  the years in an  advisory  position at a board level. "I
+     particularly  wanted someone who had a wide range of experience who could
+     bring  different  ideas from past  experience and also understood people.
+     And  I think with all the experience that Tarrnie's had, that's a minimum
+     description  of  his  skill set." Mattrick  is  enthused about the future
+     directions  his  company could take. "The  emergence of optical disks, CD
+     ROM, CDI, DVI and CDTV all lend themselves to a number of exciting future
+     prospects.  Outside  of  that  you  even  have  the  development  of  new
+     technologies like virtual reality."
+
+     ALL WORK AND NO PLAY?
+
+     Although  he  approaches  work  responsibilities  with  a  high degree of
+     intensity, Mattrick denies the adage that all work and no play make him a
+     dull  guy. Equally important are friends, sports, car racing, and travel.
+     For  December, he plans to combine Spanish beaches with his European work
+     schedule,  which includes visits with  Mindscape, Software Toolworks, and
+     some  friends  at  companies such as  US  Gold and Infogrames. When asked
+     about  rumors  of his retiring at  age 30, this computer veteran jokingly
+     replies,  "I've  booked my flight!" He looks  forward  to a time when his
+     business could function without him. "That still leaves me four years and
+     probably a lot of hard work and long evenings between now and that future
+     point."
+
+   [1.4] ELECTRONIC ARTS BUYS DISTINCTIVE SOFTWARE INC.
+
+     (from the Canadian "The Computer Paper", 1991)
+
+     Distinctive  Software  Inc.,  producer  of  popular  games  including the
+     best-selling  Test  Drive  series,  has  been  sold  to  California-based
+     Electronic  Arts for a reported $11 million. Under the terms of the sale,
+     EA  will pay $785,000 in cash, with  the balance in shares. Don Mattrick,
+     who co-founded DSI in 1982 with then-partner Jeff Sember (now at MindSpan
+     Technologies),  will  continue as V.P.,  Marketing,  and Tarrnie Williams
+     will stay on as DSI President.
+
+   [1.5] A LATE REVIEW
+
+     (by David Leadbetter for the "Game Bytes Magazine", 1994)
+
+     INTRODUCTION
+
+     If  you've  never  heard of the game  Stunts  by Bríderbund, or 4D Sports
+     Driving  by  Mindscape (from here on  referenced  as Stunts), then please
+     allow  me  to introduce you to this little  gem  of a game from days gone
+     past.
+
+     In  brief,  Stunts is a stunt car racing  game that has plenty of cars to
+     drive,  plenty  of opponents to race  (and beat), plenty of cliff hanging
+     stunts  to try, and thousands of hours of game playing excitement. Stunts
+     is not a realistic racing simulator. If you want racing realism there are
+     hordes of other titles out there to choose from.
+
+     Stunts  belongs  to a distinct genre  of  games that include other titles
+     such  as  Stunt Driver and Hard Drivin'  II. All promise to offer similar
+     features, but Stunts inevitably rates the best due simply to it's perfect
+     controllability, which is sadly lacking in the other titles no matter how
+     much configurability the try to provide. (And in my opinion a racing game
+     is not worth playing if the car is impossible to control!)
+
+     GRAPHICS AND SOUND
+
+     Visually,  Stunts  can  easily compare to  other  games  of it's time. It
+     caters  for  a wide range of  machines, with video support for everything
+     from  Hercules  graphics to VGA. This is  nice  to know if you don't have
+     VGA, but I would not recommend playing with less. The game world is drawn
+     with  3D  polygon graphics and includes  a selectable detail level, which
+     provides  a fluid frame rate on even a  low end 386. A variety of horizon
+     backdrops  and scenery add to the  overall atmosphere of the game (though
+     you  don't normally have time to comment on such things while you thunder
+     down  the  track  ;-)). Each car has  it's  own  rough polygon model, and
+     dashboard design (which you see when you view from inside the car).
+
+     Sound  support  is  equally  well  done.  Stunts  has  sound  support for
+     everything  from  the PC speaker to  the  SoundBlaster. Stunts manages to
+     provide  quite realistic engine and skidding sounds. A different sound is
+     provided  for  each  car  you can  drive.  For  total enjoyment though, a
+     SoundBlaster  is recommended (preferably pumped through an amplifier, for
+     an engine you can feel ;-)).
+
+     INTERFACE
+
+     Stunts provides excellent game controls. It supports all three main input
+     devices: keyboard, joystick and mouse. I recommend using the keyboard for
+     easiest  driving control. Strangely enough it  is in this department that
+     so  many other driving games fail. The most frequent problem I've seen is
+     "super  sensitive/unresponsive steering". But Stunts handles exquisitely.
+     The  designers  appear to have found  the perfect balance between initial
+     turning  resistance for fine steering adjustments, and continuous turning
+     speed for main maneuvering.
+
+     THE RACING
+
+     Before you begin racing, there are a few things you need to do.
+
+     First,  select your car. Stunts has a wide range to choose from, from the
+     slow  offroad 4WDs to turbo charged Formula  1 racing cars. Each car type
+     has  it's advantages and disadvantages. The  4WDs are slow as snails, but
+     handle well on icy roads. The racing cars on the other hand are fast, but
+     are  not  much fun to drive on icy  roads  (in fact, it's possible to out
+     drag  a F1 car in a 4WD on an  icy road over a short distance!). You also
+     have the option of driving a manual or automatic gearbox for each car.
+
+     Next,  you should pick your opponent. In  this area, Stunts has two modes
+     of  racing.  A  "practice"  mode where  you  race  against  the clock (no
+     opponent),  and  a  "competitive" mode where  you  race  against a single
+     opponent. There are range of opponents all with their own various driving
+     strengths.  Sadly,  the opponent intelligence  is rather weak in general.
+     The  toughest opponent is called "Skid Vicious"  - a name to instill fear
+     in  would be challengers perhaps? His  driving sure doesn't! In fact, all
+     computer  opponents share a high level  of driving incompetence. They are
+     slow,  will  reliably  crash on any  slightly  tricky  track, and if they
+     don't,  it is unbearably easy to "influence" them into doing so. But, the
+     computer  opponents can still provide a tough challenge if you don't mind
+     racing them in a much slower car.
+
+     Finally,  you  need  to pick a track  to  race. Stunts comes with a small
+     number  of  rather  simple "training"  tracks,  and  those quickly become
+     boring, but, Stunts comes with a fully featured built-in track editor, so
+     you  can  make your own tracks to race.  It  is the presence of the track
+     editor  and  it's  operating simplicity that  make  Stunts a really great
+     game.
+
+     You  can build tracks with three types of road surfaces, from solid paved
+     roads  to  slippery  icy roads. There  are  a  variety of "standard" road
+     pieces,  like  corners, chicanes, crossroads,  ramps, elevated roads, and
+     banks. But the exciting part is the huge number of stunts pieces that you
+     can   include  in  your  tracks.   The  range  includes  tunnels,  loops,
+     corkscrews, piper, half pipes, "slalom" roads (roads with barricades that
+     you have to "slalom" through), and corkscrew ramps. In addition there are
+     a number of scenery pieces including buildings of various sizes, trees of
+     various  types,  ships, and even a tennis  court! All these pieces can of
+     course be combined together to make a vast variety of jumps and stunts.
+
+     And, if you ever tire of the set of provided landscapes for building your
+     tracks  on,  Stunts also includes a terrain  editor as part of it's track
+     editor.
+
+     Hint: The  terrain  editor is an undocumented  feature of Stunts. You can
+           access   the  terrain  pieces  in  the  track  editor  by  pressing
+           <SHIFT+F1>.
+
+     So,  once  you've  picked  your car, opponent  and  track,  the aim is to
+     firstly finish the course, secondly to beat your opponent, and thirdly to
+     do  it  in  record time, but most of  all  to have a ball while doing so.
+     Which  isn't  all  that  hard, since not  much  can  compare to leaping a
+     building in a Formula 1 racing car (or any car for that matter)!
+
+     Now  you're  hurtling down the track. You  took that last jump with ease,
+     and a corkscrew looms menacingly ahead. No problem you think to yourself,
+     you've completed this stunt successfully many times before. But this time
+     you  are  over  confident and the  inevitable  happens.  You approach the
+     maneuver  too  fast and lose control, and  the  wreckage of your car gets
+     strewn all over the race track.
+
+     There's  nothing extremely exciting about that, except the amazing things
+     that  can  happen as you crash! Do not  be surprised if you find your car
+     soaring  hundreds  of meters above the  ground! Sometimes before a crash,
+     sometimes  after, but don't ever expect to survive such a fall! And there
+     is  nothing like going vertical in a F1  racing car to add some thrill to
+     you spill! It's all part of the fun.
+
+     To  top it all off, Stunts also includes a 10 minute replay buffer (which
+     is  long enough for almost any race!).  So when you complete that perfect
+     drive, make an incredible recovery from a certain death situation, have a
+     crash  that is truly spectacular, or do  anything that you want to take a
+     second look at, it's preserved for you in the replay, which you can watch
+     immediately,  or  save  to  disk for  viewing  later.  Plus, for ultimate
+     viewing  scrutiny, Stunts provides a number  of viewing cameras (for both
+     viewing replays and racing from!), including a user controlled viewpoint!
+     And of course, you are free to give your replays to your friends, so that
+     they  can see your incredible feats of  driving. In fact, you can use the
+     tracks  you  design on any version of  Stunts, including the PC and Amiga
+     versions.  Sadly,  the same compatibility is  not true for replays, which
+     will  only work accurately on the same version of the game that they were
+     saved on.
+
+     Stunts does have a small number of bugs. The most notable is the infamous
+     "overdrive"  bug.  This is essentially  an  "afterburner" for your racing
+     car,  or  a  tank of nitrous oxide  that  never  runs out. "Overdrive" is
+     really more of a feature than a bug, since it does make the game more fun
+     to play (as you can imagine).
+
+     WRAPPING UP
+
+     To  me, Stunts is a fantastic game. I consider it so good that it has had
+     permanent  residence on my harddrive for more than three years! This says
+     quite a lot to me, since no version of DOS that I've used has lasted that
+     long (or any machine I've had)! In fact, the only additional feature that
+     Stunts  does not provide, which would be truly appreciated is the ability
+     to play head to head with a friend through a serial link.
+
+     I  barely  hesitate to suggest that there  would be no one that would not
+     enjoy  playing  Stunts, however if you  enjoy a fast paced, action filled
+     game, then Stunts is definitely for you. And when you find it, you should
+     be  pleasantly  surprised that it won't cost you  an arm and a leg to buy
+     it.
+
+   [1.6] A COMPARISON OF DRIVING SPEEDS
+
+     (by Alan Robinson for "The Stunts Shrine", 1996)
+
+     ABSTRACT
+
+     Which driving program is better, Stunts version 1.10 or 4D Sports Driving
+     version  1.10? These are slightly different versions of the same program,
+     and  therefor  driving  times  can be  compared  using  the same cars and
+     tracks.  The driving speed of two cars on two different tracks using both
+     Stunts  and 4D Sports Driving were  compared in this study. Results where
+     not  completely conclusive, but the  two programs are roughly equivalent,
+     for most uses.
+
+     INTRODUCTION
+
+     There  are four versions of the  program in question, Stunts version 1.00
+     and  version 1.10, and 4D Sports Driving version 1.00 and version 1.10. A
+     question  that has been raised, mostly in high score competition is, "Are
+     there  any differences between the handling  of the two programs?". Since
+     access  was  only available to Stunts  version 1.10 and 4D Sports Driving
+     version 1.10, this study only concerns itself with those two programs. It
+     is  hoped  that most people have upgraded  to the latest version of there
+     respect program, one way or another.
+
+     The  speed  issue is a complex question  that would require many tests to
+     truely  determine for all cars and conditions.  The goal of this study is
+     not to do so, but instead to determine if such studies are needed.
+
+     MATERIAL & METHODS
+
+     Two tracks were created for use in this study.
+
+     Track  One is a large (one track editing screen full) banked circle, with
+     no stunts. This track was driven with the Porsche March Indy car, at full
+     speed for the entire track.
+
+     Track  Two is a small track, with four large size, unbanked turns, making
+     a  almost  perfect circle. This track  was  driven with the Corvette ZR1,
+     attempting to drive the car as fast as possible, without spinning off the
+     track.
+
+     In  both  cases  the games were run on  a  60 MHz Zeos Pantera, using the
+     keyboard  as driving input, and SBOS providing SoundBlaster emulation for
+     the  Gravis UltraSound. No simulation engine  bugs were exploit to attain
+     higher speeds.
+
+     RESULTS
+
+      Track ³ Stunts ³ 4D Sports Driving ³ Average Difference
+     ÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+       One  ³  32.25 ³       32.20       ³ \
+            ³  32.35 ³       32.25       ³  >  0.200 second
+            ³  32.75 ³       32.30       ³ /
+       Two  ³  23.30 ³       24.20       ³ \
+            ³  23.40 ³       24.65       ³  >  1.183 second
+            ³  23.40 ³       24.80       ³ /
+
+     Track  One results are faster for 4D Sports Driving, but not by more than
+     the  experimental  error.  Track  Two  results  show  Stunts  ahead  by a
+     significant amount.
+
+     DISCUSSION
+
+     In  the first test there was  very little experimental error, because the
+     car  was  made  to drive as fast  as  it  could, i.e. the accelerator was
+     floored  the entire time. While the experimental error is very small, the
+     difference  between  the two speeds is  just as small, suggesting that if
+     there is any difference between the Porsche March Indy top speeds for the
+     two programs, it is insignificant.
+
+     The  second  track  implies fairly strongly  that  cars  (or at least the
+     Corvette  ZR1) in Stunts version 1.10 have higher top turning speeds then
+     they  do in 4D Sports Driving version 1.10. However, due to the fact that
+     these  scores rely purely on the skills of the driver, and his luck, they
+     have  high  experimental error. Even so  they  imply pretty strongly that
+     Stunts' cars are faster.
+
+     CONCLUSION
+
+     There  does  appear  to be some  difference  between the two programs, at
+     least  for  the  Corvette ZR1. More cars,  tracks,  and stunts need to be
+     tested  before  any definite conclusions can  be drawn, but it looks like
+     all  4D Sports Driving users should update to Stunts version 1.10. In any
+     case,  competitions,  while  slightly less  valid  when competing between
+     different  versions,  should  not be a  problem  unless  the driving time
+     between first and second place is less than a few seconds.
+
+*  [1.7] SIMILAR RACING GAMES
+
+     If  you want more action similar to Stunts/4D Sports Driving you may want
+     to  try  the following games: Big  Red Racing (Domark), Destruction Derby
+     (Psygnosis), Fatal Racing (?), Midtown Madness (Microsoft), Monster Truck
+     Madness  (Microsoft),  S.O.D.A.  Off-Road  Racing  (Sierra), Screamer Fun
+     (Virgin), Stunt Track Racer (?) and Test Drive: Off-Road (Accolade).
+
+     The  long  awaited successor of  Stunts/4D Sports Driving called "Thrust,
+     Twist'n  Turn"  by  Carts Entertainment/Take 2  seems  not  be as good as
+     expected.  At  least the PC versions were  rated  very low by the top two
+     German gaming magazines.
+
+     "PC Games" 7/99 rated it 45%. "PC Player" 7/99 rated it 44%.
+
+     TTT  seems to be very different from its packaging text: There are only 8
+     tracks instead of 18. It has four different but boring cars. And the most
+     important: it does NOT contain a track editor.
+
+     They  are  still  some rumors Electronic Arts  is  working on a sequel of
+     Stunts/4D Sports Driving, but we can't confirm or deny this.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [2.0] SYSTEM REQUIREMENTS                                                  ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  All   modern  computer  system  match   these  requirements,  but  for  your
+  satisfaction, here they are.
+
+   [2.1] HARDWARE
+
+     Stunts/4D   Sports   Driving  requires  an   Intel   8086  processor  (or
+     compatibles)  running  with 8 MHz or faster.  You  will also need a video
+     card,  such as Hercules, CGA, EGA or MCGA/VGA, 640K of memory and a 5.25"
+     or 3.5" disk drive.
+
+     AdLib, SoundBlaster or Roland MT-32 sound cards and Joystick or Mouse are
+     supported.
+
+   [2.2] SOFTWARE
+
+     Stunts/4D Sports Driving requires Microsoft MS-DOS version 3.30 or later.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [3.0] BUGS & GAME ERRORS                                                   ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  Yes,  your  favourite racing game contains  some bugs and game errors, which
+  are listed here, because DSI did not release any official bug-fixes and it's
+  very hard to bug-fix an encrypted program ourself ;-).
+
+   [3.1] STRANGE GRAPHICS
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     Since  Stunts/4D Sports Driving is a really old game, which was developed
+     for XTs and ATs, the programmers had to highly optimize their code to run
+     at  a  reasonable  speed. In these times  computers  did  not have a math
+     co-processor which would be required for 3D graphics (because you have to
+     calculate some matrices/vectors). DSI decided to use integer math instead
+     of  floating-point  routines. But integer math  is sometimes a little bit
+     inaccurate  and computer displays do not  have half or quarter pixels, so
+     the  result  has to be rounded. All  these facts lead to strange graphics
+     known to you.
+
+     SOLUTION: Buy  a  high-end  IBM-PC/Sony  Playstation/Nintendo  64,  and a
+               modern racing game.
+
+   [3.2] BUILT-IN TRACK EDITOR BUG
+
+     VERSIONS: DEC-13-90
+
+     If  you use the cursor keys (left, right, up, down) in the Track Editor's
+     tile  selection  bar,  your computer system  probably  hangs  after a few
+     keypresses.
+
+     SOLUTION: Do  not  use  the keyboard, use your  mouse  or  use one of the
+               external terrain/track editors!
+
+   [3.3] TOO MANY TRACKS BUG
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     The number of track files per directory is limited. If you have more than
+     127  files in one directory, the  track selection window does not display
+     any  tracks,  the  display screws up  or  your computer system hangs. The
+     later  versions allow more files, but  these files are not displayed, and
+     the  quick access keys ('A' for the  first track file that begins with an
+     A) are disabled.
+
+     SOLUTION: Split up your track files into sub-directories!
+
+   [3.4] SWERVE ABOUT GAME ERROR
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     Sometimes  your  opponents will behave a  little bit strange. They swerve
+     about,  especially on banked corners on hills. This seems to be caused by
+     a game design error.
+
+     SOLUTION: Give them a slower car! ;-)
+
+   [3.5] OVERDRIVE BUG
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     At  a certain speed your car will  fire something like an afterburner and
+     if you go off the track (to the grass) your car will not become slower.
+
+     SOLUTION: This is not a real bug. It is feature. Just use it!
+
+   [3.6] ROCKET BOUNCE
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     Imagine  that  you have several bridges or  ramps in a row and your jumps
+     are  going wider and wider from bridge to bridge. Then if you hit such an
+     obstacle  exactly  at the highest point  (where  the up and down elements
+     connect)  your car will bounce off in a nearly 90ø angle and start like a
+     rocket  to  the  moon. In most cases  your  car  crashes if you return to
+     earth.
+
+     SOLUTION: How about braking before a jump?
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [4.0] DRIVING TIPS & TRICKS                                                ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+   [4.1] CURVES
+
+     In  order  to drive a curve really  quickly,  you should try to avoid the
+     skidding  sound. It will slow you down more, than if you had broken a bit
+     more earlier.
+
+   [4.2] CORKSCREWS (LEFT/RIGHT)
+
+     The corkscrew (left/right) is a very difficult object for beginners to go
+     through.  Simply pass it at the right,  between the red separator and the
+     corkscrew's lane. This should save you some seconds.
+
+   [4.3] PAVED SLALOM ROADS
+
+     Paved  slalom roads are passed best, if you drive your car exactly on the
+     dashed centre line.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [5.0] CHEATS                                                               ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+   [5.1] FALSE START
+
+     Choose your car, your opponent and your opponent's car.
+
+     a) Click on the "Let's Drive" icon!
+          Your car leaves the truck.
+     b) Press <Escape> twice!
+          The replay menu appears.
+     c) Choose "Continue Driving"!
+
+     Now  you  can start right from your  truck.  This will result in a longer
+     run-up  way, which will give you a  lead over your opponent. Best results
+     are achieved with slow cars like the Lamborghini LM-002.
+
+     NOTE: This cheat will make the replays going crazy.
+
+   [5.2] INTERNAL TERRAIN EDITOR
+
+     Stunts/4D  Sports Driving comes with a built-in terrain editor, which can
+     be reached via <SHIFT+F1> from the track editor screen.
+
++  [5.3] HARMLESS OBJECTS
+
+     There are some objects which do not cause a damage to your car. These are
+     traffic  signs,  traffic  lights and trees  at  the highway, the pylon at
+     "Joe's", pumps and the pylon at the gas station.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [6.0] STUNTS/4D SPORTS DRIVING SPECIFIC UTILITIES                          ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  This  section contains some information about the editing/viewing facilities
+  provided  by  several  external  programs.  All  these  utilities are either
+  freeware  or  public  domain. They are available  from  at  least one of the
+  websites mentioned in section [9.0].
+
+   [6.1] 4D SPORTS DRIVING TERRAIN EDITOR (TER3)
+
+     AUTHOR  : Lukas Loehrer <lukasl@dataway.ch>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [**___]
+
+     TER3  is the only terrain editor that  is a native Microsoft Windows 3.xx
+     application.  It  provides the basic  drawing  functions like STUNTSED or
+     TERREDIT.  On  some computers I was unable  to  start TER3, I only got an
+     empty  message  box with an <OK>  button. No error message was displayed.
+     But  if  you can make TER3 run,  there  are no problems in creating track
+     terrains.
+
+     CONCLUSION: + native Microsoft Windows 3.xx application
+                 + 'whole-track-at-once' editing
+                 - has a serious bug, which prevents it from starting
+                   properly on some machines
+
+   [6.2] CAR BLASTER (CB)
+
+     AUTHOR  : The Nailwood Company <markus.nagelholz@siemens.at>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [****_]
+
+     CB  provides a fully functional 'garage'  for tuning your racing cars. It
+     allows   editing  of  all  power  parameters   (e.g.  gears,  rpm)  in  a
+     semi-graphical  environment  and  has  a description  of  122  out of 814
+     parameter bytes (14.9%). You also can compare different cars.
+
+     CONCLUSION: + powerful car tuning
+                 - hard to setup as most Nailwood products
+
++  [6.3] CAREDIT
+
+     AUTHOR  : ? <?>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [**___]
+
+     With  CAREDIT  you can modify the  most  important values in car resource
+     files.  It can be compared with WINEDIT and  CB. It is not as powerful as
+     CB but easier to use.
+
+     CONCLUSION: + fast & easy to use
+                 - not very powerful
+                 - no manual
+
+   [6.4] OPPONENT BLASTER (OB)
+
+     AUTHOR  : BTTR Software <info@bttr-software.de>
+     VERSIONS: OCT-05-90
+     RATING  : [****_]
+
+     OB  allows  you to modify the  opponent  resource files of Stunts version
+     1.00  (OCT-05-90)  to  make it a little  bit  harder  for you to beat the
+     computer opponents. You can edit each opponent's speed value for specific
+     track tiles, e.g. paved roads, paved corners, bridges or chicanes.
+
+     CONCLUSION: + editing of all speed parameters for the 6 opponents
+                 + easy to use interface
+                 - for OCT-05-90 only
+
+   [6.5] REPLAY ANALYZER (RA)
+
+     AUTHOR  : BTTR Software <info@bttr-software.de>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     RA  performs  a driving style analysis for  a  replay file and displays a
+     statistic  about accelerate, brake, steer left, steer right, ... keyboard
+     commands.  This  may  give  you some  idea  about  the used track without
+     loading Stunts/4D Sports Driving or an external track editor.
+
+     CONCLUSION: + driving style analyzer
+                 - a little bit useless
+
+   [6.6] REPLAY DATA VIEWER (RPLINFO)
+
+     AUTHOR  : Lukas Loehrer <lukasl@dataway.ch>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [****_]
+
+     RPLINFO  is  dedicated  mainly to  the  maintainers  of driving contests,
+     because  it let's you view the name of  the track used in the replay, the
+     time  achieved,  the  opponent's name, your  and  your opponent's car and
+     their  colors  and the gear shifting mode  (auto  or manual). Also it can
+     extract  the  track used in the  replay. RPLINFO for Windows supports the
+     same driving style analysis as RA.
+
+     CONCLUSION: + view data of replay files
+                 + extract track file from replay
+                 + driving style analysis
+                 + DOS and Windows versions available
+                 - '(finished)' not 100% foolproof
+
+   [6.7] SCORE BLASTER (SB)
+
+     AUTHOR  : The Nailwood Company <markus.nagelholz@siemens.at>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     SB  allows  you  to change the names  (not  the  times) of the drivers in
+     existing  highscore  files. Also it let's  you  merge highscore files. SB
+     combines the functions of SV and UPDATE.EXE into one program.
+
+     CONCLUSION: + driver name editing
+                 + driver time viewing
+                 + merging of highscore files
+                 - hard to setup as most Nailwood products
+
+   [6.8] SCORE VIEWER (SV)
+
+     AUTHOR  : The Nailwood Company <markus.nagelholz@siemens.at>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [****_]
+
+     SV is an easy to use viewer for Stunts/4D Sports Driving highscore files.
+     It  shows  all  seven  ranks with driver  names,  cars  used and the time
+     achieved in a clear presentation.
+
+     CONCLUSION: + easy to use
+                 + very fast
+                 + can be integrated into the Norton Commander
+                 - has problems, if the extension .HIG is given on the
+                   command-line
+
+   [6.9] STEDIT
+
+     AUTHOR  : Soleil Lapierre <?>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [****_]
+
+     STEDIT is the best terrain editor available. It outdoes all other terrain
+     editors  with  it's  automatic drawing mode  for  hills.  Otherwise it is
+     similiar to TERREDIT, but it's faster.
+
+     We  recommend  to use this editor in  combination with TE. STEDIT for the
+     terrain (due to the automatic drawing mode) and TE for the real track.
+
+     CONCLUSION: + automatic drawing mode
+                 + 'whole-track-at-once' editing
+                 + mouse support
+                 + small and fast
+                 - you can't load another track in editing mode, you have to
+                   quit and restart the program
+
+   [6.A] STUNTS HIGHSCORES (STHIGH)
+
+     AUTHOR  : Martin Brunner <martinb@finwds01.tu-graz.ac.at>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [ N/A ]
+
+     Coming soon!
+
+   [6.B] STUNTS LAND EDITOR (STUNTSED)
+
+     AUTHOR  : Wayne Buttles <stunts@fdisk.com>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [**___]
+
+     STUNTSED  can  be compared with TERREDIT:  It  has only the basic drawing
+     functions  for  creating  terrains.  There  are  no  special functions or
+     editing assistents.
+
+     CONCLUSION: + 'whole-track-at-once' editing
+                 - loses the track information
+                 - no automatic drawing mode
+                 - no mouse support
+
+   [6.C] STUNTS MAP EDITOR (MAPED)
+
+     AUTHOR  : St‚phane Jantzen <?>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     MAPED  can  be  compared  with TERREDIT  too:  It  has  the basic drawing
+     functions  for  creating  terrains and in  addition  it has an rectangle,
+     flood  fill and an automatic drawing  mode. The automatic drawing mode is
+     not as nice as the one in STEDIT, but it fulfills it's job. MAPED becomes
+     nearly  unusable  by a mouse routine bug,  which  let's you over-draw the
+     menu. That's a shame!
+
+     CONCLUSION: + 'whole-track-at-once' editing
+                 + automatic drawing mode
+                 + mouse support
+                 - nearly unusable due to a mouse routine bug, which destroys
+                   the menu
+
+   [6.D] STUNTS SCENERY GENERATOR (SSG)
+
+     AUTHOR  : Wayne Buttles <stunts@fdisk.com>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     SSG  creates a random scenery (with boats, tennis courts, trees, ...) for
+     your  existing track files. Most of  the frequencies can be controlled by
+     the user, e.g. to get more buildings. SSG is command-line based, so it is
+     a  little  bit  hard for the novices to  use.  But  it is great for track
+     creating people, who do not have any idea for their sceneries.
+
+     CONCLUSION: + powerful
+                 + takes thinking from you ;-)
+                 + source code available
+                 - hard to use for novices
+
+   [6.E] STUNTS TERRAIN EDITOR (TERREDIT)
+
+     AUTHOR  : Ron Lewkiewicz <?>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [**___]
+
+     TERREDIT  has only the basic drawing  functions for creating terrains. No
+     special functions, no gimmicks, just straightforward.
+
+     CONCLUSION: + 'whole-track-at-once' editing
+                 + mouse support
+                 - no automatic drawing mode
+                 - slow, due to the BGI interface
+
+   [6.F] TRACK BLASTER PRO (TB)
+
+     AUTHOR  : The Nailwood Company <markus.nagelholz@siemens.at>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     TB  is a terrain and track editor with lots of special functions directed
+     towards the power user, these include an automatic scenery generating (as
+     in  SSG), a clipboard function (for terrain only?) and the possibility to
+     compare 2 tracks. It also allows 'whole-track-at-once' editing.
+
+     CONCLUSION: + automatic scenery generator
+                 + clipboard
+                 + 'whole-track-at-once' editing
+                 - confused design
+                 - hard to use and hard to setup as most Nailwood products
+                 - unable to create new tracks
+                 - no mouse support
+
+   [6.G] TRACK EDITOR (TE)
+
+     AUTHOR  : Marcin Wichary <dyjo@uni-koblenz.de>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [****_]
+
+     TE  is  a  very well designed editor  for  terrain  and track pieces from
+     Poland.  It  is very similiar to the  built-in  track editor but has some
+     additional   tiles   for  combinations  often   used   in  tracks  and  a
+     'whole-track-at-once'  preview mode. Unfortunatly  it lacks mouse support
+     and  an automatic drawing mode (available in STEDIT). We recommend to use
+     this  nice editor in combination with STEDIT. STEDIT for the terrain (due
+     to the automatic drawing mode) and TE for the real track.
+
+     CONCLUSION: + well designed
+                 + for terrain & track editing
+                 - lacks mouse support
+                 - no automatic drawing mode
+
+   [6.H] UPDATE.EXE
+
+     AUTHOR  : Andrew Shugg <yautja@it.net.au>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [***__]
+
+     UPDATE.EXE  was  made for those racing  championships  which are held all
+     around  the  globe. It writes an  updated highscore file by comparing two
+     existing  highscore files and the relating  track files taking the better
+     times to this new file.
+
+     CONCLUSION: + very fast
+                 - multiple files only via batch files
+                 - annoying self-check
+
++  [6.I] WINEDIT
+
+     AUTHOR  : Mirko Ruschmeyer <ruschm00@marvin.informatik.uni-dortmund.de>
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+     RATING  : [*____]
+
+     WINEDIT  is  a native Win32 application similar  to  CB. It allows you to
+     change  several  parameters  of your car  to  maximize its performance. I
+     tried  WINEDIT  on 3 different computers  running Windows 95 with various
+     different  car resource files from  all Stunts/4D Sports Driving versions
+     but  I never got a correct display of the values. Every time it displayed
+     something like: "Number of gears: 62534".
+
+     CONCLUSION: + native Win32 (Windows 9x/Windows NT) application
+                 - only in German?
+                 - no manual
+                 - does not work properly
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [7.0] OTHER UTILITIES                                                      ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  This  section  contains  information  about  not  Stunts/4D  Sports  Driving
+  specific utilities.
+
+   [7.1] DAVE'S .TGA ANIMATOR (DTA)
+
+     AUTHOR  : David K. Mason <76546.1321@compuserve.com>
+     DOWNLOAD: ftp://ftp.cdrom.com/pub/simtelnet/msdos/animate/dta18g_3.zip
+     RATING  : [****_]
+
+     DTA  is  a command-line utility for  creating  Autodesk Animator .FLI and
+     .FLC  animation files from lots of  file formats including .PCX and .TGA.
+     DTA  can also perform a wide  range of post-processing functions on image
+     files   such   as  arbitrary   rotation,   scaling,  tiling,  multi-layer
+     compositing and averaging images together for a variety of effects.
+
+     CONCLUSION: + creates Autodesk Animator .FLI animation files from your
+                   screenshots (the only way for version independent replays)
+                 - not longer supported?
+                 - expensive shareware (US$ 35.00)
+
+   [7.2] PICTURE VIEWER (PICTVIEW)
+
+     AUTHOR  : Jan Patera <patera@km1.fjfi.cvut.cz>
+     DOWNLOAD: ftp://ftp.cdrom.com/pub/simtelnet/msdos/graphics/pv250.zip
+     RATING  : [*****]
+
+     PICTVIEW  is  a mouse-driven viewer and  converter for images. It runs on
+     all  EGA, VGA, SuperVGA and Extended-VGA video adapters. PICTVIEW is able
+     to  read images stored in approximately  37 graphics file formats and can
+     convert  them into other formats. All functions are extremely fast, up to
+     10  times  faster  than  other programs.  It  also  contains a small .FLI
+     player.
+
+     CONCLUSION: + fast and easy to use picture file viewer and converter
+                   supporting approximately 37 graphics file formats
+                 + Czech freeware
+
+   [7.3] PROGRAB
+
+     AUTHOR  : Giorgio Beccalli <giobbe.s@flashnet.it>
+     DOWNLOAD: ftp://ftp.cdrom.com/pub/simtelnet/msdos/screen/pgrab110.zip
+     RATING  : [*****]
+
+     PROGRAB  is  a  very  powerful  screen-grabbing  program.  It can capture
+     screens  from  any  standard or non-standard  (like  Mode  X 360x480) 256
+     colors  VGA mode, and from any 256  colors VESA mode. It outputs directly
+     to .TGA files. It requires less than 2.7k in memory!
+
+     CONCLUSION: + small and fast
+                 + easy to use
+                 + inexpensive shareware (US$ 10.00)
+
+   [7.4] VIDEOTHIEF (VTHIEF)
+
+     AUTHOR  : Andrew A. Aksyonoff <andrew@stu.lipetsk.su>
+     DOWNLOAD: ftp://ftp.cdrom.com/pub/simtelnet/msdos/graphics/vthf006.zip
+     RATING  : [*****]
+
+     VIDEOTHIEF  is another powerful screen grabber  that supports all VGA and
+     VBE 1.2 compliant SVGA modes, including non-standard ones (so called Mode
+     X). It requires 2.2k in memory only and writes BMP files.
+
+     CONCLUSION: + small and fast
+                 + easy to use
+                 + free for personal use
+
++  [7.5] MAKING A MOVIE
+
+     As  replay  files  can  not be  exchanged  between  different versions of
+     Stunts/4D  Sports  Driving we looked for  another  method to make replays
+     available to all people.
+
+     A  combination  of  DTA,  PICTVIEW and  PROGRAB  lets  you  create replay
+     animations  which  can be displayed  without  Stunts/4D Sports Driving or
+     even if you have the wrong version of Stunts/4D Sports Driving. Here is a
+     step-by-step description to build a .FLI file from your finest replay:
+
+     1) At first you have to load PROGRAB as a TSR.
+
+        # prograb
+
+     2) Now  you  can run Stunts/4D Sports  Driving.  Load your desired replay
+        file  from  the  options  screen. Rewind  the  tape  to  the beginning
+        (00:00.00).  Make  your  first screen  shot  by  pressing <CTRL+SCROLL
+        LOCK>.  Forward the tape after each screenshot by 0.1 (or 0.2, 0.5, 1)
+        seconds. Take your next screenshot. Proceed until you reach the end of
+        your replay. Quit Stunts/4D Sports Driving by pressing <CTRL+X>.
+
+     3) Imagine  that  you  took the first 10  seconds  of your replay with 10
+        pictures  (frames)  per second. So you have  100 .TGA files plus 1 for
+        00:00.00.  Each picture occupies exactly 64.786 bytes, i.e. this short
+        sequence  of pictures takes ~6.390 Kbyte  on your hard disk. So please
+        bare in mind that 1 minute would take ~37 Mbyte!!!
+
+     4) You do not need PROGRAB any more.
+
+        # prograb /u
+
+     5) DTA  will build a .FLI animation  from your screenshots. This may take
+        several seconds or even minutes.
+
+        # dta *.tga /snnn
+
+        Where  nnn  should be 7 if you made  10 screenshots a second (14 for 5
+        shots, 35 for 2 shots, and 70 for one shot per second).
+
+     6) PICTVIEW can be used to display this animation.
+
+        # pictview anim.fli
+
+     For  your  most spectacular crashes remember  that  you can change camera
+     positions  and  zoom in/zoom out. If  you have a picture editing software
+     like  NeoPaint  or DeluxePaint you can  add  several nice effects to your
+     pictures before creating the .FLI file.
+
+     You are now able to create your own stunt movies & crash scenes without a
+     risk for your life!
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³ [8.0] FILE FORMATS                                                         ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  This  part  contains  information about the  specific  file  formats used in
+  Stunts/4D  Sports Driving. These information  might help some programmers to
+  write new editing/viewing programs.
+
+   [8.1] CAR RESOURCE FILES
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     OFFSET   SIZE      DESCRIPTION
+
+     0x0000   LongInt   Resource file size in bytes
+      ...
+
+   [8.2] HIGHSCORE FILES
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     In  highscore files (*.HIG) are stored: driver's name, driver's car name,
+     opponent's  initials,  opponent's car name and  the  time achieved by the
+     human  driver. Highscore files are always 364 bytes large (7 entries   52
+     bytes).
+
+     OFFSET   SIZE      DESCRIPTION
+
+     0x0000   17 Chars  Driver's name
+                          (zero-terminated string)
+     0x0011   25 Chars  Driver's car name
+                          (zero-terminated string)
+     0x002A   8 Chars   Opponent's initials + "/" + opponent's car name
+                          (zero-terminated string)
+     0x0032   Word      Time achieved by human driver
+
+     The time value has to be divided by 20 to get a result in seconds, e.g.
+
+          2131 / 20 = 106.55 seconds = 1 minute, 46 seconds, 55 hundredth
+
+   [8.3] OPPONENT RESOURCE FILES
+
+     VERSIONS: OCT-05-90
+
+     Each  opponent  has an individual  file (OPP?.RES) which contains his/her
+     speed  (must be between 5 and 200 mph) for the different track tiles, the
+     driver's  initials  and  his/her  messages  after  a  race.  Only version
+     OCT-05-90  has  these  files  unencrypted.  All  other  versions have the
+     opponent information in the OPP?.PRE files which are encrypted.
+
+     OFFSET   SIZE      DESCRIPTION
+
+     0x0000   LongInt   Resource file size in bytes
+      ...
+     0x00DE   2 Chars   Opponent's initials
+      ...
+     0x019B   Byte      Paved road
+     0x019C   Byte      Dirty road
+     0x019D   Byte      Icy road
+     0x019E   Byte      Paved sharp corner
+     0x019F   Byte      Dirty sharp corner
+     0x01A0   Byte      Icy sharp corner
+     0x01A1   Byte      Paved corner
+     0x01A2   Byte      Dirty corner
+     0x01A3   Byte      Icy corner
+     0x01A4   Byte      Bridge
+     0x01A5   Byte      Paved slalom road
+     0x01A6   Byte      Corkscrew up/down
+     0x01A7   Byte      Chicane
+     0x01A8   Byte      Loop
+     0x01A9   Byte      Corkscrew left/right, Pipe
+      ...
+
+   [8.4] REPLAY FILES
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     There  are  two  different  formats of  replay  files.  The old format is
+     compatible with versions OCT-05-90 and DEC-13-90. The new format was used
+     in FEB-12-91 and FEB-25-91.
+
+     CONFIGURATION BLOCK
+
+     The  configuration  block  starts at offset  0x0000  and is 24 Bytes (new
+     format: 26 Bytes) long.
+
+     OFFSET   SIZE      DESCRIPTION
+
+     0x0000   4 Chars   Driver's car abbreviation
+     0x0004   Byte      Driver's car color number
+     0x0005   Byte      Driver's shift mode
+                          0x00 = manual
+                          0x01 = auto
+     0x0006   Byte      Opponent number
+                          0x00 = no opponent
+                          0x01 = Squealin' Bernie Rubber
+                          0x02 = Herr Otto Partz
+                          0x03 = Smokin' Joe Stallin
+                          0x04 = Cherry Chassis
+                          0x05 = Helen Wheels
+                          0x06 = Skid Vicious
+     0x0007   4 Chars   Opponent's car abbreviation
+     0x000B   Byte      Opponent's car color number
+     0x000C   Byte      Opponent's shift mode
+                          0x00 = manual
+                          0x01 = auto
+     0x000D   9 Chars   Track name
+                          (zero-terminated string)
+
+     OLD FORMAT
+
+     0x0016   Word      Replay length in 1/20 of a second
+
+     NEW FORMAT
+
+     0x0016   Word      Replay length divisor?
+     0x0018   Word      Keyboard Event Block length in bytes
+                          (To determine the replay time in seconds you have
+                           to divide this value by the word at offset 0x0016.
+                           See section [8.2].)
+
+     TRACK BLOCK
+
+     The track block starts at offset 0x0018 (new format: 0x001A) and is 1,802
+     bytes long. See section [8.5].
+
+     KEYBOARD EVENT BLOCK
+
+     At  offset  0x0722 (new format: 0x0724)  the keyboard event block begins.
+     Each  event  is  represented  by one byte  and  can  consist of up to six
+     simultanously keypresses (in theory).
+
+     The  following chart shows how keypresses  are encoded. If a specific bit
+     is set the corresponding key was pressed, if the bit is clear the key has
+     been released.
+
+                           Bit 76543210   Keyboard event
+                               ³³³³³³³³
+                               ³³³³³³³ÀÄÄ Accelerate key pressed
+                               ³³³³³³ÀÄÄÄ Brake key pressed
+                               ³³³³³ÀÄÄÄÄ Right key pressed
+                               ³³³³ÀÄÄÄÄÄ Left key pressed
+                               ³³³ÀÄÄÄÄÄÄ Shift up key pressed
+                               ³³ÀÄÄÄÄÄÄÄ Shift down key pressed
+                               ÀÁÄÄÄÄÄÄÄÄ Unused (should be 0)
+
+     But  how large is the keyboard event  block? You will find out by reading
+     the  word value at offset 0x0016 (new  format: 0x0018). It shows how many
+     bytes you have to process.
+
+     FORMAT DETECTION
+
+     To  detect the old format you have to  read the word at offset 0x0016. If
+     its  value + 0x0722 corresponds to the replay file size you have detected
+     the old replay file format.
+
+     For  the  new format you have to read  the  word at offset 0x0018. If its
+     value  + 0x0724 corresponds to the replay file size you have detected the
+     new replay file format.
+
+     Weird, huh?!
+
+     CONCLUSION
+
+     As  you see from above you can write a replay file viewer and probably an
+     editor.  But  writing a converter between the  old  and the new format is
+     useless,  because  there  are some  things,  which we call "environmental
+     conditions",  that  influence the behaviour of  a car too. These settings
+     vary from version to version and can't be controlled by the user.
+
+*  [8.5] TRACK FILES
+
+     (major corrections by Markus Nagelholz)
+
+     VERSIONS: OCT-05-90, DEC-13-90, FEB-12-91, FEB-25-91
+
+     Each  track is on a 30x30 grid of squares:  30 x 30 = 900 bytes for track
+     layout + 1 byte for horizon + 30 x 30 = 900 bytes for terrain information
+     + 1 pad byte (zero), i.e. any track file should be 1,802 bytes long.
+
+     Track  layout starts at offset 0x0000, which is the bottom left corner of
+     the  track  [30/01]. The next element is  [30/02], and so on. The mapping
+     system  is therefore row by row, bottom to top. Offset 0x0383 defines the
+     top right track element [01/30].
+
+     Horizon  is  at offset 0x0384.
+
+     Terrain  elements start at offset 0x0385. The coding system is row by row
+     too  (from left to right), but from  top to bottom (contrary to the track
+     elements).
+
+     TRACK VALUES
+
+     Empty track elements have the value 0.
+
+     NOTE: A value of 2 displays the currently selected car in the default
+           color. A value of 3 represents the opponent's car.
+
+     Multi-field  elements (e.g. banked corners, chicanes, ...) have a special
+     coding system:
+
+         ID 255
+        254 253
+
+     2-field  elements  (corkscrews  left/right and  loops)  only  have the ID
+     element and 255 (horizontally oriented) or 254 (vertically oriented). The
+     element  is  defined  by  the top left  byte  (ID).  The whole element is
+     displayed  and  also the track is valid,  even  if the bytes of the other
+     sub-elements are set to 0.
+
+     If  a  sub-element  is not set with  the  values described above, it will
+     still  be displayed as defined by the ID element, but it will behave like
+     the track element corresponding to the specific value.
+
+     If  a  track has been created with  some of the special effects described
+     above,  it should only be opened  with special editors like TRACK BLASTER
+     PRO  and  not  with  the integrated  editor  of  the game. Otherwise such
+     elements will be deleted.
+
+     VALUE      DESCRIPTION
+
+        0       Empty
+        1       ?
+        2       Ghost car 1 (currently selected car in default color)
+        3       Ghost car 2 (opponent's car in default color)
+      ...
+      253       ?
+      254       Vertically oriented 2-field element
+      255       Horizontally oriented 2-field element
+
+     HORIZON VALUES
+
+     VALUE      DESCRIPTION
+
+        0       Desert
+        1       Tropical
+        2       Alpine
+        3       City
+        4       Country
+
+     TERRAIN VALUES
+
+     X and Y describe the tile's position in the terrain selection window (can
+     be reached via <SHIFT+F1>) of the built-in track editor.
+
+     VALUE      DESCRIPTION             X       Y
+
+        0       Plain                   1       1
+        1       Lake                    2       1
+        2       Shore                   2       2
+        3       Shore                   1       2
+        4       Shore                   1       3
+        5       Shore                   1       4
+        6       Hill                    3       1
+        7       Descent                 4       2
+        8       Descent                 3       2
+        9       Ascent                  3       3
+       10       Ascent                  4       3
+       11       Descent                 2       5
+       12       Descent                 2       4
+       13       Ascent                  1       4
+       14       Ascent                  1       5
+       15       Descent with hill       4       5
+       16       Descent with hill       4       4
+       17       Ascent with hill        3       4
+       18       Ascent with hill        3       5
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+*³ [9.0] INTERNET RESOURCES                                                   ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  This  part  of the FAQ contains  some  interesting links to Stunts/4D Sports
+  Driving related stuff on the Internet.
+
+  4dStunts Speed Track
+
+    Tracks and high scores. There're also lots of information about the game.
+
+    <http://www.geocities.com/TimesSquare/Chamber/2152/>
+
+  Andrew Shugg's 4D Stunts Driving Page
+
+    Links, tracks and a very useful utility.
+
+    <http://www.omen.net.au/~aws/4dStunts/>
+
+  Autoracer's stunts page
+
+    Two different versions of Stunts, tracks, cars and a terrain editor.
+
+    <http://www.geocities.com/MotorCity/Speedway/7611/stunts.html>
+
+  brainSteen
+
+    The game, some tracks, cars and replays are available from this page.
+
+    <http://www.stuntsdriving.de/>
+
+  Christian Schuster's Stunts Site
+
+    Another very well designed page. There's a newsletter, lots of tracks,
+    hints and the game itself. Christian has also got his own driving contest.
+
+    <http://members.xoom.com/schoussi/>
+
+  CyberRacer's Stunts Page
+
+    The game, additional tracks, and experimental cars.
+
+    <http://www.geocities.com/TimesSquare/Chasm/2762/stunts.htm>
+
+  Gray's Stunts Page
+
+    Offers the actual game, tracks, replays, custom cars and much more.
+
+    <http://www.stunts.gamespage.com/>
+
+  Igor's Stunts Page
+
+    This site contains lots of Stunts info. Contains tracks, game info, and a
+    competition.
+
+    <http://www.angelfire.com/sd/stuntspage/>
+
+  Integri's Games! - Stunts
+
+    A track can be downloaded.
+
+    <http://www.interlinx.qc.ca/~integris/stunts.html>
+
+  Jurgen's homepage
+
+    Some tracks and highscores.
+
+    <http://www.geocities.com/SiliconValley/Code/5886/>
+
+  KHR's & JTK's World of Stunts Driving
+
+    A must visit page. Offers a lot of interesting stuff all around 4D/Stunts.
+
+    <http://www.kalpen.de/stunts/stunts.htm>
+
+  La seule page de Stunts française (in French)
+
+    Le site français pour les amateurs de Stunts francophone.
+
+    <http://members.xoom.com/fastball/stunts/>
+
+  Luke's 4D/Stunts Homepage
+
+    FAQ, tools, tracks, replays.
+
+    <http://www.dataway.ch/~lukasl/4dsports.html>
+
+  Mach_5's Home Page
+
+    A few tracks.
+
+    <http://www.geocities.com/Area51/Nebula/4994/>
+
+  Mark's Stunts Stuff
+
+    Some quotes, rating of tracks and designers and a competition.
+
+    <http://www.geocities.com/TimesSquare/6921/stunts.html>
+
+  Markus Nagelholz's Stunts Page
+
+    Home of all the "... Blaster" tools. These programs are really essentially
+    to every ambitious 4D/Stunts driver, so you must visit this site.
+
+    <http://www.geocities.com/TimesSquare/Castle/8554/>
+
+  Marv's Fanpage von Stunts (German)
+
+    On this site you'll find links, tracks, replays for 4D/Stunts. There is
+    also a tuned version of the Porsche March Indy.
+
+    <http://www.marv.de/stunts.htm>
+
+  Matteuz Stunts Page!
+
+    Nicely done page; some tracks and utilities.
+
+    <http://www.geocities.com/SiliconValley/Vista/3837/stunts.html>
+
+  NRGSpoon's Stunts Page
+
+    Page containing the actual game, tracks, and stuff about another game,
+    Acrophobia.
+
+    <http://nrgspoon.iwarp.com/>
+
+  Peter's 3D PC Driving Games Page
+
+    A page devoted to 3D driving games. Has a section about 4D/Stunts.
+
+    <http://www.fortunecity.com/underworld/fifa/168/driving.htm>
+
+  Petrol Peter's Stunts Page
+
+    Very comprehensive page; contains cheats, challenges, a lot of tracks and
+    some other cool information on 4D Stunts Driving.
+
+    <http://prozac.cwru.edu/stunts/stunts.html>
+
+  Royforever
+
+    Another comprehensive site. Has some very special tracks (BLASTS).
+
+    <http://come.to/stunts/>
+
+  STUNTS
+
+    Download Stunts version 1.1, and wicked tracks. Also, get the cracks for
+    version 1.1.
+
+    <http://www.cs.mcgill.ca/~abatko/stunts/stuntshome.htm>
+
+  Stunts!!! - Metal Marine's Lair
+
+    Offers a bunch of tracks and a few links.
+
+    <http://www.geocities.com/SiliconValley/Park/3291/stunts.html>
+
+  Stunts Official Message Board
+
+    Another message board. Less frequented than "The PitStop Braging Pages".
+
+    <http://www.InsideTheWeb.com/messageboard/mbs.cgi/mb10436>
+
+  Stunts Online
+
+    Stunts Online has almost everything you ever wanted to know about this
+    cool classic game. Another game that offers a wide range of material.
+
+    <http://members.xoom.com/stuntsonline/>
+
+  Stunts Page by Vajhra
+
+    Some tracks can be downloaded from here.
+
+    <http://www.powerup.com.au/~kitkat/stunts.html>
+
+  Stunts Racetracks by Tyrone Settlemeier
+
+    Quite a lot of tracks to download.
+
+    <http://www.proaxis.com/~settlet/Stunts.html>
+
+  Stunts Racing
+
+    On this site you can race in a Contset, you can race with any car you want
+    to. There are also some cool cars to download. Very well designed site!
+
+    <http://hem.fyristorg.com/bil/Stunts/>
+
+  Stunts Site by Bamse
+
+    Tracks, replays, links.
+
+    <http://www.angelfire.com/al/stuntz/>
+
+  Stunts World by Inavoeg
+
+    A 4D/Stunts driving contest.
+
+    <http://stunts.i.am/>
+
+  Stunts Zone
+
+    Some good tracks, tips and information on the game.
+
+    <http://members.tripod.com/~john_doe5/track.html>
+
+  SWIRL - Stunts World Internet Racing Leauge
+
+    This site is your gateway when competing for top times on Stunt tracks.
+
+    <http://www.angelfire.com/on/Swirl/>
+
+  The PitStop Braging Pages
+
+    A 4D/Stunts message board.
+
+    <http://www.InsideTheWeb.com/messageboard/mbs.cgi/mb119252>
+
+  The Stunts Page
+
+    Some tracks, a cool cheat car and a few screenshots of the game.
+
+    <http://www.geocities.com/Area51/Rampart/3455/stunts.html>
+
+  The Stunts Ring Homepage
+
+    The official homepage of the 4D/Stunts webring. It is now maintained by
+    Christian Schuster.
+
+    <http://www.geocities.com/SiliconValley/2536/joinring.htm>
+
+  The Stunts Shrine
+
+    This page by Alan Robinson distinguishes itself through an extensive
+    comparison between 4D Sports Driving and Stunts.
+
+    <http://members.tripod.com/~AlanRobinson/stunts_shrine.html>
+
+  Tom's Stunts Page
+
+    Another place where you can download the game, including the cracks.
+
+    <http://www.qnet.fi/tom/stunts/>
+
+  TSST - The Swedish Stunts Team
+
+    Yet another contest. Great looking site.
+
+    <http://stunts.da.ru/>
+
+  Widdie
+
+    A lot of cool stuff like landscapes, tracks, tools, links.
+
+    <http://www.free.prohosting.com/~stunts/>

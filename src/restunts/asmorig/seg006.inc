@@ -1,0 +1,24 @@
+seg006 segment byte public 'STUNTSC' use16
+    extrn init_polyinfo:proc
+    extrn copy_material_list_pointers:proc
+    extrn polyinfo_reset:proc
+    extrn select_cliprect_rotate:proc
+    extrn transformed_shape_op:proc
+    extrn transformed_shape_op_helper:proc
+    extrn rect_compare_point:proc
+    extrn transformed_shape_op_helper3:proc
+    extrn get_a_poly_info:proc
+    extrn mat_rot_zxy:proc
+    extrn rect_adjust_from_point:proc
+    extrn vector_op_unk2:proc
+    extrn calc_sincos80:proc
+    extrn nopsub_26552:proc
+    extrn rect_union:proc
+    extrn rect_intersect:proc
+    extrn rectlist_add_rect:proc
+    extrn rect_is_overlapping:proc
+    extrn rect_is_inside:proc
+    extrn rect_is_adjacent:proc
+    extrn rectlist_add_rects:proc
+    extrn rect_array_sort_by_top:proc
+seg006 ends

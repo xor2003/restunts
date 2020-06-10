@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>restunts progress report</title>
+<style type="text/css">
+h1 {
+  margin-bottom: 0;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 0;
+}
+table th, table td {
+  vertical-align: top;
+}
+table td {
+  border: 1px solid black;
+}
+table > tbody > tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+table th {
+  border: 0;
+  padding-top: 1em;
+  text-align: left;
+}
+table > thead > tr > th.status, table > tbody > tr > td.status {
+  font-weight: bold;
+  text-align: center;
+}
+table > tbody > tr > td.ported {
+  background-color: #6f6;
+}
+table > tbody > tr:nth-child(even) > td.ported {
+  background-color: #5d5;
+}
+table > tbody > tr > td.ignore {
+  background-color: #ccc;
+}
+table > tbody > tr:nth-child(even) > td.ignore {
+  background-color: #bbb;
+}
+table > tbody > tr > td.pending {
+  background-color: #f66;
+}
+table > tbody > tr:nth-child(even) > td.pending {
+  background-color: #d55;
+}
+code {
+  display: block;
+  margin-bottom: 1em;
+  white-space: pre;
+}
+</style>
+</head>
+<body>
+<h1>restunts progress report</h1>
+<table>
+  <thead>
+    <tr>
+      <th>seg000</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="stuntsmain"></a>stuntsmain</td><td><code>; File Name   : C:\stunts2\game.exe
+; Format      : MS-DOS executable (EXE)
+; Base Address: 1000h Range: 10000h-483D0h Loaded length: 30D40h
+; Entry Point : 2CC5:12
+; OS type         :  MS DOS
+; Application type:  Executable 16bit
+</code><small>1 callers, 106 calls, 490 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="run_intro_looped"></a>run_intro_looped</td><td><small>2 callers, 30 calls, 92 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_intro"></a>run_intro</td><td><small>1 callers, 28 calls, 78 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_intro_resources"></a>load_intro_resources</td><td><small>1 callers, 206 calls, 712 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_menu"></a>run_menu</td><td><small>1 callers, 30 calls, 139 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_tracks_menu"></a>run_tracks_menu</td><td><small>1 callers, 114 calls, 436 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="highscore_write_a"></a>highscore_write_a</td><td><small>4 callers, 12 calls, 99 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="highscore_text_unk"></a>highscore_text_unk</td><td><small>5 callers, 56 calls, 220 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="print_highscore_entry"></a>print_highscore_entry</td><td><small>2 callers, 20 calls, 131 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="enter_hiscore"></a>enter_hiscore</td><td><small>2 callers, 30 calls, 153 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="highscore_write_b"></a>highscore_write_b</td><td><small>1 callers, 4 calls, 58 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_car_menu"></a>run_car_menu</td><td><small>2 callers, 212 calls, 1171 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_opponent_menu"></a>run_opponent_menu</td><td><small>1 callers, 112 calls, 535 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="run_option_menu"></a>run_option_menu</td><td><small>1 callers, 54 calls, 206 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="end_hiscore"></a>end_hiscore</td><td><small>1 callers, 382 calls, 1739 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="security_check"></a>security_check</td><td><small>2 callers, 36 calls, 180 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="set_default_car"></a>set_default_car</td><td><small>1 callers, 0 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg001</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="opponent_op"></a>opponent_op</td><td><small>2 callers, 40 calls, 613 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mat_mul_vector2"></a>mat_mul_vector2</td><td><small>2 callers, 2 calls, 27 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="update_player_state"></a>update_player_state</td><td><small>2 callers, 170 calls, 2464 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="init_carstate_from_simd"></a>init_carstate_from_simd</td><td><small>3 callers, 0 calls, 226 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="init_game_state"></a>init_game_state</td><td><small>11 callers, 60 calls, 435 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="restore_gamestate"></a>restore_gamestate</td><td><small>5 callers, 8 calls, 94 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="update_gamestate"></a>update_gamestate</td><td><small>5 callers, 26 calls, 182 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="player_op"></a>player_op</td><td><small>2 callers, 44 calls, 589 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="detect_penalty"></a>detect_penalty</td><td><small>1 callers, 0 calls, 223 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="update_car_speed"></a>update_car_speed</td><td><small>3 callers, 16 calls, 492 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="update_grip"></a>update_grip</td><td><code>update_grip:
+former update_player_carstate
+</code><small>2 callers, 12 calls, 438 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="car_car_speed_adjust_maybe"></a>car_car_speed_adjust_maybe</td><td><small>1 callers, 18 calls, 142 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="carState_rc_op"></a>carState_rc_op</td><td><small>1 callers, 0 calls, 163 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="upd_statef20_from_steer_input"></a>upd_statef20_from_steer_input</td><td><small>1 callers, 2 calls, 105 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_carstate"></a>audio_carstate</td><td><small>13 callers, 20 calls, 391 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_unk3"></a>audio_unk3</td><td><small>1 callers, 4 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_18D06"></a>sub_18D06</td><td><small>1 callers, 4 calls, 30 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_18D60"></a>sub_18D60</td><td><small>10 callers, 0 calls, 320 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="car_car_coll_detect_maybe"></a>car_car_coll_detect_maybe</td><td><small>5 callers, 18 calls, 352 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_plantrak"></a>init_plantrak</td><td><small>1 callers, 6 calls, 148 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_opponent_op"></a>do_opponent_op</td><td><small>1 callers, 2 calls, 4 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="update_crash_state"></a>update_crash_state</td><td><code>former audio_engine_unk / set_AV_event_triggers
+Sets a player as crashed.
+Events include special sounds, bitmaps and animations
+and game screens triggered by game events such as
+crashes.
+</code><small>16 callers, 6 calls, 152 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="plane_rotate_op"></a>plane_rotate_op</td><td><code>This function appears to be used to rotate the
+velocity vector to its correct orientation according
+to both car direction and plane inclination.
+</code><small>5 callers, 20 calls, 163 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="plane_origin_op"></a>plane_origin_op</td><td><code>plane_origin_op:
+Given a global coordinates vector and a
+planindex, calculates the inner product
+between the corresponding vector in
+coordinates relative to the plane origin
+and the plane normal. Obvious use is to
+find on which side of a plane we are.
+</code><small>7 callers, 2 calls, 50 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="vec_normalInnerProduct"></a>vec_normalInnerProduct</td><td><small>1 callers, 8 calls, 62 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="state_op_unk"></a>state_op_unk</td><td><small>2 callers, 10 calls, 138 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_19BA0"></a>sub_19BA0</td><td><small>1 callers, 4 calls, 96 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="setup_aero_trackdata"></a>setup_aero_trackdata</td><td><small>4 callers, 18 calls, 133 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg002</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="update_rpm_from_speed"></a>update_rpm_from_speed</td><td><small>1 callers, 0 calls, 16 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_19DE8"></a>nopsub_19DE8</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_19DFF"></a>nopsub_19DFF</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_19E09"></a>nopsub_19E09</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_19E13"></a>nopsub_19E13</td><td><small>0 callers, 0 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="init_kevinrandom"></a>init_kevinrandom</td><td><small>2 callers, 0 calls, 19 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="get_kevinrandom_seed"></a>get_kevinrandom_seed</td><td><small>1 callers, 0 calls, 19 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="get_kevinrandom"></a>get_kevinrandom</td><td><small>13 callers, 0 calls, 25 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="intr0_handler"></a>intr0_handler</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_div0"></a>init_div0</td><td><small>1 callers, 0 calls, 15 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg003</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="sub_19F14"></a>sub_19F14</td><td><small>1 callers, 20 calls, 146 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_rect_arrays"></a>init_rect_arrays</td><td><small>2 callers, 0 calls, 59 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="update_frame"></a>update_frame</td><td><small>1 callers, 162 calls, 3038 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="skybox_op_helper2"></a>skybox_op_helper2</td><td><small>3 callers, 20 calls, 128 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="skybox_op"></a>skybox_op</td><td><small>1 callers, 68 calls, 650 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="transformed_shape_add_for_sort"></a>transformed_shape_add_for_sort</td><td><small>9 callers, 2 calls, 44 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_track_preview"></a>draw_track_preview</td><td><small>1 callers, 42 calls, 512 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_ingame_text"></a>draw_ingame_text</td><td><small>2 callers, 82 calls, 393 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_sinking"></a>do_sinking</td><td><small>2 callers, 8 calls, 56 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_crak"></a>init_crak</td><td><small>2 callers, 26 calls, 203 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_skybox"></a>load_skybox</td><td><small>2 callers, 6 calls, 94 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="unload_skybox"></a>unload_skybox</td><td><small>3 callers, 2 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_sdgame2_shapes"></a>load_sdgame2_shapes</td><td><small>1 callers, 4 calls, 39 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="free_sdgame2"></a>free_sdgame2</td><td><small>1 callers, 2 calls, 6 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="setup_intro"></a>setup_intro</td><td><small>1 callers, 90 calls, 468 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="intro_op"></a>intro_op</td><td><small>1 callers, 32 calls, 294 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg004</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="build_track_object"></a>build_track_object</td><td><small>4 callers, 82 calls, 2208 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="bto_auxiliary1"></a>bto_auxiliary1</td><td><small>1 callers, 0 calls, 364 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape3d_load_all"></a>shape3d_load_all</td><td><small>2 callers, 12 calls, 78 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="shape3d_free_all"></a>shape3d_free_all</td><td><small>2 callers, 4 calls, 16 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="shape3d_load_car_shapes"></a>shape3d_load_car_shapes</td><td><small>2 callers, 64 calls, 452 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="shape3d_free_car_shapes"></a>shape3d_free_car_shapes</td><td><small>3 callers, 8 calls, 48 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sub_204AE"></a>sub_204AE</td><td><small>4 callers, 20 calls, 215 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="track_setup"></a>track_setup</td><td><small>6 callers, 6 calls, 1484 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_opponent_data"></a>load_opponent_data</td><td><small>2 callers, 12 calls, 213 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="subst_hillroad_track"></a>subst_hillroad_track</td><td><small>5 callers, 0 calls, 125 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg005</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="run_game"></a>run_game</td><td><small>1 callers, 164 calls, 716 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="handle_ingame_kb_shortcuts"></a>handle_ingame_kb_shortcuts</td><td><small>2 callers, 8 calls, 113 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_unknown"></a>init_unknown</td><td><small>2 callers, 0 calls, 16 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="set_frame_callback"></a>set_frame_callback</td><td><small>1 callers, 2 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="remove_frame_callback"></a>remove_frame_callback</td><td><small>1 callers, 4 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="frame_callback"></a>frame_callback</td><td><small>0 callers, 12 calls, 87 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="replay_unk2"></a>replay_unk2</td><td><small>4 callers, 26 calls, 289 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2298C"></a>sub_2298C</td><td><small>1 callers, 14 calls, 312 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_load_replay"></a>file_load_replay</td><td><small>3 callers, 4 calls, 36 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_write_replay"></a>file_write_replay</td><td><small>1 callers, 2 calls, 33 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="setup_car_shapes"></a>setup_car_shapes</td><td><small>4 callers, 134 calls, 862 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="setup_player_cars"></a>setup_player_cars</td><td><small>2 callers, 60 calls, 235 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="free_player_cars"></a>free_player_cars</td><td><small>3 callers, 24 calls, 42 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mouse_minmax_position"></a>mouse_minmax_position</td><td><small>5 callers, 6 calls, 33 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="replay_unk"></a>replay_unk</td><td><small>1 callers, 0 calls, 68 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="loop_game"></a>loop_game</td><td><small>28 callers, 290 calls, 1733 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg006</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="init_polyinfo"></a>init_polyinfo</td><td><small>1 callers, 12 calls, 38 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="copy_material_list_pointers"></a>copy_material_list_pointers</td><td><small>1 callers, 0 calls, 15 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="polyinfo_reset"></a>polyinfo_reset</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="select_cliprect_rotate"></a>select_cliprect_rotate</td><td><small>4 callers, 10 calls, 67 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="transformed_shape_op"></a>transformed_shape_op</td><td><small>16 callers, 88 calls, 1398 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="transformed_shape_op_helper"></a>transformed_shape_op_helper</td><td><small>1 callers, 0 calls, 74 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_compare_point"></a>rect_compare_point</td><td><small>6 callers, 0 calls, 32 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="transformed_shape_op_helper3"></a>transformed_shape_op_helper3</td><td><small>2 callers, 4 calls, 86 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="get_a_poly_info"></a>get_a_poly_info</td><td><small>4 callers, 16 calls, 188 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mat_rot_zxy"></a>mat_rot_zxy</td><td><code>Combined rotation matrix for
+angles around all axes.
+</code><small>24 callers, 16 calls, 159 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_adjust_from_point"></a>rect_adjust_from_point</td><td><small>15 callers, 0 calls, 33 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="vector_op_unk2"></a>vector_op_unk2</td><td><small>1 callers, 14 calls, 126 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="calc_sincos80"></a>calc_sincos80</td><td><small>1 callers, 8 calls, 30 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_26552"></a>nopsub_26552</td><td><small>0 callers, 0 calls, 15 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="rect_union"></a>rect_union</td><td><small>17 callers, 0 calls, 47 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_intersect"></a>rect_intersect</td><td><small>8 callers, 0 calls, 56 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rectlist_add_rect"></a>rectlist_add_rect</td><td><small>4 callers, 14 calls, 347 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_is_overlapping"></a>rect_is_overlapping</td><td><small>1 callers, 0 calls, 29 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_is_inside"></a>rect_is_inside</td><td><small>2 callers, 0 calls, 26 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_is_adjacent"></a>rect_is_adjacent</td><td><small>1 callers, 0 calls, 57 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rectlist_add_rects"></a>rectlist_add_rects</td><td><small>4 callers, 6 calls, 106 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="rect_array_sort_by_top"></a>rect_array_sort_by_top</td><td><small>1 callers, 2 calls, 48 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg007</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audio_add_driver_timer"></a>audio_add_driver_timer</td><td><small>1 callers, 2 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_remove_driver_timer"></a>audio_remove_driver_timer</td><td><small>2 callers, 4 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="pad_id"></a>pad_id</td><td><small>9 callers, 0 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_init_engine"></a>audio_init_engine</td><td><small>2 callers, 39 calls, 253 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk"></a>audio_op_unk</td><td><small>2 callers, 6 calls, 51 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_function2"></a>audio_function2</td><td><small>6 callers, 2 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_driver_timer"></a>audio_driver_timer</td><td><small>0 callers, 16 calls, 153 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk2"></a>audio_op_unk2</td><td><small>2 callers, 8 calls, 87 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_27220"></a>nopsub_27220</td><td><small>0 callers, 4 calls, 34 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_2726C"></a>nopsub_2726C</td><td><small>0 callers, 4 calls, 30 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_272B0"></a>nopsub_272B0</td><td><small>0 callers, 4 calls, 30 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audio_function2_wrap"></a>audio_function2_wrap</td><td><small>2 callers, 4 calls, 30 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk3"></a>audio_op_unk3</td><td><small>1 callers, 2 calls, 26 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk4"></a>audio_op_unk4</td><td><small>1 callers, 2 calls, 26 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk5"></a>audio_op_unk5</td><td><small>1 callers, 4 calls, 37 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk6"></a>audio_op_unk6</td><td><small>1 callers, 4 calls, 37 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_op_unk7"></a>audio_op_unk7</td><td><small>3 callers, 2 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_27489"></a>nopsub_27489</td><td><small>0 callers, 2 calls, 19 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg008</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="sub_274B0"></a>sub_274B0</td><td><small>1 callers, 16 calls, 114 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_275C6"></a>sub_275C6</td><td><small>5 callers, 10 calls, 81 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="show_dialog"></a>show_dialog</td><td><small>38 callers, 68 calls, 708 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_fileselect_dialog"></a>do_fileselect_dialog</td><td><small>4 callers, 84 calls, 671 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_build_path"></a>file_build_path</td><td><small>10 callers, 10 calls, 45 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="do_savefile_dialog"></a>do_savefile_dialog</td><td><small>2 callers, 24 calls, 125 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="parse_filepath_separators"></a>parse_filepath_separators</td><td><small>2 callers, 2 calls, 38 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="input_checking"></a>input_checking</td><td><small>16 callers, 14 calls, 171 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="input_do_checking"></a>input_do_checking</td><td><small>13 callers, 2 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_load_resfile"></a>file_load_resfile</td><td><small>17 callers, 14 calls, 55 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="unload_resource"></a>unload_resource</td><td><small>19 callers, 2 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="locate_shape_alt"></a>locate_shape_alt</td><td><small>36 callers, 2 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="locate_text_res"></a>locate_text_res</td><td><small>118 callers, 2 calls, 21 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="copy_string"></a>copy_string</td><td><small>70 callers, 0 calls, 23 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_track_op"></a>mouse_track_op</td><td><small>6 callers, 28 calls, 256 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_draw_transparent_check"></a>mouse_draw_transparent_check</td><td><small>37 callers, 2 calls, 8 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_draw_opaque_check"></a>mouse_draw_opaque_check</td><td><small>57 callers, 2 calls, 7 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_draw_opaque"></a>mouse_draw_opaque</td><td><small>3 callers, 8 calls, 20 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_draw_transparent"></a>mouse_draw_transparent</td><td><small>2 callers, 12 calls, 46 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_multi_hittest"></a>mouse_multi_hittest</td><td><small>11 callers, 0 calls, 44 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="check_input"></a>check_input</td><td><small>18 callers, 6 calls, 27 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_28F26"></a>nopsub_28F26</td><td><small>1 callers, 6 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_2_to_1_2"></a>sprite_copy_2_to_1_2</td><td><small>28 callers, 2 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_2_to_1_clear"></a>sprite_copy_2_to_1_clear</td><td><small>2 callers, 4 calls, 11 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_wnd_to_1"></a>sprite_copy_wnd_to_1</td><td><small>23 callers, 2 calls, 6 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_wnd_to_1_clear"></a>sprite_copy_wnd_to_1_clear</td><td><small>7 callers, 4 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="intro_draw_text"></a>intro_draw_text</td><td><small>38 callers, 10 calls, 42 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="hiscore_draw_text"></a>hiscore_draw_text</td><td><small>13 callers, 16 calls, 72 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="call_read_line"></a>call_read_line</td><td><small>5 callers, 8 calls, 54 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="input_repeat_check"></a>input_repeat_check</td><td><small>3 callers, 6 calls, 28 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_lines_unk"></a>draw_lines_unk</td><td><small>3 callers, 24 calls, 142 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_button"></a>draw_button</td><td><small>33 callers, 36 calls, 241 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape3d_init_shape"></a>shape3d_init_shape</td><td><small>18 callers, 0 calls, 69 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="font_op2_alt"></a>font_op2_alt</td><td><small>25 callers, 2 calls, 12 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_blit_to_video"></a>sprite_blit_to_video</td><td><small>14 callers, 20 calls, 62 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="show_waiting"></a>show_waiting</td><td><small>11 callers, 6 calls, 26 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="print_int_as_string_maybe"></a>print_int_as_string_maybe</td><td><small>7 callers, 2 calls, 69 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_29772"></a>sub_29772</td><td><small>9 callers, 0 calls, 5 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_timer_sprite_unk"></a>mouse_timer_sprite_unk</td><td><small>6 callers, 8 calls, 49 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_load_audiores"></a>file_load_audiores</td><td><small>3 callers, 8 calls, 36 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="audio_unload"></a>audio_unload</td><td><small>4 callers, 6 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="font_set_fontdef2"></a>font_set_fontdef2</td><td><small>11 callers, 2 calls, 12 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="font_set_fontdef"></a>font_set_fontdef</td><td><small>11 callers, 2 calls, 6 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="format_frame_as_string"></a>format_frame_as_string</td><td><small>10 callers, 16 calls, 89 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="get_super_random"></a>get_super_random</td><td><small>6 callers, 6 calls, 29 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_resource"></a>file_load_resource</td><td><small>23 callers, 20 calls, 74 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sub_29A86"></a>sub_29A86</td><td><small>1 callers, 6 calls, 44 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="input_push_status"></a>input_push_status</td><td><small>10 callers, 0 calls, 12 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="input_pop_status"></a>input_pop_status</td><td><small>10 callers, 2 calls, 17 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_joy_restext"></a>do_joy_restext</td><td><small>1 callers, 42 calls, 226 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_key_restext"></a>do_key_restext</td><td><small>1 callers, 12 calls, 34 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_mou_restext"></a>do_mou_restext</td><td><small>2 callers, 12 calls, 34 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_pau_restext"></a>do_pau_restext</td><td><small>0 callers, 12 calls, 32 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_mof_restext"></a>do_mof_restext</td><td><small>1 callers, 10 calls, 43 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_sonsof_restext"></a>do_sonsof_restext</td><td><small>1 callers, 10 calls, 43 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_dos_restext"></a>do_dos_restext</td><td><small>1 callers, 13 calls, 35 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_mrl_textres"></a>do_mrl_textres</td><td><small>2 callers, 18 calls, 140 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_dea_textres"></a>do_dea_textres</td><td><small>4 callers, 12 calls, 64 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="ensure_file_exists"></a>ensure_file_exists</td><td><small>11 callers, 8 calls, 40 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="do_mer_restext"></a>do_mer_restext</td><td><small>1 callers, 4 calls, 24 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="timer_get_delta_alt"></a>timer_get_delta_alt</td><td><small>30 callers, 2 calls, 2 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_3dres"></a>file_load_3dres</td><td><small>5 callers, 14 calls, 55 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg009</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="load_tracks_menu_shapes"></a>load_tracks_menu_shapes</td><td><small>1 callers, 232 calls, 2531 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="preRender_icons"></a>preRender_icons</td><td><small>1 callers, 14 calls, 196 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_2DtrackMap"></a>draw_2DtrackMap</td><td><small>1 callers, 34 calls, 763 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2C81C"></a>sub_2C81C</td><td><small>1 callers, 6 calls, 154 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2C9B4"></a>sub_2C9B4</td><td><small>2 callers, 0 calls, 229 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg010</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="start"></a>start</td><td><small>0 callers, 24 calls, 156 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="libsub_quit_to_dos_alt"></a>libsub_quit_to_dos_alt</td><td><small>3 callers, 4 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="libsub_quit_to_dos"></a>libsub_quit_to_dos</td><td><small>3 callers, 8 calls, 26 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2CE4A"></a>sub_2CE4A</td><td><small>1 callers, 1 calls, 18 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2CE77"></a>sub_2CE77</td><td><small>8 callers, 1 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="__FF_MSGBANNER"></a>__FF_MSGBANNER</td><td><small>3 callers, 5 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__fptrap"></a>__fptrap</td><td><small>5 callers, 0 calls, 2 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__chkstk"></a>__chkstk</td><td><small>1 callers, 0 calls, 19 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__nullcheck"></a>__nullcheck</td><td><small>1 callers, 4 calls, 17 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__setargv"></a>__setargv</td><td><small>1 callers, 0 calls, 204 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__setenvp"></a>__setenvp</td><td><small>1 callers, 2 calls, 59 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__NMSG_TEXT"></a>__NMSG_TEXT</td><td><small>1 callers, 0 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__NMSG_WRITE"></a>__NMSG_WRITE</td><td><small>6 callers, 2 calls, 21 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__myalloc"></a>__myalloc</td><td><small>1 callers, 4 calls, 48 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__maperror"></a>__maperror</td><td><small>1 callers, 2 calls, 3 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sub_2D1BC"></a>sub_2D1BC</td><td><small>3 callers, 0 calls, 22 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="_flushall"></a>_flushall</td><td><small>0 callers, 2 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_printf"></a>_printf</td><td><small>2 callers, 6 calls, 29 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__flsbuf"></a>__flsbuf</td><td><small>4 callers, 10 calls, 140 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__getbuf"></a>__getbuf</td><td><small>1 callers, 2 calls, 43 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__stbuf"></a>__stbuf</td><td><small>1 callers, 0 calls, 52 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__ftbuf"></a>__ftbuf</td><td><small>1 callers, 8 calls, 60 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_fflush"></a>_fflush</td><td><small>3 callers, 2 calls, 48 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__output"></a>__output</td><td><small>2 callers, 21 calls, 302 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="iprint"></a>iprint</td><td><small>3 callers, 6 calls, 117 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprint"></a>sprint</td><td><small>1 callers, 6 calls, 91 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="fprint"></a>fprint</td><td><small>1 callers, 10 calls, 62 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_outc"></a>_outc</td><td><small>5 callers, 2 calls, 29 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="putpad"></a>putpad</td><td><small>4 callers, 2 calls, 40 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="putbuf"></a>putbuf</td><td><small>3 callers, 2 calls, 44 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_out"></a>_out</td><td><small>2 callers, 18 calls, 90 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="putsign"></a>putsign</td><td><small>2 callers, 2 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="putprefix"></a>putprefix</td><td><small>2 callers, 4 calls, 17 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="getnum"></a>getnum</td><td><small>2 callers, 0 calls, 56 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="flagchar"></a>flagchar</td><td><small>1 callers, 0 calls, 22 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_lseek"></a>_lseek</td><td><small>1 callers, 0 calls, 46 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_write"></a>_write</td><td><small>3 callers, 8 calls, 136 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_stackavail"></a>_stackavail</td><td><small>1 callers, 0 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="unknown_libname_1"></a>unknown_libname_1</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="unknown_libname_2"></a>unknown_libname_2</td><td><small>1 callers, 4 calls, 34 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__amalloc"></a>__amalloc</td><td><small>1 callers, 6 calls, 106 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__amexpand"></a>__amexpand</td><td><small>1 callers, 2 calls, 29 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__amlink"></a>__amlink</td><td><small>3 callers, 2 calls, 18 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__amallocbrk"></a>__amallocbrk</td><td><small>2 callers, 2 calls, 21 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_brkctl"></a>_brkctl</td><td><small>1 callers, 4 calls, 53 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sub_2E290"></a>sub_2E290</td><td><small>2 callers, 0 calls, 39 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_strcat"></a>_strcat</td><td><small>28 callers, 0 calls, 31 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_strcpy"></a>_strcpy</td><td><small>29 callers, 0 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_strcmp"></a>_strcmp</td><td><small>3 callers, 0 calls, 22 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_strlen"></a>_strlen</td><td><small>26 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_itoa"></a>_itoa</td><td><small>1 callers, 0 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_ultoa"></a>_ultoa</td><td><small>1 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_abort"></a>_abort</td><td><small>1 callers, 5 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_isatty"></a>_isatty</td><td><small>3 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_int86"></a>_int86</td><td><small>12 callers, 3 calls, 52 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_sprintf"></a>_sprintf</td><td><small>2 callers, 4 calls, 40 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_stricmp"></a>_stricmp</td><td><small>4 callers, 0 calls, 87 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_abs"></a>_abs</td><td><small>11 callers, 0 calls, 17 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_raise"></a>_raise</td><td><small>1 callers, 5 calls, 66 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_srand"></a>_srand</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_rand"></a>_rand</td><td><small>3 callers, 2 calls, 15 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_signal"></a>_signal</td><td><small>0 callers, 3 calls, 67 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__sigentry"></a>__sigentry</td><td><small>3 callers, 4 calls, 120 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="_strrchr"></a>_strrchr</td><td><small>2 callers, 0 calls, 27 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__aFldiv"></a>__aFldiv</td><td><small>38 callers, 0 calls, 74 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__aFlmul"></a>__aFlmul</td><td><small>51 callers, 0 calls, 23 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__aFlshr"></a>__aFlshr</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="unknown_libname_3"></a>unknown_libname_3</td><td><small>1 callers, 2 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__aFFblmul"></a>__aFFblmul</td><td><small>1 callers, 2 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="unknown_libname_4"></a>unknown_libname_4</td><td><small>3 callers, 2 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="unknown_libname_5"></a>unknown_libname_5</td><td><small>1 callers, 2 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="__aFuldiv"></a>__aFuldiv</td><td><small>8 callers, 0 calls, 47 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg011</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="polarRadius3D"></a>polarRadius3D</td><td><small>5 callers, 4 calls, 13 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg012</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="fatal_error"></a>fatal_error</td><td><small>21 callers, 11 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="polarAngle"></a>polarAngle</td><td><small>25 callers, 0 calls, 59 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sub_2EAD4"></a>sub_2EAD4</td><td><small>5 callers, 0 calls, 5 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="set_add_value"></a>set_add_value</td><td><small>2 callers, 4 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2EB07"></a>sub_2EB07</td><td><small>1 callers, 2 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_2EB1E"></a>sub_2EB1E</td><td><small>1 callers, 4 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_line_related_alt"></a>draw_line_related_alt</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="draw_line_related"></a>draw_line_related</td><td><small>4 callers, 0 calls, 752 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="parse_shape2d_helper"></a>parse_shape2d_helper</td><td><small>5 callers, 0 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="parse_shape2d_helper2"></a>parse_shape2d_helper2</td><td><small>1 callers, 0 calls, 20 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="criterr_interrupt_handler"></a>criterr_interrupt_handler</td><td><small>0 callers, 1 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="set_criterr_handler"></a>set_criterr_handler</td><td><small>1 callers, 2 calls, 28 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="criterr_exithandler"></a>criterr_exithandler</td><td><small>0 callers, 0 calls, 11 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="preRender_unk"></a>preRender_unk</td><td><small>1 callers, 0 calls, 29 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_2F424"></a>nopsub_2F424</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_2F436"></a>nopsub_2F436</td><td><small>0 callers, 0 calls, 1235 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="preRender_line"></a>preRender_line</td><td><small>35 callers, 4 calls, 24 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="add_exit_handler"></a>add_exit_handler</td><td><small>5 callers, 1 calls, 23 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="call_exitlist"></a>call_exitlist</td><td><small>2 callers, 1 calls, 13 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="call_exitlist2"></a>call_exitlist2</td><td><small>1 callers, 3 calls, 5 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_paras"></a>file_paras</td><td><small>2 callers, 0 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_paras_nofatal"></a>file_paras_nofatal</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_paras_fatal"></a>file_paras_fatal</td><td><small>0 callers, 1 calls, 64 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_paras"></a>file_decomp_paras</td><td><small>1 callers, 0 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_paras_nofatal"></a>file_decomp_paras_nofatal</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_paras_fatal"></a>file_decomp_paras_fatal</td><td><small>0 callers, 1 calls, 66 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_find"></a>file_find</td><td><small>6 callers, 0 calls, 44 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_find_next"></a>file_find_next</td><td><small>1 callers, 0 calls, 13 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="multiply_and_scale"></a>multiply_and_scale</td><td><code>Formely called scale_value.
+Computes the product between the
+two arguments and divides it by
+2^14 = 16384. 2^14 is a
+normalization value for cosines
+and sines given by sinetable.
+</code><small>101 callers, 0 calls, 13 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="video_set_mode4"></a>video_set_mode4</td><td><small>1 callers, 0 calls, 41 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="polarRadius2D"></a>polarRadius2D</td><td><small>21 callers, 6 calls, 47 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="video_set_mode7"></a>video_set_mode7</td><td><small>1 callers, 2 calls, 44 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_30180"></a>nopsub_30180</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="timer_setup_interrupt"></a>timer_setup_interrupt</td><td><small>1 callers, 2 calls, 72 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_stop_unk"></a>audio_stop_unk</td><td><small>2 callers, 0 calls, 30 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="timer_reg_callback"></a>timer_reg_callback</td><td><small>3 callers, 1 calls, 19 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="timer_remove_callback"></a>timer_remove_callback</td><td><small>3 callers, 0 calls, 28 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="compare_ds_ss"></a>compare_ds_ss</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="timer_intr_callback"></a>timer_intr_callback</td><td><small>0 callers, 3 calls, 63 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_303BA"></a>sub_303BA</td><td><small>1 callers, 1 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="set_bios_mode3"></a>set_bios_mode3</td><td><small>1 callers, 2 calls, 17 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="kb_parse_key"></a>kb_parse_key</td><td><small>2 callers, 1 calls, 40 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="kb_reg_callback"></a>kb_reg_callback</td><td><small>9 callers, 0 calls, 35 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_304AF"></a>nopsub_304AF</td><td><small>0 callers, 0 calls, 4 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_304B6"></a>nopsub_304B6</td><td><small>0 callers, 4 calls, 41 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="kb_get_char"></a>kb_get_char</td><td><small>3 callers, 2 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="get_kb_or_joy_flags"></a>get_kb_or_joy_flags</td><td><small>6 callers, 2 calls, 46 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_305C8"></a>nopsub_305C8</td><td><small>0 callers, 0 calls, 19 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="get_joy_flags"></a>get_joy_flags</td><td><small>4 callers, 0 calls, 156 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_307B4"></a>sub_307B4</td><td><small>1 callers, 0 calls, 6 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_307D2"></a>sub_307D2</td><td><small>1 callers, 0 calls, 8 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_307E3"></a>sub_307E3</td><td><small>1 callers, 0 calls, 9 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_307FA"></a>nopsub_307FA</td><td><small>0 callers, 0 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="kb_init_interrupt"></a>kb_init_interrupt</td><td><small>1 callers, 2 calls, 37 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_exit_handler"></a>kb_exit_handler</td><td><small>1 callers, 0 calls, 22 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_int9_handler"></a>kb_int9_handler</td><td><small>0 callers, 0 calls, 89 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_int16_handler"></a>kb_int16_handler</td><td><small>0 callers, 0 calls, 40 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_get_key_state"></a>kb_get_key_state</td><td><small>3 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_call_readchar_callback"></a>kb_call_readchar_callback</td><td><small>5 callers, 1 calls, 2 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_read_char"></a>kb_read_char</td><td><small>1 callers, 0 calls, 11 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_checking"></a>kb_checking</td><td><small>2 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_kb_set_readchar_callback"></a>nopsub_kb_set_readchar_callback</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_kb_get_readchar_callback"></a>nopsub_kb_get_readchar_callback</td><td><small>0 callers, 0 calls, 3 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="flush_stdin"></a>flush_stdin</td><td><small>3 callers, 2 calls, 4 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="kb_check"></a>kb_check</td><td><small>2 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_30A77"></a>nopsub_30A77</td><td><small>2 callers, 4 calls, 11 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_30A97"></a>nopsub_30A97</td><td><small>0 callers, 6 calls, 22 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_read"></a>file_read</td><td><small>2 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_read_nofatal"></a>file_read_nofatal</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_read_fatal"></a>file_read_fatal</td><td><small>4 callers, 1 calls, 48 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_rle"></a>file_decomp_rle</td><td><small>1 callers, 6 calls, 63 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_rle_single"></a>file_decomp_rle_single</td><td><small>1 callers, 0 calls, 93 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_rle_seq"></a>file_decomp_rle_seq</td><td><small>1 callers, 0 calls, 78 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_binary"></a>file_load_binary</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_binary_nofatal"></a>file_load_binary_nofatal</td><td><small>8 callers, 8 calls, 36 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp"></a>file_decomp</td><td><small>3 callers, 0 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_nofatal"></a>file_decomp_nofatal</td><td><small>4 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_fatal"></a>file_decomp_fatal</td><td><small>1 callers, 20 calls, 164 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="locate_shape_nofatal"></a>locate_shape_nofatal</td><td><small>8 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="locate_shape_fatal"></a>locate_shape_fatal</td><td><small>43 callers, 0 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="locate_sound_fatal"></a>locate_sound_fatal</td><td><small>1 callers, 1 calls, 96 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_alloc_resmem"></a>mmgr_alloc_resmem</td><td><small>2 callers, 0 calls, 46 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_alloc_a000"></a>mmgr_alloc_a000</td><td><small>1 callers, 2 calls, 5 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_310FE"></a>nopsub_310FE</td><td><small>0 callers, 2 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_3111D"></a>nopsub_3111D</td><td><small>0 callers, 0 calls, 22 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_31157"></a>nopsub_31157</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_31169"></a>nopsub_31169</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="mmgr_get_ofs_diff"></a>mmgr_get_ofs_diff</td><td><small>1 callers, 0 calls, 6 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_copy_paras"></a>mmgr_copy_paras</td><td><small>3 callers, 0 calls, 36 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="copy_paras_reverse"></a>copy_paras_reverse</td><td><small>5 callers, 0 calls, 44 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_path_to_name"></a>mmgr_path_to_name</td><td><small>4 callers, 0 calls, 19 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_alloc_pages"></a>mmgr_alloc_pages</td><td><small>8 callers, 4 calls, 66 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_find_free"></a>mmgr_find_free</td><td><small>1 callers, 2 calls, 45 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_get_chunk_by_name"></a>mmgr_get_chunk_by_name</td><td><small>5 callers, 6 calls, 72 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_31429"></a>nopsub_31429</td><td><small>0 callers, 2 calls, 40 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="mmgr_free"></a>mmgr_free</td><td><small>23 callers, 3 calls, 62 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_31525"></a>nopsub_31525</td><td><small>0 callers, 4 calls, 102 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="mmgr_release"></a>mmgr_release</td><td><small>12 callers, 0 calls, 24 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_get_chunk_size"></a>mmgr_get_chunk_size</td><td><small>2 callers, 0 calls, 18 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_resize_memory"></a>mmgr_resize_memory</td><td><small>2 callers, 2 calls, 56 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_op_unk"></a>mmgr_op_unk</td><td><small>2 callers, 2 calls, 51 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="preRender_default"></a>preRender_default</td><td><small>1 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="preRender_default_alt"></a>preRender_default_alt</td><td><small>4 callers, 0 calls, 12 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="skybox_op_helper"></a>skybox_op_helper</td><td><small>2 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="preRender_wheel_helper4"></a>preRender_wheel_helper4</td><td><small>2 callers, 17 calls, 193 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="preRender_helper"></a>preRender_helper</td><td><small>2 callers, 0 calls, 70 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="preRender_helper2"></a>preRender_helper2</td><td><small>4 callers, 0 calls, 105 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="preRender_helper3"></a>preRender_helper3</td><td><small>2 callers, 0 calls, 408 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_31F39"></a>nopsub_31F39</td><td><small>0 callers, 0 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_31F55"></a>nopsub_31F55</td><td><small>0 callers, 9 calls, 200 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_3215A"></a>nopsub_3215A</td><td><small>1 callers, 0 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_3216C"></a>nopsub_3216C</td><td><small>2 callers, 0 calls, 25 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_3219D"></a>nopsub_3219D</td><td><small>6 callers, 10 calls, 100 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_322B4"></a>nopsub_322B4</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_322C0"></a>nopsub_322C0</td><td><small>0 callers, 0 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_322DF"></a>nopsub_322DF</td><td><small>0 callers, 0 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="set_projection"></a>set_projection</td><td><small>4 callers, 10 calls, 92 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="vector_to_point"></a>vector_to_point</td><td><code>returns something like x/z, y/z
+</code><small>10 callers, 0 calls, 97 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_free_wnd"></a>sprite_free_wnd</td><td><small>24 callers, 3 calls, 35 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_write_nofatal"></a>file_write_nofatal</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_write_fatal"></a>file_write_fatal</td><td><small>4 callers, 1 calls, 65 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="video_add_exithandler"></a>video_add_exithandler</td><td><small>1 callers, 2 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="video_on_exit"></a>video_on_exit</td><td><small>0 callers, 2 calls, 22 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_both_to_arg"></a>sprite_copy_both_to_arg</td><td><small>3 callers, 0 calls, 19 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_arg_to_both"></a>sprite_copy_arg_to_both</td><td><small>3 callers, 0 calls, 17 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_get_res_shape_count"></a>file_get_res_shape_count</td><td><small>3 callers, 0 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_get_shape2d"></a>file_get_shape2d</td><td><small>8 callers, 0 calls, 44 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_326BA"></a>nopsub_326BA</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sin_fast"></a>sin_fast</td><td><code>Returns a sine from a given angle.
+Please note there is a 4000h factor
+included in the sine!!
+</code><small>33 callers, 0 calls, 36 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="cos_fast"></a>cos_fast</td><td><small>35 callers, 0 calls, 6 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_32738"></a>nopsub_32738</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_32746"></a>nopsub_32746</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_32751"></a>nopsub_32751</td><td><small>0 callers, 0 calls, 6 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="transformed_shape_op_helper2"></a>transformed_shape_op_helper2</td><td><small>1 callers, 0 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_3276A"></a>nopsub_3276A</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="timer_get_counter"></a>timer_get_counter</td><td><small>9 callers, 0 calls, 5 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_custom_delta"></a>timer_custom_delta</td><td><small>0 callers, 0 calls, 12 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_get_delta"></a>timer_get_delta</td><td><small>3 callers, 0 calls, 11 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_reset"></a>timer_reset</td><td><small>0 callers, 0 calls, 4 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_copy_counter"></a>timer_copy_counter</td><td><small>5 callers, 2 calls, 9 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_wait_for_dx"></a>timer_wait_for_dx</td><td><small>5 callers, 2 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_compare_dx"></a>timer_compare_dx</td><td><small>1 callers, 2 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="timer_get_counter_unk"></a>timer_get_counter_unk</td><td><small>3 callers, 4 calls, 18 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="font_op"></a>font_op</td><td><small>2 callers, 0 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="font_op2"></a>font_op2</td><td><small>18 callers, 0 calls, 32 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="preRender_patterned"></a>preRender_patterned</td><td><small>1 callers, 0 calls, 26 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_328C9"></a>nopsub_328C9</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_328DB"></a>nopsub_328DB</td><td><small>0 callers, 0 calls, 9 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="mat_mul_vector"></a>mat_mul_vector</td><td><small>54 callers, 0 calls, 122 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mat_multiply"></a>mat_multiply</td><td><small>7 callers, 0 calls, 60 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mat_invert"></a>mat_invert</td><td><code>Creates inverted 3x3 matrix
+</code><small>3 callers, 0 calls, 48 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_unflip_shape2d"></a>file_unflip_shape2d</td><td><code>enumerates shapes in an uncompressed shape resource 
+and flips x/y/interlaced depending on shape flags
+</code><small>1 callers, 2 calls, 425 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_decomp_vle"></a>file_decomp_vle</td><td><small>1 callers, 0 calls, 271 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_32FEE"></a>nopsub_32FEE</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="video_get_status"></a>video_get_status</td><td><small>2 callers, 0 calls, 6 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_33006"></a>nopsub_33006</td><td><small>0 callers, 0 calls, 8 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="vector_op_unk"></a>vector_op_unk</td><td><small>6 callers, 0 calls, 40 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="preRender_sphere"></a>preRender_sphere</td><td><small>2 callers, 6 calls, 169 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_3320E"></a>nopsub_3320E</td><td><small>0 callers, 0 calls, 43 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_set_1_size"></a>sprite_set_1_size</td><td><small>49 callers, 0 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="video_clear_color"></a>video_clear_color</td><td><small>3 callers, 0 calls, 13 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_clear_1_color"></a>sprite_clear_1_color</td><td><small>24 callers, 0 calls, 49 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_33330"></a>nopsub_33330</td><td><small>0 callers, 0 calls, 10 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="draw_unknown_lines"></a>draw_unknown_lines</td><td><small>0 callers, 0 calls, 52 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="putpixel_line1_maybe"></a>putpixel_line1_maybe</td><td><small>1 callers, 0 calls, 181 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_1_unk2"></a>sprite_1_unk2</td><td><small>6 callers, 0 calls, 35 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_1_unk"></a>sprite_1_unk</td><td><small>17 callers, 0 calls, 86 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_1_unk3"></a>sprite_1_unk3</td><td><small>1 callers, 0 calls, 76 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="font_draw_text"></a>font_draw_text</td><td><small>28 callers, 0 calls, 89 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="video_set_mode_13h"></a>video_set_mode_13h</td><td><small>1 callers, 4 calls, 19 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_res_fatal_thunk"></a>file_load_shape2d_res_fatal_thunk</td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_res_nofatal_thunk"></a>file_load_shape2d_res_nofatal_thunk</td><td><small>1 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_res_thunk"></a>file_load_shape2d_res_thunk</td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="parse_shape2d_thunk"></a>parse_shape2d_thunk</td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_fatal_thunk"></a>file_load_shape2d_fatal_thunk</td><td><small>5 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_nofatal_thunk"></a>file_load_shape2d_nofatal_thunk</td><td><small>2 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_thunk"></a>file_load_shape2d_thunk</td><td><small>0 callers, 0 calls, 2 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_and_alt2"></a>sprite_putimage_and_alt2</td><td><small>2 callers, 0 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_and"></a>sprite_putimage_and</td><td><small>5 callers, 0 calls, 157 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_339FA"></a>nopsub_339FA</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="putpixel_iconMask"></a>putpixel_iconMask</td><td><small>3 callers, 0 calls, 78 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_33AC0"></a>nopsub_33AC0</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_33AE4"></a>nopsub_33AE4</td><td><small>0 callers, 0 calls, 14 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="shape2d_render_bmp_as_mask"></a>shape2d_render_bmp_as_mask</td><td><small>3 callers, 0 calls, 66 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_33B98"></a>nopsub_33B98</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_and_alt"></a>sprite_putimage_and_alt</td><td><small>25 callers, 0 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage"></a>sprite_putimage</td><td><small>13 callers, 0 calls, 127 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_33D0C"></a>nopsub_33D0C</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_shape_to_1"></a>sprite_shape_to_1</td><td><small>14 callers, 0 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_shape_to_1_alt"></a>sprite_shape_to_1_alt</td><td><small>7 callers, 0 calls, 52 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_33DBE"></a>nopsub_33DBE</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="shape2d_op_unk5"></a>shape2d_op_unk5</td><td><small>7 callers, 0 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape2d_op_unk"></a>shape2d_op_unk</td><td><small>6 callers, 0 calls, 64 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_33E90"></a>nopsub_33E90</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="shape2d_op_unk2"></a>shape2d_op_unk2</td><td><small>2 callers, 0 calls, 14 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape2d_op_unk3"></a>shape2d_op_unk3</td><td><small>3 callers, 0 calls, 179 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_or_alt"></a>sprite_putimage_or_alt</td><td><small>2 callers, 0 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_or"></a>sprite_putimage_or</td><td><small>5 callers, 0 calls, 173 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="putpixel_iconFillings"></a>putpixel_iconFillings</td><td><small>3 callers, 0 calls, 108 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape2d_op_unk4"></a>shape2d_op_unk4</td><td><small>2 callers, 0 calls, 82 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_putimage_transparent"></a>sprite_putimage_transparent</td><td><small>5 callers, 0 calls, 162 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_34526"></a>sub_34526</td><td><small>3 callers, 0 calls, 65 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_345BC"></a>sub_345BC</td><td><small>16 callers, 0 calls, 101 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="video_set_palette"></a>video_set_palette</td><td><small>1 callers, 0 calls, 13 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_filled_lines"></a>draw_filled_lines</td><td><code>draws multiple sequential variable length horizontal lines + various optimizations
+</code><small>1 callers, 0 calls, 57 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_34736"></a>nopsub_34736</td><td><small>0 callers, 0 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sprite_clear_shape_alt"></a>sprite_clear_shape_alt</td><td><small>6 callers, 0 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_clear_shape"></a>sprite_clear_shape</td><td><small>1 callers, 0 calls, 39 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="shape_op_explosion"></a>shape_op_explosion</td><td><small>1 callers, 0 calls, 156 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="font_set_unk"></a>font_set_unk</td><td><small>22 callers, 0 calls, 55 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="set_fontdefseg"></a>set_fontdefseg</td><td><small>1 callers, 0 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="draw_patterned_lines"></a>draw_patterned_lines</td><td><small>0 callers, 0 calls, 51 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sprite_make_wnd"></a>sprite_make_wnd</td><td><small>25 callers, 3 calls, 80 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_set_1_from_argptr"></a>sprite_set_1_from_argptr</td><td><small>15 callers, 0 calls, 18 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="sprite_copy_2_to_1"></a>sprite_copy_2_to_1</td><td><small>9 callers, 2 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="putpixel_single_maybe"></a>putpixel_single_maybe</td><td><small>5 callers, 0 calls, 35 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_35B76"></a>sub_35B76</td><td><small>5 callers, 0 calls, 93 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_35C4E"></a>sub_35C4E</td><td><small>2 callers, 0 calls, 50 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_35DC8"></a>sub_35DC8</td><td><small>0 callers, 0 calls, 18 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_35DE6"></a>sub_35DE6</td><td><small>0 callers, 0 calls, 19 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_35E08"></a>sub_35E08</td><td><small>0 callers, 0 calls, 136 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_palmap_apply"></a>file_load_shape2d_palmap_apply</td><td><small>1 callers, 2 calls, 39 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_expand"></a>file_load_shape2d_expand</td><td><small>1 callers, 4 calls, 138 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_unflip_shape2d_pes"></a>file_unflip_shape2d_pes</td><td><small>1 callers, 2 calls, 81 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg013</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="sprite_1_unk4"></a>sprite_1_unk4</td><td><small>4 callers, 8 calls, 49 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg014</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="preRender_wheel_helper3"></a>preRender_wheel_helper3</td><td><small>2 callers, 24 calls, 174 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg015</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="preRender_sphere_helper2"></a>preRender_sphere_helper2</td><td><small>1 callers, 56 calls, 346 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg016</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="locate_many_resources"></a>locate_many_resources</td><td><small>12 callers, 2 calls, 20 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nopsub_367E4"></a>nopsub_367E4</td><td><small>0 callers, 2 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_36826"></a>nopsub_36826</td><td><small>0 callers, 2 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_36868"></a>nopsub_36868</td><td><small>0 callers, 2 calls, 26 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg017</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="mouse_set_pixratio"></a>mouse_set_pixratio</td><td><small>1 callers, 2 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_init"></a>mouse_init</td><td><small>1 callers, 8 calls, 54 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_set_minmax"></a>mouse_set_minmax</td><td><small>3 callers, 10 calls, 76 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_set_position"></a>mouse_set_position</td><td><small>1 callers, 2 calls, 20 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="mouse_get_state"></a>mouse_get_state</td><td><small>3 callers, 2 calls, 23 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_36A9A"></a>nopsub_36A9A</td><td><small>0 callers, 2 calls, 19 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_36ACA"></a>nopsub_36ACA</td><td><small>0 callers, 2 calls, 16 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg018</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="kb_shift_checking1"></a>kb_shift_checking1</td><td><small>1 callers, 2 calls, 5 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="kb_shift_checking2"></a>kb_shift_checking2</td><td><small>1 callers, 2 calls, 5 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg019</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="preRender_wheel_helper2"></a>preRender_wheel_helper2</td><td><small>1 callers, 12 calls, 63 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg020</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="preRender_sphere_helper"></a>preRender_sphere_helper</td><td><small>1 callers, 4 calls, 17 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg021</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="heapsort_by_order"></a>heapsort_by_order</td><td><small>2 callers, 0 calls, 66 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg022</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="preRender_wheel"></a>preRender_wheel</td><td><small>1 callers, 12 calls, 177 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg023</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="preRender_wheel_helper"></a>preRender_wheel_helper</td><td><small>1 callers, 2 calls, 38 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg024</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="mat_rot_x"></a>mat_rot_x</td><td><small>2 callers, 4 calls, 28 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mat_rot_y"></a>mat_rot_y</td><td><code>Calvin's notation names rotation matrices according
+to the axis of rotation, while Duplode tends to
+think in terms of the plane on which the rotating
+angle lies. So mat_rot_y might be called matRotXZ.
+This remark is just to avoid possible interpretation
+mistakes.
+</code><small>10 callers, 4 calls, 28 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mat_rot_z"></a>mat_rot_z</td><td><small>1 callers, 4 calls, 27 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg025</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sub_3702E"></a>sub_3702E</td><td><small>2 callers, 8 calls, 54 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg026</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="toupper"></a>toupper</td><td><small>2 callers, 0 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg027</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="init_audio_resources"></a>init_audio_resources</td><td><small>9 callers, 10 calls, 67 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_audio_finalize"></a>load_audio_finalize</td><td><small>1 callers, 5 calls, 58 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_unk"></a>audio_unk</td><td><small>7 callers, 5 calls, 82 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_372F4"></a>sub_372F4</td><td><small>7 callers, 3 calls, 43 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3736A"></a>sub_3736A</td><td><small>2 callers, 6 calls, 29 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_enable_flag2"></a>audio_enable_flag2</td><td><small>1 callers, 0 calls, 2 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_disable_flag2"></a>audio_disable_flag2</td><td><small>1 callers, 4 calls, 15 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_toggle_flag2"></a>audio_toggle_flag2</td><td><small>2 callers, 4 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_373FE"></a>nopsub_373FE</td><td><small>0 callers, 0 calls, 42 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_37456"></a>nopsub_37456</td><td><small>0 callers, 2 calls, 13 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="sub_37470"></a>sub_37470</td><td><small>1 callers, 0 calls, 45 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_374DE"></a>sub_374DE</td><td><small>1 callers, 2 calls, 13 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_check_flag2"></a>audio_check_flag2</td><td><small>1 callers, 2 calls, 16 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_check_flag"></a>audio_check_flag</td><td><small>9 callers, 4 calls, 125 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_init_chunk2"></a>audio_init_chunk2</td><td><small>6 callers, 4 calls, 32 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_enable_flag6"></a>audio_enable_flag6</td><td><small>1 callers, 2 calls, 22 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_disable_flag6"></a>audio_disable_flag6</td><td><small>1 callers, 2 calls, 27 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_toggle_flag6"></a>audio_toggle_flag6</td><td><small>2 callers, 4 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3771E"></a>sub_3771E</td><td><small>2 callers, 0 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_37750"></a>nopsub_37750</td><td><small>0 callers, 0 calls, 12 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audio_driver_func3F"></a>audio_driver_func3F</td><td><small>1 callers, 18 calls, 91 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_37868"></a>sub_37868</td><td><small>2 callers, 2 calls, 25 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_37898"></a>nopsub_37898</td><td><small>0 callers, 2 calls, 11 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_378AE"></a>nopsub_378AE</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="nopsub_378BC"></a>nopsub_378BC</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audio_load_driver"></a>audio_load_driver</td><td><small>1 callers, 20 calls, 154 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audiodrv_atexit"></a>audiodrv_atexit</td><td><small>2 callers, 7 calls, 57 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_sfx_ge"></a>load_sfx_ge</td><td><small>6 callers, 26 calls, 104 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_37C38"></a>sub_37C38</td><td><small>0 callers, 0 calls, 7 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_sfx_file"></a>load_sfx_file</td><td><small>1 callers, 5 calls, 47 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_song_file"></a>load_song_file</td><td><small>1 callers, 3 calls, 30 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="load_voice_file"></a>load_voice_file</td><td><small>1 callers, 5 calls, 47 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nopsub_37D7A"></a>nopsub_37D7A</td><td><small>0 callers, 3 calls, 27 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audio_init_chunk"></a>audio_init_chunk</td><td><small>6 callers, 4 calls, 92 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_map_song_instruments"></a>audio_map_song_instruments</td><td><small>1 callers, 20 calls, 133 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3803C"></a>sub_3803C</td><td><small>0 callers, 6 calls, 106 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38156"></a>sub_38156</td><td><small>1 callers, 0 calls, 13 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38178"></a>sub_38178</td><td><small>2 callers, 5 calls, 82 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_map_song_tracks"></a>audio_map_song_tracks</td><td><small>1 callers, 24 calls, 271 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_get_dword"></a>audioresource_get_dword</td><td><small>8 callers, 0 calls, 11 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_get_word"></a>audioresource_get_word</td><td><small>2 callers, 0 calls, 10 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_copy_4_bytes"></a>audioresource_copy_4_bytes</td><td><small>5 callers, 12 calls, 108 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg028</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="audiodriver_timer"></a>audiodriver_timer</td><td><small>0 callers, 8 calls, 29 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3868A"></a>sub_3868A</td><td><small>1 callers, 4 calls, 32 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_386D6"></a>sub_386D6</td><td><small>1 callers, 2 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38702"></a>sub_38702</td><td><small>2 callers, 24 calls, 380 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38AC4"></a>sub_38AC4</td><td><small>1 callers, 0 calls, 18 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38AEA"></a>sub_38AEA</td><td><small>1 callers, 2 calls, 97 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38BEA"></a>sub_38BEA</td><td><small>1 callers, 1 calls, 40 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_unk2"></a>audio_unk2</td><td><small>10 callers, 2 calls, 72 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38CF8"></a>sub_38CF8</td><td><small>1 callers, 2 calls, 93 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_38DE6"></a>sub_38DE6</td><td><small>2 callers, 5 calls, 230 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_39050"></a>sub_39050</td><td><small>1 callers, 2 calls, 21 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_39088"></a>sub_39088</td><td><small>1 callers, 6 calls, 366 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3945A"></a>sub_3945A</td><td><small>2 callers, 4 calls, 192 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3963C"></a>sub_3963C</td><td><small>2 callers, 2 calls, 36 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_3968A"></a>sub_3968A</td><td><small>2 callers, 1 calls, 49 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="sub_39700"></a>sub_39700</td><td><small>3 callers, 5 calls, 217 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audio_driver_func1E"></a>audio_driver_func1E</td><td><small>5 callers, 2 calls, 131 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg029</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="audioresource_compare_chunknames"></a>audioresource_compare_chunknames</td><td><code>compares two 4 bytes optionally case sensitive chunk names
+returns 1 if the chunk names are equal, 0 if not
+</code><small>2 callers, 4 calls, 58 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_get_chunk_index"></a>audioresource_get_chunk_index</td><td><code>returns the index of a specified 4 byte chunk name in an array of 4 bytes chunk names
+</code><small>3 callers, 2 calls, 59 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_find"></a>audioresource_find</td><td><small>12 callers, 4 calls, 69 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="audioresource_copy_n_bytes"></a>audioresource_copy_n_bytes</td><td><small>2 callers, 0 calls, 31 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg030</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="audio_make_filename"></a>audio_make_filename</td><td><small>7 callers, 4 calls, 149 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg031</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="file_load_shape2d_nofatal2"></a>file_load_shape2d_nofatal2</td><td><small>1 callers, 2 calls, 7 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_combine_and_find"></a>file_combine_and_find</td><td><small>2 callers, 4 calls, 16 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_find_next_alt"></a>file_find_next_alt</td><td><small>2 callers, 2 calls, 2 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="nullsub_1"></a>nullsub_1</td><td><small>4 callers, 0 calls, 2 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="nullsub_2"></a>nullsub_2</td><td><small>5 callers, 0 calls, 2 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="init_main"></a>init_main</td><td><small>1 callers, 75 calls, 378 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="random_wait"></a>random_wait</td><td><small>2 callers, 12 calls, 44 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="load_palandcursor"></a>load_palandcursor</td><td><small>1 callers, 34 calls, 129 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="get_0"></a>get_0</td><td><small>2 callers, 0 calls, 3 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_alloc_resbytes"></a>mmgr_alloc_resbytes</td><td><small>5 callers, 4 calls, 17 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_get_res_ofs_diff_scaled"></a>mmgr_get_res_ofs_diff_scaled</td><td><small>3 callers, 2 calls, 8 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="mmgr_get_chunk_size_bytes"></a>mmgr_get_chunk_size_bytes</td><td><small>1 callers, 2 calls, 14 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg032</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="read_line"></a>read_line</td><td><small>1 callers, 51 calls, 283 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="read_line_helper"></a>read_line_helper</td><td><small>12 callers, 12 calls, 52 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="read_line_helper2"></a>read_line_helper2</td><td><small>2 callers, 14 calls, 62 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg033</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="setup_mcgawnd1"></a>setup_mcgawnd1</td><td><small>4 callers, 6 calls, 25 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="setup_mcgawnd2"></a>setup_mcgawnd2</td><td><small>8 callers, 4 calls, 18 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg034</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_fatal"></a>file_load_shape2d_fatal</td><td><small>1 callers, 2 calls, 11 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_nofatal"></a>file_load_shape2d_nofatal</td><td><small>1 callers, 2 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d"></a>file_load_shape2d</td><td><small>4 callers, 60 calls, 252 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_palmap_init"></a>file_load_shape2d_palmap_init</td><td><small>1 callers, 0 calls, 16 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg035</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="file_load_shape2d_res_fatal"></a>file_load_shape2d_res_fatal</td><td><small>1 callers, 2 calls, 11 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_res_nofatal"></a>file_load_shape2d_res_nofatal</td><td><small>1 callers, 2 calls, 10 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="file_load_shape2d_res"></a>file_load_shape2d_res</td><td><small>3 callers, 16 calls, 60 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+<tr>
+    <td><a name="parse_shape2d"></a>parse_shape2d</td><td><small>2 callers, 22 calls, 258 lines of code.</small></td><td class="status pending"></td>
+</tr>
+<tr>
+    <td><a name="parse_shape2d_helper3"></a>parse_shape2d_helper3</td><td><small>1 callers, 0 calls, 18 lines of code.</small></td><td class="status pending"></td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg036</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="file_get_unflip_size"></a>file_get_unflip_size</td><td><code>returns size of largest shape (XxY+32) in the shape collection resource
+</code><small>1 callers, 4 calls, 39 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg037</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name="file_load_shape2d_expandedsize"></a>file_load_shape2d_expandedsize</td><td><small>1 callers, 6 calls, 50 lines of code.</small></td><td class="status ported">PORTED</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg038</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg039</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 1400 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>dseg</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td><a name=""></a></td><td><small>0 callers, 0 calls, 11367 lines of code.</small></td><td class="status ignore">IGNORE</td>
+</tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>seg041</th><th></th><th class="status">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+<tfoot><tr>
+    <td colspan="3"><strong>Total functions: 633 / Ignored: 154 / Ported: 185</strong></td>
+</tr></tfoot>
+</table>
+<p style="font-size: x-small">Generated <script type="text/javascript">var d = new Date(1422219494 * 1000);document.write(d.toUTCString());</script>.</p>
+</body>
+</html>

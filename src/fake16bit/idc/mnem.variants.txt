@@ -1,0 +1,406 @@
+push - no flag changes
+  0x55 532
+  0x57 420
+  0x56 525
+  0xff 2682 (es override)
+  0x50 3974
+  0x52 427
+  0x0e 488
+  0x1e 204
+  0x16 86
+  0x51 46
+  0x53 38
+  0x06 17
+
+mov - no flag changes (but maybe access to vga-,textmode ,bios ram)
+  0x8b 7779 (cs override,es override)
+  0x89 3067 (cs override,es override,ss override)
+  0xb8 2194
+  0xb1 286
+  0xa3 512 (cs override,es override,ss override)
+  0xbe 101
+  0xc6 991 (es override,ss override)
+  0xbf 103
+  0xb9 157
+  0x8a 1674 (cs override,es override,ss override)
+  0x88 557 (es override,ss override)
+  0xc7 1113 (cs override,es override,ss override)
+  0x8e 424 (cs override,es override,ss override)
+  0xa0 308 (es override)
+  0xa1 605 (cs override,es override)
+  0xb0 63
+  0xa2 181 (es override)
+  0x8c 125 (es override,ss override)
+  0xba 59
+  0xb4 67
+  0xbb 30
+  0xb3 6
+  0xb2 2
+  0xb7 1
+  0xbd 2
+  0xb5 1
+
+sub - change flags, subb, subw
+  0x2a 425 --> 	subb r/m8,r8 --> subb( r/m8, r8 ); ...
+  0x2b 1294 (cs override,es override)  --> 	subw r/m16,r16 --> subw( r/m16, r16 );
+  0x2c 7 --> subb al,imm8 --> subb(al,imm8);
+  0x2d 97 --> subw imm16,ax --> subw(ax,imm16);
+  0x28 1 --> subb r/m8,r8 --> subb( r/m8, r8 );
+  0x29 64 (cs override,es override) --> subw r/m16,r16 --> subw( r/m16, r16 );
+  0x80 7 --> subb r/m8,imm8 --> subb( r/m8, imm8 );
+  0x81 67 --> subw r/m16,imm16 --> subw( r/m16, imm16 );
+  0x83 369 --> subw r/m16,imm8 --> subw( r/m16, imm8 ); // sign-extended imm8 to imm16 ---> subw( ax, -5 );
+
+sub(byte,byte)
+sub(word,word)
+
+call - (no flag changes in realmode...)
+  0x9a 2481
+  0xe8 514
+  0xff 71 (cs override,ss override)
+
+add - change flags
+  0x00 11 --> addb r/m8,r8 --> addb( r/m8, r8 );
+  0x01 138 (ss override) --> addw r16,r/m16 --> addw( r/m16, r );
+  0x02 22 --> addb r8,r/m8 --> addb( r8, r/m8 );
+  0x03 1635 (cs override,es override) --> addw r16,r/m16 --> addw( r16, r/m16 );
+  0x04 21 --> addb al,imm8 --> addb( al, imm8 );
+  0x05 340 --> addw ax,imm16 --> addw( ax, imm16 );
+  0x80 53 --> addb r/m8,imm8 --> addb( r/m8, imm8 );
+  0x81 90 --> addw r/m16,imm16 --> addw( r/m16, imm16 );
+  0x83 2526 --> addw r/m16,imm8 --> addw( r/m16, imm8 ); // sign-extended imm8 to imm16
+  example:
+    code: 0x83
+    dis: add bx, 0FFFBh --> add bx,-5 --> short(0xfffb) --> -5 ----> addw( bx, (65531|0xfffb|-5) );
+    mnem: add
+    operand 0: register 00000003 bx
+    operand 1: immediate 0000fffb 0FFFBh
+
+shl - change flags
+  0xd0 11 --> shlb r/m8,1 --> shlb( r/m8, 1 );
+  0xd1 1382 --> shlw r/m16, 1 --> shlw( r/m16, 1 );
+  0xd2 4 --> shlb r/m8,cl --> shlb( r/m8, cl );
+  0xd3 142 --> 	shlw r/m16,cl --> shlw( r/m16, cl );
+
+imul - change flags
+  0xf7 133 (es override) --> imulw r/m16 --> imulw(r/m16);
+  0xf6 12                --> imulb r/m8 --> imulb(r/m8);
+
+inc - change flags
+  0x40 116 incw r16  40+r --> incw(ax)
+  0x41 22 --> incw(cx)
+  0x42 18 --> incw(dx)
+  0x43 48 --> incw(bx)
+  0x45 6 --> incw(bp)
+  0x46 126 --> incw(si)
+  0x47 98 --> incw(di)
+  0xfe 159 --> incb r/m8 --> incb( r/m8 )
+  0xff 234 --> incw r/m16 --> incw( r/m16 )
+
+cmp - change flags (works like sub without data result), cmpb, cmpw
+  0x38 139 (cs override,es override)
+  0x39 369 (cs override,es override)
+  0x3a 18
+  0x3b 391 (cs override,es override)
+  0x3c 113
+  0x3d 479
+  0x80 926 (es override)
+  0x81 196
+  0x83 829 (es override)
+
+jl - no flags changes
+  0x7c 360
+
+cwd - no flag changes
+  0x99 294
+
+jmp - (no flag changes in realmode...)
+  0xe9 1438
+  0xeb 1169
+  0xff 30 (cs override,ss override)
+  0xea 16
+
+or - change flags (OF := 0, CF := 0; SF, ZF, and PF)
+  0x09 5 (es override) --> orw r/m16,r16
+  0x08 9 (es override) --> orb r/m8,r8
+  0x0a 97 --> orb r8,r/m8
+  0x0b 442 --> orw r16,r/m16
+  0x0c 28 --> orb al,imm8
+  0x0d 4 --> orw ax,imm16
+  0x80 31 (es override) --> orb r/m8,imm8
+  0x81 4 --> 	orw r/m16,imm16
+  0x83 5 --> orw r/m16,imm8 --> signe extended
+
+or(byte,byte)
+or(word,word)
+
+jnz - no flag changes
+  0x75 1412
+
+pop
+  0x07 116 --> popw es --> popw(es);
+  0x1f 134 --> popw ds --> popw(ds);
+  0x58 21 --> popw r16 = register_nr = byte - 0x58
+  0x59 14 --> popw r16 = register_nr = byte - 0x58
+  0x5a 12 --> popw r16 = register_nr = byte - 0x58
+  0x5b 51 --> popw r16 = register_nr = byte - 0x58
+  0x5d 579 --> popw r16 = register_nr = byte - 0x58
+  0x5e 486 --> popw r16 = register_nr = byte - 0x58
+  0x5f 380 --> popw r16 = register_nr = byte - 0x58
+  0x8f 3 --> popw m16
+
+movs
+  0xa5 370 (REP/REPE/REPZ,REPNE/REPNZ)
+  0xa4 26 (REP/REPE/REPZ,REPNE/REPNZ)
+-->replacing "repne movsw(F2,A5)" with "rep movsw(F3,A5)" ... seems to be the same...
+
+les
+  0xc4 411 (es override)
+
+jz - no flag changes
+  0x74 1527
+
+idiv
+  0xf6 1 --> 	idivb r/m8
+  0xf7 35 (cs override) --> idivw r/m16,ax
+
+cbw
+  0x98 676
+
+jge - no flag changes
+  0x7d 360
+
+retf
+  0xcb 679
+  0xca 12
+
+lea
+  0x8d 678
+
+jle - no flag changes
+  0x7e 399
+
+jg - no flag changes
+  0x7f 245
+
+dec - flags affected
+  0x48 93 --> decw r16 48-48=0 ax???
+  0x49 22 --> decw r16 49-48=1 bx???
+  0x4a 42 --> decw r16 4a-48=2 cx???
+  0x4b 10 ...
+  0x4e 29
+  0x4f 11
+  0xfe 216 (es override) --> decb r/m8
+  0xff 55 --> decw r/m16
+
+ja - no flag changes
+  0x77 56
+
+jbe - no flag changes
+  0x76 81
+
+shr
+  0xd3 38
+  0xd1 109
+  0xd0 14
+
+rcl
+  0xd1 69
+
+neg
+  0xf7 219
+  0xf6 9
+
+jb - no flag changes
+  0x72 144
+
+div
+  0xf7 45 --> divw r/m16,ax
+  0xf6 1  --> divb r/m8,al
+
+and
+  0x20 13 (es override) --> andb r/m8,r8
+  0x21 6 (es override) --> andw r/m16,r16
+  0x22 3 --> andb r8,r/m8
+  0x23 15 --> andw r16,r/m16
+  0x24 31 --> andb al,imm8
+  0x25 16 --> andw ax,imm16
+  0x80 43 (es override) --> andb r/m8,imm8
+  0x81 14 --> andw r/m16,imm16
+  0x83 18 --> andw r/m16,imm8 (singe extended imm8)
+
+js - no flag changes
+  0x78 5
+
+xor
+  0x30 2 (es override) --> XORb r/m8,r8
+  0x31 2 (es override) --> XORw r/m16,r16
+  0x32 78 --> XORb r8,r/m8
+  0x33 218 --> 	XORw r16,r/m16
+  0x34 4 --> 	XORb AL,imm8
+  0x80 14 --> XORb r/m8,imm8
+
+xor(byte,byte)
+xor(word,word)
+
+xchg - no flag changes
+  0x86 15 --> xchgb r8,r/m8, xchgb r/m8,r8
+  0x87 22 --> xchgw r16,r/m16, xchgw r/m16,r16
+  0x91 11 --> xchgw r16,r16 --> xchgw r16,ax ---> regnr = bytecode - 0x90 --> xchgw( ax, r16 ), xchgw( r16, ax )
+  0x92 5  --> xchgw r16,r16 --> xchgw r16,ax
+  0x93 15 --> xchgw r16,r16 --> xchgw r16,ax
+  0x95 1  --> xchgw r16,r16 --> xchgw r16,ax
+  0x96 6  --> xchgw r16,r16 --> xchgw r16,ax
+  0x97 2  --> xchgw r16,r16 --> xchgw r16,ax
+
+test - change flags (works like AND without data result)
+  0xf6 156 (es override) --> testb imm8,r/m8
+  0xf7 19 --> testw imm16,r/m16
+  0x84 1 --> testb r8,r/m8
+  0x85 2 (es override) --> testw r16,r/m16
+  0xa8 20 --> testb imm8,al
+  0xa9 3 --> testw imm16,ax
+
+jnb - no flag changes
+  0x73 119
+
+sar
+  0xd1 199
+  0xd3 34
+
+rcr
+  0xd1 171 --> 	rcrw r/m16,1 --> rcrw( r/m16, 1 );
+
+adc
+  0x13 75 (es override) --> ADC r16, r/m16
+  0x11 26 --> ADC r/m16, r16
+  0x15 13 --> ADC AX, imm16
+  0x83 46 --> ADC r/m16, imm8 ... Add with CF sign-extended imm8 to r/m16
+//Destination = Destination + Source + CF;
+//The OF, SF, ZF, AF, CF, and PF flags are set according to the result.
+
+jns - no flag changes
+  0x79 10
+
+sbb
+  0x19 5 -> sbbw r16,r/m16
+  0x1a 7 -> sbbb r/m8,r8
+  0x1b 17 -> 	sbbw r/m16,r16
+  0x1c 1 -> sbbb imm8,al
+  0x1d 10 -> sbbw imm16,ax
+  0x83 7 -> sbbw imm8,r/m16
+
+mul
+  0xf6 9 --> mulb r/m8,al --> mulb( r/m8 ); ax = al * r/m8
+  0xf7 51 (es override) --> mulw r/m16,ax --> mulw( r/m16 ); dx:ax = ax * r/m16
+
+int // int( xx );
+  0xcd 75
+
+iret // return;
+  0xcf 3
+
+cli // flags.if = 0; // nop();
+  0xfa 15
+
+sti // flags.if = 1; // nop();
+  0xfb 18
+
+cld --> // flags.df = 0;
+  0xfc 54
+
+stos
+  0xaa 50 (REP/REPE/REPZ) -> stosb (Store AL in byte ES:[DI], update DI) if cflags.df = 0 ? di+=1 : di-=1
+  0xab 51 (REP/REPE/REPZ) -> stosw (Store AX in word ES:[DI], update DI) if cflags.df = 0 ? di+=2 : di-=2
+
+  void stosb()
+  {
+    *bptr(es,di)=al;
+    if( flags.cf == 0 )
+    {
+      ++di;
+    }
+    else
+    {
+      --di;
+    }
+  }
+
+  void rep_stosb()
+  {
+    //Fill CX bytes at ES:[DI] with AL
+    for(int i = 0; i < cx; ++i )
+    {
+      stosb();
+    }
+  }
+
+jcxz
+  0xe3 7  -> JCXZ rel8 ; jump short if cx = 0; if( jcxz() ) goto lable
+
+lds
+  0xc5 8 (ss override) --> 	ldsw m16:16,r16 (Load DS:r16 with pointer from memory), lds ax, dword_40C22
+
+cmps
+  0xa6 3 (REP/REPE/REPZ) -> cmpsb -> Compare bytes ES:[DI] with DS:[SI] --> void cmpsb(){ cmpb( *bptr(es,di), *bptr(ds,si) ); }
+  repe_cmpsb(){ for cl,... cmpsb(); }
+
+scas
+  0xae 28 (REPNE/REPNZ)
+
+lods
+  0xac 58
+  0xad 13
+
+loop
+  0xe2 133 --> loop rel8 --> if( loop() ) goto blub; // bool loop(){ --cx; return cx == 0; }
+
+retn
+  0xc3 27
+
+not - no flag changes
+  0xf7 16  --> notw r/m16 --> op != op;
+  0xf6 1 --> notb r/m8 --> op != op;
+
+xlat - no flag change
+  0xd7 1
+
+stc // flags.cf = 1;
+  0xf9 8
+
+clc // flags.cf = 0;
+  0xf8 5
+
+lahf --> load ah with flags
+  0x9f 1
+
+sahf --> loads flags with ah
+  0x9e 2
+
+std
+  0xfd 2 // flags.df = 1;
+
+in - no flag changes
+  0xec 9 --> inb dx,al --> inb( regs.dx, regs.al );
+  0xe4 10 --> inb imm8,al --> inb( 0ximm8, regs.al );
+
+jno - no flag changes
+  0x71 1
+
+jo - no flag changes
+  0x70 7
+
+out - no flag changes
+  0xe6 19 --> outb imm8,al --> outb( 0ximm8, regs.al );
+  0xee 11 --> outb dx,al --> outb( regs.dx, regs.al );
+
+pushf - no flag changes
+  0x9c 1
+
+rol - change flags
+  0xd3 6 --> rolw r/m16,cl --> rolw( r/m16, regs.cl );
+  0xd2 2 --> rolb r/m8,cl --> rolb( r/m8, regs.cl );
+  0xd0 2 --> rolb r/m8,1 --> rolb( r/m8, 1 );
+
+nop - no flag changes
+  0x90 1 --> nop();

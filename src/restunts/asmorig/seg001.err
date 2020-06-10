@@ -1,0 +1,52 @@
+seg001.asm(2) : Error A2210: Syntax error: nosmart
+seg001.asm(741) : Error A2210: Syntax error: smart
+seg001.asm(743) : Error A2210: Syntax error: nosmart
+seg001.asm(835) : Error A2028: Instruction prefix not allowed
+seg001.asm(984) : Error A2028: Instruction prefix not allowed
+seg001.asm(991) : Error A2274: structure field expected
+seg001.asm(992) : Error A2274: structure field expected
+seg001.asm(993) : Error A2274: structure field expected
+seg001.asm(1003) : Error A2274: structure field expected
+seg001.asm(1033) : Error A2028: Instruction prefix not allowed
+seg001.asm(1041) : Error A2274: structure field expected
+seg001.asm(1042) : Error A2274: structure field expected
+seg001.asm(1043) : Error A2274: structure field expected
+seg001.asm(1055) : Error A2274: structure field expected
+seg001.asm(1060) : Error A2274: structure field expected
+seg001.asm(1150) : Error A2274: structure field expected
+seg001.asm(1154) : Error A2274: structure field expected
+seg001.asm(1184) : Error A2274: structure field expected
+seg001.asm(1191) : Error A2274: structure field expected
+seg001.asm(1198) : Error A2274: structure field expected
+seg001.asm(1319) : Error A2274: structure field expected
+seg001.asm(1329) : Error A2274: structure field expected
+seg001.asm(1339) : Error A2274: structure field expected
+seg001.asm(1342) : Error A2274: structure field expected
+seg001.asm(1345) : Error A2274: structure field expected
+seg001.asm(1346) : Error A2274: structure field expected
+seg001.asm(1347) : Error A2274: structure field expected
+seg001.asm(1378) : Error A2274: structure field expected
+seg001.asm(1379) : Error A2274: structure field expected
+seg001.asm(1382) : Error A2274: structure field expected
+seg001.asm(1393) : Error A2274: structure field expected
+seg001.asm(1394) : Error A2274: structure field expected
+seg001.asm(1405) : Error A2274: structure field expected
+seg001.asm(1430) : Error A2274: structure field expected
+seg001.asm(1432) : Error A2274: structure field expected
+seg001.asm(1436) : Error A2274: structure field expected
+seg001.asm(1438) : Error A2274: structure field expected
+seg001.asm(1442) : Error A2274: structure field expected
+seg001.asm(1443) : Error A2274: structure field expected
+seg001.asm(1475) : Error A2274: structure field expected
+seg001.asm(1484) : Error A2274: structure field expected
+seg001.asm(1501) : Error A2274: structure field expected
+seg001.asm(1502) : Error A2274: structure field expected
+seg001.asm(1505) : Error A2274: structure field expected
+seg001.asm(1506) : Error A2274: structure field expected
+seg001.asm(1507) : Error A2274: structure field expected
+seg001.asm(1509) : Error A2274: structure field expected
+seg001.asm(1510) : Error A2274: structure field expected
+seg001.asm(1511) : Error A2274: structure field expected
+seg001.asm(1513) : Error A2274: structure field expected
+seg001.asm(1526) : Error A2210: Syntax error: smart
+seg001.asm(1526) : Fatal error A1113: Too many errors
