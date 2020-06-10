@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc

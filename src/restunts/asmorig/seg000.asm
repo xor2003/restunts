@@ -79,67 +79,67 @@ ported_stuntsmain_ proc far
     envp = dword ptr 12
 
     push    bp
-loc_10001:
+loc_10001::
     mov     bp, sp
-loc_10003:
+loc_10003::
     sub     sp, 12h
-loc_10006:
+loc_10006::
     push    di
     push    si
-loc_10008:
+loc_10008::
     push    word ptr [bp+p_argv]
-loc_1000B:
+loc_1000B::
     push    [bp+p_argc]
-loc_1000E:
+loc_1000E::
     call    init_main
     add     sp, 4
-loc_10016:
+loc_10016::
     call    init_div0
-loc_1001B:
+loc_1001B::
     sub     si, si
-loc_1001D:
+loc_1001D::
     mov     ax, si
-loc_1001F:
+loc_1001F::
     shl     ax, 1
     mov     [bp+var_C], ax
     mov     ax, 1Dh
     sub     ax, si
-loc_10029:
+loc_10029::
     mov     [bp+var_E], ax
-loc_1002C:
+loc_1002C::
     mov     ax, 1Eh
     imul    [bp+var_E]
     mov     bx, [bp+var_C]
-loc_10035:
+loc_10035::
     mov     trackrows[bx], ax
     mov     ax, 1Eh
     imul    si
-loc_1003E:
+loc_1003E::
     mov     bx, [bp+var_C]
-loc_10041:
+loc_10041::
     mov     terrainrows[bx], ax
     mov     ax, [bp+var_E]
     mov     cl, 0Ah
     shl     ax, cl          ; *1024, or tile length
-loc_1004C:
+loc_1004C::
     mov     [bp+var_10], ax
     mov     bx, [bp+var_C]
-loc_10052:
+loc_10052::
     mov     trackpos[bx], ax
     mov     bx, [bp+var_C]
     mov     ax, [bp+var_10]
-loc_1005C:
+loc_1005C::
     add     ah, 2
     mov     trackcenterpos[bx], ax
-loc_10063:
+loc_10063::
     mov     ax, si
     shl     ax, cl
     mov     [bp+var_12], ax
-loc_1006A:
+loc_1006A::
     mov     bx, [bp+var_C]
     mov     terrainpos[bx], ax
     mov     bx, [bp+var_C]
-loc_10074:
+loc_10074::
     mov     ax, [bp+var_12]
     add     ah, 2
     mov     terraincenterpos[bx], ax
@@ -147,10 +147,10 @@ loc_10074:
     cmp     si, 1Eh
     jl      short loc_1001D
     sub     si, si
-loc_10086:
+loc_10086::
     mov     ax, si
     shl     ax, 1
-loc_1008A:
+loc_1008A::
     mov     [bp+var_12], ax
     mov     bx, ax
     mov     ax, si
@@ -167,27 +167,27 @@ loc_1008A:
     jl      short loc_10086
     mov     ax, offset aMain; "main"
     push    ax
-loc_100B1:
+loc_100B1::
     call    file_load_resfile
     add     sp, 2
     mov     word ptr mainresptr, ax
-loc_100BC:
+loc_100BC::
     mov     word ptr mainresptr+2, dx
-loc_100C0:
+loc_100C0::
     mov     ax, offset aFontdef_fnt; "fontdef.fnt"
-loc_100C3:
+loc_100C3::
     push    ax              ; char *
-loc_100C4:
+loc_100C4::
     sub     ax, ax
-loc_100C6:
+loc_100C6::
     push    ax              ; int
-loc_100C7:
+loc_100C7::
     call    file_load_resource; type 0 = binary file
-loc_100CC:
+loc_100CC::
     add     sp, 4
-loc_100CF:
+loc_100CF::
     mov     word ptr fontdefptr, ax
-loc_100D2:
+loc_100D2::
     mov     word ptr fontdefptr+2, dx
     mov     ax, offset aFontn_fnt; "fontn.fnt"
     push    ax              ; char *
@@ -237,7 +237,7 @@ loc_100D2:
     mov     word ptr trackdata7, ax
     mov     word ptr trackdata7+2, dx
     add     [bp+trkptr], 80h
-loc_10176:
+loc_10176::
     mov     ax, [bp+trkptr]
     mov     word ptr td08_direction_related, ax
     mov     word ptr td08_direction_related+2, dx
@@ -330,23 +330,23 @@ loc_10176:
     mov     si, 1
     jmp     _do_intro
     nop
-_tracks_menu0:
+_tracks_menu0::
     sub     ax, ax
-_tracks_menu_ax:
+_tracks_menu_ax::
     push    ax
     push    cs
     call near ptr run_tracks_menu
     add     sp, 2
     jmp     _show_menu
     nop
-_do_opp_menu:
+_do_opp_menu::
     call    check_input
     call    show_waiting
     push    cs
     call near ptr run_opponent_menu
     jmp     _show_menu
     nop
-_do_option_menu:
+_do_option_menu::
     call    check_input
     call    show_waiting
     push    cs
@@ -354,11 +354,11 @@ _do_option_menu:
     or      al, al
     jnz     short _goto_game1
     jmp     _show_menu
-_goto_game1:
+_goto_game1::
     mov     [bp+var_A], 1
     jmp     short _do_game1
     nop
-_do_car_menu:
+_do_car_menu::
     call    check_input
     call    show_waiting
     sub     ax, ax
@@ -374,9 +374,9 @@ _do_car_menu:
     add     sp, 8
     jmp     _show_menu
     nop
-_do_game0:
+_do_game0::
     mov     [bp+var_A], 0
-_do_game1:
+_do_game1::
     push    si
     push    di
     mov     di, offset gameconfigcopy
@@ -388,7 +388,7 @@ _do_game1:
     pop     di
     pop     si
     sub     si, si
-loc_1032F:
+loc_1032F::
     les     bx, td14_elem_map_main
     mov     al, es:[bx+si]
     les     bx, td20_trk_file_appnd
@@ -397,7 +397,7 @@ loc_1032F:
     cmp     si, 70Ah
     jl      short loc_1032F
     sub     si, si
-loc_10346:
+loc_10346::
     les     bx, td20_trk_file_appnd
     mov     al, byte_3B80C[si]
     mov     es:[bx+si+70Ah], al
@@ -414,7 +414,7 @@ loc_10346:
     jz      short _sec_check1
     mov     ax, 1
     jmp     _tracks_menu_ax
-_sec_check1:
+_sec_check1::
     call    random_wait
     cmp     passed_security, 0
     jnz     short _init_replay
@@ -428,7 +428,7 @@ _sec_check1:
     push    cs
     call near ptr security_check
     add     sp, 2
-_init_replay:
+_init_replay::
     call    audio_unload
     mov     ax, 5780h       ; size to allocate, 20*1120
     cwd
@@ -447,22 +447,22 @@ _init_replay:
     cmp     [bp+var_A], 0
     jnz     short loc_103D1
     jmp     loc_104A6
-loc_103D1:
+loc_103D1::
     mov     byte_43966, 0
     jmp     loc_104AC
     nop
-_find_tedit:
+_find_tedit::
     mov     ax, offset aTedit__0; "tedit.*"
     push    ax
     call    file_find
     add     sp, 2
     or      ax, ax
     jnz     short _init_replay
-_prepare_intro:
+_prepare_intro::
     call    audio_unload
-_do_intro0:
+_do_intro0::
     sub     si, si
-_do_intro:
+_do_intro::
     mov     ax, 2
     push    ax
     call    ensure_file_exists
@@ -485,7 +485,7 @@ _do_intro:
     push    ax
     call    file_read_fatal
     add     sp, 6
-loc_1042D:
+loc_1042D::
     mov     idle_expired, 0
     push    cs
     call near ptr run_intro_looped
@@ -493,7 +493,7 @@ loc_1042D:
     cmp     di, 1Bh
     jnz     short _show_menu
     jmp     _ask_dos
-_show_menu:
+_show_menu::
     mov     ax, 2
     push    ax
     call    ensure_file_exists
@@ -508,43 +508,43 @@ _show_menu:
     push    ax              ; char *
     call    file_load_audiores
     add     sp, 6
-loc_10467:
+loc_10467::
     push    cs
     call near ptr run_menu
     cbw
     cmp     ax, 0FFFFh
     jnz     short loc_10474
     jmp     _prepare_intro
-loc_10474:
+loc_10474::
     or      ax, ax
     jnz     short loc_1047B
     jmp     _do_game0
-loc_1047B:
+loc_1047B::
     cmp     ax, 1
     jnz     short loc_10483
     jmp     _do_car_menu
-loc_10483:
+loc_10483::
     cmp     ax, 2
     jnz     short _do_show_menu
     jmp     _do_opp_menu
-_do_show_menu:
+_do_show_menu::
     cmp     ax, 3
     jnz     short loc_10493
     jmp     _tracks_menu0
-loc_10493:
+loc_10493::
     cmp     ax, 4
     jnz     short loc_1049B
     jmp     _do_option_menu
-loc_1049B:
+loc_1049B::
     jmp     short _show_menu
     nop
-loc_1049E:
+loc_1049E::
     mov     byte_43966, 4
     jmp     short loc_104AC
     nop
-loc_104A6:
+loc_104A6::
     mov     gameconfig.game_recordedframes, 0
-loc_104AC:
+loc_104AC::
     call    show_waiting
     call    run_game
     cmp     idle_expired, 0
@@ -558,7 +558,7 @@ loc_104AC:
     jz      short loc_1049E
     cmp     ax, 1
     jz      short loc_104A6
-loc_104D2:
+loc_104D2::
     push    si
     push    di
     mov     di, offset gameconfig
@@ -570,7 +570,7 @@ loc_104D2:
     pop     di
     pop     si
     sub     si, si
-loc_104E5:
+loc_104E5::
     les     bx, td20_trk_file_appnd
     mov     al, es:[bx+si]
     les     bx, td14_elem_map_main
@@ -579,7 +579,7 @@ loc_104E5:
     cmp     si, 70Ah
     jl      short loc_104E5
     sub     si, si
-loc_104FC:
+loc_104FC::
     les     bx, td20_trk_file_appnd
     mov     al, es:[bx+si+70Ah]
     mov     byte_3B80C[si], al
@@ -596,10 +596,10 @@ loc_104FC:
     cmp     idle_expired, 0
     jnz     short loc_10536
     jmp     _show_menu
-loc_10536:
+loc_10536::
     jmp     _do_intro0
     nop
-_ask_dos:
+_ask_dos::
     sub     ax, ax
     push    ax
     push    ax
@@ -624,7 +624,7 @@ _ask_dos:
     cmp     ax, 1
     jge     short loc_10575
     jmp     _do_intro0
-loc_10575:
+loc_10575::
     call    mouse_draw_opaque_check
     call    audio_stop_unk
     call    audiodrv_atexit
@@ -727,9 +727,9 @@ run_intro_looped proc far
     push    word ptr tempdataptr
     call    mmgr_free
     add     sp, 4
-loc_1068E:
+loc_1068E::
     call    audio_unload
-loc_10693:
+loc_10693::
     mov     ax, si
     pop     si
     mov     sp, bp
@@ -763,9 +763,9 @@ run_intro proc far
     jz      short loc_106DE
     mov     waitflag, 0A0h ; ' '
     jmp     short loc_106E4
-loc_106DE:
+loc_106DE::
     mov     waitflag, 0B4h ; '´'
-loc_106E4:
+loc_106E4::
     mov     ax, offset aProd_0; "prod"
     push    ax
     push    word ptr tempdataptr+2
@@ -818,7 +818,7 @@ loc_106E4:
     call    input_repeat_check
     add     sp, 2
     mov     si, ax
-loc_1077F:
+loc_1077F::
     mov     ax, si
     pop     si
     mov     sp, bp
@@ -1392,14 +1392,14 @@ load_intro_resources proc far
     call    sprite_copy_2_to_1_2
     call    timer_get_delta_alt
     mov     si, 14Ah
-loc_10D77:
+loc_10D77::
     call    timer_get_delta_alt
     mov     [bp+var_40], ax
     shl     ax, 1
     sub     si, ax
     cmp     [bp+var_2], si
     jle     short loc_10DA0
-loc_10D88:
+loc_10D88::
     les     bx, [bp+var_34]
     mov     ax, es:[bx+0Ah]
     mov     [bp+var_4], ax
@@ -1409,7 +1409,7 @@ loc_10D88:
     jmp     loc_10E83
     ; align 2
     db 144
-loc_10DA0:
+loc_10DA0::
     call    mouse_draw_opaque_check
     push    [bp+var_4]
     push    si
@@ -1438,7 +1438,7 @@ loc_10DA0:
     jmp     short loc_10D88
     ; align 2
     db 144
-loc_10DEC:
+loc_10DEC::
     call    sprite_copy_wnd_to_1
     mov     ax, 0C8h ; 'È'
     push    ax
@@ -1480,7 +1480,7 @@ loc_10DEC:
     call    mouse_draw_transparent_check
     add     [bp+var_36], 5
     jmp     short loc_10E7D
-loc_10E66:
+loc_10E66::
     call    timer_get_delta_alt
     mov     [bp+var_40], ax
     push    ax
@@ -1488,17 +1488,17 @@ loc_10E66:
     add     sp, 2
     mov     [bp+var_46], ax
     add     si, [bp+var_40]
-loc_10E7D:
+loc_10E7D::
     cmp     [bp+var_36], si
     jg      short loc_10E66
     inc     di
-loc_10E83:
+loc_10E83::
     cmp     di, 0Ah
     jge     short loc_10E91
     cmp     [bp+var_46], 0
     jnz     short loc_10E91
     jmp     loc_10DEC
-loc_10E91:
+loc_10E91::
     mov     ax, 0C8h ; 'È'
     push    ax
     sub     ax, ax
@@ -1552,14 +1552,14 @@ loc_10E91:
     add     sp, 2
     or      ax, ax
     jz      short loc_10F34
-loc_10F2B:
+loc_10F2B::
     mov     ax, 1
     pop     si
     pop     di
     mov     sp, bp
     pop     bp
     retf
-loc_10F34:
+loc_10F34::
     sub     ax, ax
     pop     si
     pop     di
@@ -1620,7 +1620,7 @@ run_menu proc far
     push    [bp+var_4]
     call    mmgr_free
     add     sp, 4
-loc_10FB9:
+loc_10FB9::
     mov     al, [bp+var_C]
     cmp     [bp+var_selectedmenu], al
     jz      short loc_10FEF
@@ -1637,7 +1637,7 @@ loc_10FB9:
     mov     [bp+var_6], 0FEh ; 'þ'
     call    sprite_copy_2_to_1_2
     call    sub_29772
-loc_10FEF:
+loc_10FEF::
     push    word_407D0
     push    word_407CE
     mov     ax, offset menu_buttons_y2
@@ -1674,23 +1674,23 @@ loc_10FEF:
     cmp     al, 0FFh
     jz      short loc_11049
     mov     [bp+var_selectedmenu], al
-loc_11049:
+loc_11049::
     mov     ax, [bp+var_timedelta]
     add     idle_counter, ax
     cmp     idle_counter, 1770h
     jle     short loc_11062
     mov     idle_counter, 0
     inc     idle_expired
-loc_11062:
+loc_11062::
     cmp     idle_expired, 0
     jz      short loc_11072
     mov     [bp+var_selectedmenu], 0; idle expired -> select menu 0 and keycode for enter
     mov     [bp+var_keycode], 0Dh
-loc_11072:
+loc_11072::
     cmp     [bp+var_keycode], 0
     jnz     short loc_1107B
     jmp     loc_10FB9
-loc_1107B:
+loc_1107B::
     mov     ax, [bp+var_keycode]
     cmp     ax, 0Dh         ; enter
     jz      short loc_110BA
@@ -1703,23 +1703,23 @@ loc_1107B:
     cmp     ax, 4D00h       ; arrow opposite direction
     jz      short loc_110AA
     jmp     loc_10FB9
-loc_1109A:
+loc_1109A::
     mov     al, [bp+var_selectedmenu]
     cbw
     mov     bx, ax
     mov     al, [bx+280h]
-loc_110A4:
+loc_110A4::
     mov     [bp+var_selectedmenu], al
     jmp     loc_10FB9
-loc_110AA:
+loc_110AA::
     mov     al, [bp+var_selectedmenu]
     cbw
     mov     bx, ax
     mov     al, [bx+286h]
     jmp     short loc_110A4
-loc_110B6:
+loc_110B6::
     mov     [bp+var_selectedmenu], 0FFh
-loc_110BA:
+loc_110BA::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -1760,7 +1760,7 @@ run_tracks_menu proc far
     cmp     [bp+arg_0], 0
     jz      short loc_110ED
     jmp     loc_1156A
-loc_110ED:
+loc_110ED::
     mov     [bp+var_6], 0FFh
     mov     [bp+var_16], 0
     mov     [bp+var_12], 0FFh
@@ -1854,7 +1854,7 @@ loc_110ED:
     or      al, al
     jz      short loc_111F9
     jmp     loc_112E5
-loc_111F9:
+loc_111F9::
     mov     ax, 34h ; '4'
     imul    word_46170
     mov     di, ax
@@ -1862,7 +1862,7 @@ loc_111F9:
     cmp     word ptr es:[bx+di+32h], 0FFFFh
     jnz     short loc_11210
     jmp     loc_112E5
-loc_11210:
+loc_11210::
     mov     ax, offset aHs0 ; "hs0"
     push    ax
     push    word ptr mainresptr+2
@@ -1946,7 +1946,7 @@ loc_11210:
     call    font_draw_text
     add     sp, 6
     call    font_set_fontdef
-loc_112E5:
+loc_112E5::
     mov     ax, offset aTedit; "tedit"
     push    ax
     call    file_load_resfile
@@ -2026,7 +2026,7 @@ loc_112E5:
     push    [bp+var_4]
     call    unload_resource
     add     sp, 4
-loc_113B4:
+loc_113B4::
     mov     al, [bp+var_12]
     cmp     [bp+var_16], al
     jz      short loc_113E5
@@ -2042,7 +2042,7 @@ loc_113B4:
     mov     [bp+var_6], 0FEh ; 'þ'
     call    sprite_copy_2_to_1_2
     call    sub_29772
-loc_113E5:
+loc_113E5::
     push    word_407D0
     push    word_407CE
     mov     ax, offset trackmenu_buttons_y2
@@ -2064,7 +2064,7 @@ loc_113E5:
     jle     short loc_11423
     mov     idle_counter, 0
     inc     idle_expired
-loc_11423:
+loc_11423::
     push    [bp+var_C]
     call    input_checking
     add     sp, 2
@@ -2085,16 +2085,16 @@ loc_11423:
     cmp     al, 0FFh
     jz      short loc_11457
     mov     [bp+var_16], al
-loc_11457:
+loc_11457::
     cmp     idle_expired, 0
     jz      short loc_11467
     mov     [bp+var_16], 2
     mov     [bp+var_E], 0Dh
-loc_11467:
+loc_11467::
     cmp     [bp+var_E], 0
     jnz     short loc_11470
     jmp     loc_113B4
-loc_11470:
+loc_11470::
     mov     ax, [bp+var_E]
     cmp     ax, 0Dh
     jz      short loc_114BC
@@ -2109,29 +2109,29 @@ loc_11470:
     jmp     loc_113B4
     ; align 2
     db 144
-loc_11490:
+loc_11490::
     cmp     [bp+var_16], 0
     jz      short loc_1149C
     dec     [bp+var_16]
     jmp     loc_113B4
-loc_1149C:
+loc_1149C::
     mov     [bp+var_16], 2
     jmp     loc_113B4
     ; align 2
     db 144
-loc_114A4:
+loc_114A4::
     cmp     [bp+var_16], 2
     jge     short loc_114B0
     inc     [bp+var_16]
     jmp     loc_113B4
-loc_114B0:
+loc_114B0::
     mov     [bp+var_16], 0
     jmp     loc_113B4
     ; align 2
     db 144
-loc_114B8:
+loc_114B8::
     mov     [bp+var_16], 0FFh
-loc_114BC:
+loc_114BC::
     mov     al, [bp+var_16]
     cbw
     or      ax, ax
@@ -2139,7 +2139,7 @@ loc_114BC:
     cmp     ax, 1
     jnz     short loc_114CC
     jmp     loc_1155A
-loc_114CC:
+loc_114CC::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -2149,7 +2149,7 @@ loc_114CC:
     mov     sp, bp
     pop     bp
     retf
-loc_114E2:
+loc_114E2::
     mov     ax, offset aTrk ; "trk"
     push    ax
     push    word ptr mainresptr+2
@@ -2191,17 +2191,17 @@ loc_114E2:
     call    sprite_free_wnd
     add     sp, 4
     jmp     loc_110ED
-loc_11552:
+loc_11552::
     mov     [bp+var_12], 0FFh
     jmp     loc_113B4
     ; align 2
     db 144
-loc_1155A:
+loc_1155A::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
     add     sp, 4
-loc_1156A:
+loc_1156A::
     call    check_input
     call    show_waiting
     mov     waitflag, 82h ; '‚'
@@ -2231,7 +2231,7 @@ highscore_write_a proc far
     push    si
     mov     byte_449CE, 0FFh
     mov     [bp+var_3A], 0
-loc_1159A:
+loc_1159A::
     mov     bx, [bp+var_3A]
     shl     bx, 1
     mov     ax, [bp+var_3A]
@@ -2239,7 +2239,7 @@ loc_1159A:
     inc     [bp+var_3A]
     cmp     [bp+var_3A], 7
     jl      short loc_1159A
-loc_115AF:
+loc_115AF::
     mov     ax, offset g_path_buf
     push    ax              ; char *
     mov     ax, offset a_hig_0; ".hig"
@@ -2266,21 +2266,21 @@ loc_115AF:
     mov     g_is_busy, 0
     or      ax, dx
     jnz     short loc_11602
-loc_115F9:
+loc_115F9::
     mov     ax, 1
     pop     si
     pop     di
     mov     sp, bp
     pop     bp
     retf
-loc_11602:
+loc_11602::
     sub     ax, ax
     pop     si
     pop     di
     mov     sp, bp
     pop     bp
     retf
-loc_1160A:
+loc_1160A::
     mov     ax, offset a______________; "...................."
     push    ax
     lea     ax, [bp+var_38]
@@ -2302,7 +2302,7 @@ loc_1160A:
     add     sp, 4
     mov     [bp+var_6], 0FFFFh
     mov     [bp+var_3A], 0
-loc_11648:
+loc_11648::
     mov     ax, 34h ; '4'
     imul    [bp+var_3A]
     mov     bx, ax
@@ -2328,7 +2328,7 @@ loc_11648:
     or      ax, ax
     jnz     short loc_1168B
     jmp     loc_11602
-loc_1168B:
+loc_1168B::
     jmp     loc_115F9
 highscore_write_a endp
 highscore_text_unk proc far
@@ -2488,9 +2488,9 @@ highscore_text_unk proc far
     add     sp, 4
     mov     [bp+var_A], 0
     jmp     loc_118A0
-loc_1181A:
+loc_1181A::
     mov     [bp+var_2], 0
-loc_1181F:
+loc_1181F::
     mov     al, [bp+var_A]
     cbw
     mov     cx, ax
@@ -2542,7 +2542,7 @@ loc_1181F:
     call    font_draw_text
     add     sp, 6
     inc     [bp+var_A]
-loc_118A0:
+loc_118A0::
     cmp     [bp+var_A], 7
     jge     short loc_118CA
     lea     ax, [bp+var_6]
@@ -2557,11 +2557,11 @@ loc_118A0:
     cmp     [bp+var_A], al
     jz      short loc_118C1
     jmp     loc_1181A
-loc_118C1:
+loc_118C1::
     mov     ax, dialogarg2
     mov     [bp+var_2], ax
     jmp     loc_1181F
-loc_118CA:
+loc_118CA::
     call    font_set_fontdef
     mov     sp, bp
     pop     bp
@@ -2652,7 +2652,7 @@ print_highscore_entry proc far
     push    si              ; char *
     call    _strcat
     add     sp, 4
-loc_11981:
+loc_11981::
     lea     ax, [bp+var_20]
     push    ax
     mov     al, [bp+var_16]
@@ -2671,7 +2671,7 @@ loc_11981:
     push    ax              ; char *
     call    _strcat
     add     sp, 4
-loc_119AF:
+loc_119AF::
     mov     al, [bp+var_16]
     cbw
     add     ax, offset resID_byte1
@@ -2691,12 +2691,12 @@ loc_119AF:
     jmp     short loc_119E7
     ; align 2
     db 144
-loc_119E0:
+loc_119E0::
     mov     ax, 1
     push    ax              ; int
     sub     ax, ax
     push    ax
-loc_119E7:
+loc_119E7::
     lea     ax, [bp+var_12]
     push    ax              ; char *
     call    format_frame_as_string
@@ -2747,18 +2747,18 @@ enter_hiscore proc far
     cmp     framespersec, 0Ah
     jnz     short loc_11A2E
     shl     [bp+arg_0], 1
-loc_11A2E:
+loc_11A2E::
     les     bx, td11_highscores
     mov     ax, [bp+arg_0]
     cmp     es:[bx+16Ah], ax
     ja      short loc_11A3F
     jmp     loc_11BAA
-loc_11A3F:
+loc_11A3F::
     mov     [bp+var_38], 0
     jmp     short loc_11A5D
     ; align 2
     db 144
-loc_11A46:
+loc_11A46::
     cmp     [bp+var_38], 7
     jge     short loc_11A71
     mov     al, [bp+var_38]
@@ -2768,7 +2768,7 @@ loc_11A46:
     shl     bx, 1
     mov     word_46170[bx], si
     inc     [bp+var_38]
-loc_11A5D:
+loc_11A5D::
     mov     al, 34h ; '4'
     imul    [bp+var_38]
     mov     di, ax
@@ -2776,12 +2776,12 @@ loc_11A5D:
     mov     ax, [bp+arg_0]
     cmp     es:[bx+di+32h], ax
     jbe     short loc_11A46
-loc_11A71:
+loc_11A71::
     mov     al, [bp+var_38]
     mov     [bp+var_2], al
     mov     byte_449CE, al
     jmp     short loc_11A8D
-loc_11A7C:
+loc_11A7C::
     mov     al, [bp+var_38]
     cbw
     mov     si, ax
@@ -2789,7 +2789,7 @@ loc_11A7C:
     shl     bx, 1
     mov     word_46172[bx], si
     inc     [bp+var_38]
-loc_11A8D:
+loc_11A8D::
     cmp     [bp+var_38], 6
     jl      short loc_11A7C
     mov     al, [bp+var_2]
@@ -2823,11 +2823,11 @@ loc_11A8D:
     jmp     short loc_11AED
     ; align 2
     db 144
-loc_11AE6:
+loc_11AE6::
     mov     ax, offset asc_3BABB; " "
     push    ax
     lea     ax, [bp+var_C]
-loc_11AED:
+loc_11AED::
     push    ax              ; char *
     call    _strcpy
     add     sp, 4
@@ -2896,7 +2896,7 @@ loc_11AED:
     add     sp, 6
     push    cs
     call near ptr highscore_write_b
-loc_11BAA:
+loc_11BAA::
     push    cs
     call near ptr highscore_text_unk
     pop     si
@@ -2917,7 +2917,7 @@ highscore_write_b proc far
     push    di
     push    si
     mov     [bp+var_16E], 0
-loc_11BC3:
+loc_11BC3::
     mov     bx, [bp+var_16E]
     shl     bx, 1
     mov     ax, 34h ; '4'
@@ -3038,9 +3038,9 @@ run_car_menu proc far
     mov     [bp+var_transshape.ts_rectptr], ax
     mov     [bp+var_transshape.ts_flags], 8
     jmp     short loc_11C86
-loc_11C82:
+loc_11C82::
     mov     [bp+var_transshape.ts_flags], 0
-loc_11C86:
+loc_11C86::
     mov     ax, 2
     push    ax
     call    ensure_file_exists
@@ -3062,7 +3062,7 @@ loc_11C86:
     mov     sp, bp
     pop     bp
     retf
-loc_11CB8:
+loc_11CB8::
     mov     bx, [bp+var_findfile]
     mov     al, [bx+3]
     mov     [bp+var_carids], al
@@ -3074,7 +3074,7 @@ loc_11CB8:
     mov     [bp+var_carids+3], al
     mov     [bp+var_carids+4], 0
     mov     [bp+var_46], 1
-loc_11CE1:
+loc_11CE1::
     call    file_find_next_alt
     mov     [bp+var_findfile], ax
     or      ax, ax
@@ -3109,23 +3109,23 @@ loc_11CE1:
     inc     [bp+var_46]
     cmp     [bp+var_46], 20h ; ' '
     jnz     short loc_11CE1
-loc_11D44:
+loc_11D44::
     call    nullsub_1
     cmp     [bp+var_46], 1
     jg      short loc_11D52
     jmp     loc_11E10
-loc_11D52:
+loc_11D52::
     mov     [bp+var_4A], 0
     jmp     loc_11DFB
-loc_11D5A:
+loc_11D5A::
     inc     [bp+var_44]
-loc_11D5D:
+loc_11D5D::
     mov     al, [bp+var_46]
     cbw
     cmp     ax, [bp+var_44]
     ja      short loc_11D69
     jmp     loc_11DF8
-loc_11D69:
+loc_11D69::
     mov     di, [bp+var_44]
     mov     ax, di
     shl     di, 1
@@ -3183,9 +3183,9 @@ loc_11D69:
     call    _strcpy
     add     sp, 4
     jmp     loc_11D5A
-loc_11DF8:
+loc_11DF8::
     inc     [bp+var_4A]
-loc_11DFB:
+loc_11DFB::
     mov     al, [bp+var_46]
     cbw
     dec     ax
@@ -3197,13 +3197,13 @@ loc_11DFB:
     jmp     loc_11D5D
     ; align 2
     db 144
-loc_11E10:
+loc_11E10::
     mov     [bp+var_caridindex], 0
     mov     [bp+var_F6], 0
     jmp     short loc_11E20
-loc_11E1C:
+loc_11E1C::
     inc     [bp+var_F6]
-loc_11E20:
+loc_11E20::
     mov     al, [bp+var_46]
     cmp     [bp+var_F6], al
     jge     short loc_11E68
@@ -3230,7 +3230,7 @@ loc_11E20:
     jnz     short loc_11E1C
     mov     al, [bp+var_F6]
     mov     [bp+var_caridindex], al
-loc_11E68:
+loc_11E68::
     mov     waitflag, 5Ah ; 'Z'
     mov     [bp+var_3E], 0FFh
     mov     backlights_paint_override, 2Dh ; '-'; default backlights paintjob 2Dh
@@ -3248,16 +3248,16 @@ loc_11E68:
     add     sp, 2
     mov     word ptr miscptr, ax
     mov     word ptr miscptr+2, dx
-loc_11EA2:
+loc_11EA2::
     cmp     [bp+arg_opponenttype], 0
     jnz     short loc_11EAB
     jmp     loc_11F4A
-loc_11EAB:
+loc_11EAB::
     mov     rect_unk16.rc_right, 0F0h ; 'ð'
     cmp     video_flag5_is0, 0
     jnz     short loc_11EBB
     jmp     loc_11F50
-loc_11EBB:
+loc_11EBB::
     mov     bx, [bp+arg_opponenttype]
     shl     bx, 1
     shl     bx, 1
@@ -3308,9 +3308,9 @@ loc_11EBB:
     jmp     short loc_11F50
     ; align 2
     db 144
-loc_11F4A:
+loc_11F4A::
     mov     rect_unk16.rc_right, 140h
-loc_11F50:
+loc_11F50::
     mov     [bp+var_prevcaridindex], 0FFh
     mov     [bp+var_rotation], 0
     mov     [bp+var_106], 0
@@ -3338,12 +3338,12 @@ loc_11F50:
     add     sp, 6
     mov     word ptr wndsprite, ax
     mov     word ptr wndsprite+2, dx
-loc_11FA5:
+loc_11FA5::
     mov     al, [bp+var_prevcaridindex]
     cmp     [bp+var_caridindex], al
     jnz     short loc_11FB1
     jmp     loc_12405
-loc_11FB1:
+loc_11FB1::
     cmp     al, 0FFh
     jz      short loc_11FC8
     push    word ptr [bp+var_carres+2]
@@ -3351,7 +3351,7 @@ loc_11FB1:
     call    unload_resource
     add     sp, 4
     call    shape3d_free_car_shapes
-loc_11FC8:
+loc_11FC8::
     mov     ax, offset gameconfig.game_opponentcarid
     push    ax
     mov     al, [bp+var_caridindex]
@@ -3437,7 +3437,7 @@ loc_11FC8:
     mov     ax, 55h ; 'U'
     push    ax
     mov     ax, 8Ch ; 'Œ'
-loc_120A3:
+loc_120A3::
     push    ax
     mov     ax, 6Dh ; 'm'
     push    ax
@@ -3588,9 +3588,9 @@ loc_120A3:
     jz      short loc_12226
     mov     ax, offset aBau ; "bau"
     jmp     short loc_12229
-loc_12226:
+loc_12226::
     mov     ax, offset aBma ; "bma"
-loc_12229:
+loc_12229::
     push    ax
     push    word ptr miscptr+2
     push    word ptr miscptr
@@ -3651,7 +3651,7 @@ loc_12229:
     add     sp, 2
     mov     state.playerstate.car_transmission, 1
     mov     [bp+var_4A], 0
-loc_122CE:
+loc_122CE::
     mov     ax, offset simd_player
     push    ax
     mov     ax, offset state.playerstate
@@ -3673,7 +3673,7 @@ loc_122CE:
     mov     ax, [bp+var_carspeed]
     cwd
     mov     cl, 6
-loc_122FB:
+loc_122FB::
     shl     ax, 1
     rcl     dx, 1
     dec     cl
@@ -3701,7 +3701,7 @@ loc_122FB:
     inc     [bp+var_4A]
     cmp     [bp+var_4A], 320h
     jl      short loc_122CE
-loc_12344:
+loc_12344::
     mov     ax, [bp+var_12]
     mov     framespersec, ax
     push    word ptr fontnptr+2
@@ -3718,7 +3718,7 @@ loc_12344:
     mov     word ptr [bp+var_FC+2], dx
     mov     [bp+var_44], 0
     mov     [bp+var_48], 74h ; 't'
-loc_1237E:
+loc_1237E::
     les     bx, [bp+var_FC]
     inc     word ptr [bp+var_FC]
     mov     al, es:[bx]
@@ -3736,17 +3736,17 @@ loc_1237E:
     push    ax
     call    font_draw_text
     add     sp, 6
-loc_123B1:
+loc_123B1::
     mov     [bp+var_44], 0
     mov     ax, fontdef_unk_0E
     add     [bp+var_48], ax
     jmp     short loc_123CB
-loc_123BE:
+loc_123BE::
     mov     bx, [bp+var_44]
     inc     [bp+var_44]
     mov     al, [bp+var_1C]
     mov     resID_byte1[bx], al
-loc_123CB:
+loc_123CB::
     les     bx, [bp+var_FC]
     cmp     byte ptr es:[bx], 0
     jnz     short loc_1237E
@@ -3759,7 +3759,7 @@ loc_123CB:
     mov     [bp+var_104_rc.rc_bottom], 0C8h ; 'È'
     mov     [bp+var_108], 0
     mov     [bp+var_6], 3
-loc_12405:
+loc_12405::
     mov     ax, [bp+var_rotationdelta]
     add     [bp+var_rotation], ax
     mov     al, [bp+var_6]
@@ -3769,11 +3769,11 @@ loc_12405:
     cmp     ax, 1
     jnz     short loc_1241B
     jmp     loc_125FE
-loc_1241B:
+loc_1241B::
     cmp     ax, 3
     jz      short loc_12423
     jmp     loc_124DE
-loc_12423:
+loc_12423::
     push    carmenu_carpos.vz
     push    carmenu_carpos.vy
     call    polarAngle
@@ -3787,11 +3787,11 @@ loc_12423:
     jmp     short loc_1244F
     ; align 2
     db 144
-loc_12448:
+loc_12448::
     push    si
     lea     di, [bp+var_10_rc]
     mov     si, offset carmenu_cliprect
-loc_1244F:
+loc_1244F::
     push    ss
     pop     es
     movsw
@@ -3814,7 +3814,7 @@ loc_1244F:
     cmp     [bx], al
     jl      short loc_1247A
     mov     byte ptr [bx], 0
-loc_1247A:
+loc_1247A::
     mov     ax, [bp+var_rotation]
     mov     [bp+var_transshape.ts_rotvec.vz], ax
     mov     bx, [bp+arg_materialofs]
@@ -3831,9 +3831,9 @@ loc_1247A:
     jmp     short loc_124AC
     ; align 2
     db 144
-loc_124A6:
+loc_124A6::
     mov     rect_unk16.rc_bottom, 0C8h ; 'È'
-loc_124AC:
+loc_124AC::
     mov     ax, offset rect_unk16
     push    ax
     lea     ax, [bp+var_10_rc]
@@ -3851,9 +3851,9 @@ loc_124AC:
     cmp     [bp+var_6], 3
     jnz     short loc_124DA
     jmp     loc_125FE
-loc_124DA:
+loc_124DA::
     mov     [bp+var_6], 1
-loc_124DE:
+loc_124DE::
     mov     al, [bp+var_F2]
     cmp     [bp+var_106], al
     jz      short loc_12541
@@ -3865,7 +3865,7 @@ loc_124DE:
     push    ax
     push    carmenu_buttons_x1
     mov     ax, carmenu_buttons_y2
-loc_124FD:
+loc_124FD::
     add     ax, video_flag2_is1
     and     ax, video_flag3_isFFFF
     push    ax
@@ -3880,11 +3880,11 @@ loc_124FD:
     add     sp, 4
     call    mouse_draw_transparent_check
     call    sprite_copy_2_to_1_2
-loc_12534:
+loc_12534::
     call    sub_29772
     mov     al, [bp+var_106]
     mov     [bp+var_F2], al
-loc_12541:
+loc_12541::
     call    sprite_copy_2_to_1_2
     push    word_407D0
     push    word_407CE
@@ -3907,7 +3907,7 @@ loc_12541:
     jle     short loc_12585
     mov     idle_counter, 0
     inc     idle_expired
-loc_12585:
+loc_12585::
     push    [bp+var_rotationdelta]
     call    input_checking
     add     sp, 2
@@ -3928,41 +3928,41 @@ loc_12585:
     cmp     al, 0FFh
     jz      short loc_125BA
     mov     [bp+var_106], al
-loc_125BA:
+loc_125BA::
     cmp     idle_expired, 0
     jz      short loc_125C9
     mov     [bp+var_106], 0
     mov     si, 0Dh
-loc_125C9:
+loc_125C9::
     or      si, si
     jnz     short loc_125D0
     jmp     loc_11FA5
-loc_125D0:
+loc_125D0::
     mov     ax, si
     cmp     ax, 0Dh
     jnz     short loc_125DA
     jmp     loc_12732
-loc_125DA:
+loc_125DA::
     cmp     ax, 1Bh
     jnz     short loc_125E2
     jmp     loc_12732
-loc_125E2:
+loc_125E2::
     cmp     ax, 20h ; ' '
     jnz     short loc_125EA
     jmp     loc_12732
-loc_125EA:
+loc_125EA::
     cmp     ax, 4800h
     jnz     short loc_125F2
     jmp     loc_12910
-loc_125F2:
+loc_125F2::
     cmp     ax, 5000h
     jnz     short loc_125FA
     jmp     loc_12926
-loc_125FA:
+loc_125FA::
     jmp     loc_11FA5
     ; align 2
     db 144
-loc_125FE:
+loc_125FE::
     mov     [bp+var_6], 0
     mov     [bp+var_108], 1
     call    sprite_copy_wnd_to_1
@@ -4027,7 +4027,7 @@ loc_125FE:
     push    word ptr oppresources[bx]
     call    sprite_putimage_transparent
     jmp     short loc_126CE
-loc_126B8:
+loc_126B8::
     sub     ax, ax
     push    ax
     mov     ax, 0F0h ; 'ð'
@@ -4036,9 +4036,9 @@ loc_126B8:
     push    word ptr es:[bx+2]
     push    word ptr es:[bx]
     call    sprite_putimage_and_alt
-loc_126CE:
+loc_126CE::
     add     sp, 8
-loc_126D1:
+loc_126D1::
     call    sprite_copy_2_to_1_2
     push    [bp+var_1A_rc.rc_bottom]
     push    [bp+var_1A_rc.rc_top]
@@ -4058,18 +4058,18 @@ loc_126D1:
     add     sp, 6
     mov     [bp+var_3E], 0FEh ; 'þ'
     jmp     short loc_12723
-loc_12710:
+loc_12710::
     les     bx, wndsprite
     push    word ptr es:[bx+2]
     push    word ptr es:[bx]
     call    sprite_putimage
     add     sp, 4
-loc_12723:
+loc_12723::
     call    mouse_draw_transparent_check
     mov     al, [bp+var_caridindex]
     mov     [bp+var_prevcaridindex], al
     jmp     loc_124DE
-loc_12732:
+loc_12732::
     mov     al, [bp+var_106]
     cbw
     or      ax, ax
@@ -4077,25 +4077,25 @@ loc_12732:
     cmp     ax, 1
     jnz     short loc_12743
     jmp     _menu_nextcar
-loc_12743:
+loc_12743::
     cmp     ax, 2
     jnz     short loc_1274B
     jmp     _menu_prevcar
-loc_1274B:
+loc_1274B::
     cmp     ax, 3
     jnz     short loc_12753
     jmp     _menu_transmission
-loc_12753:
+loc_12753::
     cmp     ax, 4
     jnz     short loc_1275B
     jmp     _menu_color
-loc_1275B:
+loc_1275B::
     jmp     loc_11FA5
-_menu_done:
+_menu_done::
     cmp     [bp+var_108], 0
     jnz     short loc_12768
     jmp     loc_11FA5
-loc_12768:
+loc_12768::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -4113,14 +4113,14 @@ loc_12768:
     push    word ptr [bp+var_42wnd]
     call    sprite_free_wnd
     add     sp, 4
-loc_127A6:
+loc_127A6::
     cmp     [bp+arg_opponenttype], 0
     jnz     short loc_127BC
     push    word ptr miscptr+2
     push    word ptr miscptr
     call    unload_resource
     add     sp, 4
-loc_127BC:
+loc_127BC::
     push    [bp+var_34]
     push    [bp+var_36]
     call    mmgr_free
@@ -4170,27 +4170,27 @@ loc_127BC:
     retf
     ; align 2
     db 144
-_menu_nextcar:
+_menu_nextcar::
     inc     [bp+var_caridindex]
     mov     al, [bp+var_46]
     cmp     [bp+var_caridindex], al
     jz      short loc_12846
     jmp     loc_11FA5
-loc_12846:
+loc_12846::
     mov     [bp+var_caridindex], 0
     jmp     loc_11FA5
-_menu_prevcar:
+_menu_prevcar::
     dec     [bp+var_caridindex]
     js      short loc_12857
     jmp     loc_11FA5
-loc_12857:
+loc_12857::
     mov     al, [bp+var_46]
     dec     al
     mov     [bp+var_caridindex], al
     jmp     loc_11FA5
     ; align 2
     db 144
-_menu_transmission:
+_menu_transmission::
     mov     bx, [bp+arg_transmissionofs]
     xor     byte ptr [bx], 1
     call    sprite_copy_wnd_to_1
@@ -4199,9 +4199,9 @@ _menu_transmission:
     jz      short loc_1287C
     mov     ax, offset aBau_0; "bau"
     jmp     short loc_1287F
-loc_1287C:
+loc_1287C::
     mov     ax, offset aBma_0; "bma"
-loc_1287F:
+loc_1287F::
     push    ax
     push    word ptr miscptr+2
     push    word ptr miscptr
@@ -4251,25 +4251,25 @@ loc_1287F:
     add     sp, 14h
     call    mouse_draw_transparent_check
     jmp     loc_11FA5
-_menu_color:
+_menu_color::
     mov     bx, [bp+arg_materialofs]
     inc     byte ptr [bx]   ; change color/material
     mov     [bp+var_6], 3
     jmp     loc_11FA5
-loc_12910:
+loc_12910::
     cmp     [bp+var_106], 0
     jz      short loc_1291E
     dec     [bp+var_106]
     jmp     loc_11FA5
-loc_1291E:
+loc_1291E::
     mov     [bp+var_106], 4
     jmp     loc_11FA5
-loc_12926:
+loc_12926::
     cmp     [bp+var_106], 4
     jge     short loc_12934
     inc     [bp+var_106]
     jmp     loc_11FA5
-loc_12934:
+loc_12934::
     mov     [bp+var_106], 0
     jmp     loc_11FA5
 run_car_menu endp
@@ -4325,14 +4325,14 @@ run_opponent_menu proc far
     mov     [bp+var_1E], 0FFh
     mov     [bp+var_4], 0FFh
     call    sub_29772
-loc_129A3:
+loc_129A3::
     call    mouse_draw_transparent_check
-loc_129A8:
+loc_129A8::
     mov     al, gameconfig.game_opponenttype
     cmp     [bp+var_1E], al
     jnz     short loc_129B3
     jmp     loc_12CFB
-loc_129B3:
+loc_129B3::
     cmp     [bp+var_1E], 0FFh
     jz      short loc_129DD
     push    word ptr wndsprite+2
@@ -4345,7 +4345,7 @@ loc_129B3:
     push    [bp+var_C]
     call    unload_resource
     add     sp, 4
-loc_129DD:
+loc_129DD::
     mov     ax, 4
     push    ax
     call    ensure_file_exists
@@ -4363,9 +4363,9 @@ loc_129DD:
     mov     [bp+var_A], dx
     mov     [bp+var_6], 1
     jmp     short loc_12A14
-loc_12A10:
+loc_12A10::
     mov     [bp+var_6], 0
-loc_12A14:
+loc_12A14::
     mov     ax, 0Fh
     push    ax
     mov     ax, 0C8h ; 'È'
@@ -4385,9 +4385,9 @@ loc_12A14:
     jmp     short loc_12A4D
     ; align 2
     db 144
-loc_12A48:
+loc_12A48::
     call    setup_mcgawnd2
-loc_12A4D:
+loc_12A4D::
     sub     ax, ax
     push    ax
     call    sprite_clear_1_color
@@ -4572,7 +4572,7 @@ loc_12A4D:
     call    sprite_clear_shape_alt
     add     sp, 8
     call    sprite_copy_wnd_to_1
-loc_12C46:
+loc_12C46::
     cmp     gameconfig.game_opponenttype, 0
     jz      short loc_12C5A
     mov     ax, offset aDes_0; "des"
@@ -4582,12 +4582,12 @@ loc_12C46:
     jmp     short loc_12C66
     ; align 2
     db 144
-loc_12C5A:
+loc_12C5A::
     mov     ax, offset aRac ; "rac"
     push    ax
     push    word ptr miscptr+2
     push    word ptr miscptr
-loc_12C66:
+loc_12C66::
     call    locate_text_res
     add     sp, 6
     mov     word ptr [bp+var_1A], ax
@@ -4603,7 +4603,7 @@ loc_12C66:
     add     sp, 4
     mov     [bp+var_8], 0
     mov     [bp+var_E], 0
-loc_12C9D:
+loc_12C9D::
     les     bx, [bp+var_1A]
     inc     word ptr [bp+var_1A]
     mov     al, es:[bx]
@@ -4623,24 +4623,24 @@ loc_12C9D:
     push    ax
     call    font_draw_text
     add     sp, 6
-loc_12CD2:
+loc_12CD2::
     mov     [bp+var_8], 0
     mov     ax, fontdef_unk_0E
     add     [bp+var_E], ax
     jmp     short loc_12CED
     ; align 2
     db 144
-loc_12CE0:
+loc_12CE0::
     mov     bx, [bp+var_8]
     inc     [bp+var_8]
     mov     al, [bp+var_2]
     mov     resID_byte1[bx], al
-loc_12CED:
+loc_12CED::
     les     bx, [bp+var_1A]
     cmp     byte ptr es:[bx], 0
     jnz     short loc_12C9D
     call    font_set_fontdef
-loc_12CFB:
+loc_12CFB::
     mov     al, [bp+var_14]
     cmp     [bp+var_1C], al
     jz      short loc_12D2C
@@ -4656,7 +4656,7 @@ loc_12CFB:
     mov     [bp+var_4], 0FEh ; 'þ'
     call    timer_get_delta_alt
     call    sub_29772
-loc_12D2C:
+loc_12D2C::
     push    word_407D0
     push    word_407CE
     mov     ax, 462h
@@ -4696,14 +4696,14 @@ loc_12D2C:
     jnz     short loc_12D8D
     cmp     al, 3
     jz      short loc_12D93
-loc_12D8D:
+loc_12D8D::
     mov     al, [bp+var_16]
     mov     [bp+var_1C], al
-loc_12D93:
+loc_12D93::
     or      si, si
     jnz     short loc_12D9A
     jmp     loc_129A8
-loc_12D9A:
+loc_12D9A::
     mov     ax, si
     cmp     ax, 0Dh
     jz      short loc_12DBE
@@ -4714,13 +4714,13 @@ loc_12D9A:
     cmp     ax, 4B00h
     jnz     short loc_12DB3
     jmp     loc_12EF6
-loc_12DB3:
+loc_12DB3::
     cmp     ax, 4D00h
     jnz     short loc_12DBB
     jmp     loc_12F20
-loc_12DBB:
+loc_12DBB::
     jmp     loc_129A8
-loc_12DBE:
+loc_12DBE::
     mov     al, [bp+var_1C]
     cbw
     or      ax, ax
@@ -4734,35 +4734,35 @@ loc_12DBE:
     cmp     ax, 4
     jnz     short loc_12DDD
     jmp     loc_12E6A
-loc_12DDD:
+loc_12DDD::
     jmp     loc_129A8
-loc_12DE0:
+loc_12DE0::
     dec     gameconfig.game_opponenttype
     cmp     gameconfig.game_opponenttype, 1
     jl      short loc_12DEE
     jmp     loc_129A8
-loc_12DEE:
+loc_12DEE::
     mov     gameconfig.game_opponenttype, 6
     jmp     loc_129A8
-loc_12DF6:
+loc_12DF6::
     inc     gameconfig.game_opponenttype
     cmp     gameconfig.game_opponenttype, 7
     jz      short loc_12E04
     jmp     loc_129A8
-loc_12E04:
+loc_12E04::
     mov     gameconfig.game_opponenttype, 1
     jmp     loc_129A8
-loc_12E0C:
+loc_12E0C::
     mov     gameconfig.game_opponenttype, 0
     jmp     loc_129A8
-loc_12E14:
+loc_12E14::
     cmp     gameconfig.game_opponenttype, 0
     jnz     short loc_12E1E
     jmp     loc_129A8
-loc_12E1E:
+loc_12E1E::
     call    check_input
     call    mouse_draw_opaque_check
-loc_12E28:
+loc_12E28::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -4786,7 +4786,7 @@ loc_12E28:
     add     sp, 8
     mov     [bp+var_1E], 0FFh
     jmp     loc_129A3
-loc_12E6A:
+loc_12E6A::
     cmp     gameconfig.game_opponenttype, 0
     jz      short loc_12EA2
     cmp     gameconfig.game_opponentcarid, 0FFh
@@ -4809,9 +4809,9 @@ nosmart
     jmp     short loc_12EA7
     ; align 2
     db 144
-loc_12EA2:
+loc_12EA2::
     mov     gameconfig.game_opponentcarid, 0FFh
-loc_12EA7:
+loc_12EA7::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -4822,7 +4822,7 @@ loc_12EA7:
     push    [bp+var_C]
     call    unload_resource
     add     sp, 4
-loc_12ECB:
+loc_12ECB::
     push    word ptr opp_res+2
     push    word ptr opp_res
     call    mmgr_free
@@ -4838,46 +4838,46 @@ loc_12ECB:
     retf
     ; align 2
     db 144
-loc_12EF6:
+loc_12EF6::
     cmp     [bp+var_1C], 0
     jz      short loc_12F02
     dec     [bp+var_1C]
     jmp     short loc_12F06
     ; align 2
     db 144
-loc_12F02:
+loc_12F02::
     mov     [bp+var_1C], 4
-loc_12F06:
+loc_12F06::
     cmp     gameconfig.game_opponenttype, 0
     jz      short loc_12F10
     jmp     loc_129A8
-loc_12F10:
+loc_12F10::
     cmp     [bp+var_1C], 3
     jz      short loc_12F19
     jmp     loc_129A8
-loc_12F19:
+loc_12F19::
     dec     [bp+var_1C]
     jmp     loc_129A8
     ; align 2
     db 144
-loc_12F20:
+loc_12F20::
     cmp     [bp+var_1C], 4
     jge     short loc_12F2C
     inc     [bp+var_1C]
     jmp     short loc_12F30
     ; align 2
     db 144
-loc_12F2C:
+loc_12F2C::
     mov     [bp+var_1C], 0
-loc_12F30:
+loc_12F30::
     cmp     gameconfig.game_opponenttype, 0
     jz      short loc_12F3A
     jmp     loc_129A8
-loc_12F3A:
+loc_12F3A::
     cmp     [bp+var_1C], 3
     jz      short loc_12F43
     jmp     loc_129A8
-loc_12F43:
+loc_12F43::
     inc     [bp+var_1C]
     jmp     loc_129A8
     ; align 2
@@ -4929,14 +4929,14 @@ run_option_menu proc far
     push    ax
     call    intro_draw_text
     add     sp, 0Ah
-loc_12FBA:
+loc_12FBA::
     mov     ax, offset aGver; "gver"
     push    ax
     push    word ptr miscptr+2
     push    word ptr miscptr
     call    locate_shape_alt
     add     sp, 6
-loc_12FCE:
+loc_12FCE::
     push    dx
     push    ax
     mov     ax, offset resID_byte1
@@ -4945,7 +4945,7 @@ loc_12FCE:
     add     sp, 6
     sub     ax, ax
     push    ax
-loc_12FDF:
+loc_12FDF::
     push    dialog_fnt_colour
     mov     ax, 10h
     push    ax
@@ -4954,13 +4954,13 @@ loc_12FDF:
     call    font_op2_alt
     add     sp, 2
     push    ax
-loc_12FF4:
+loc_12FF4::
     mov     ax, offset resID_byte1
     push    ax
     call    intro_draw_text
     add     sp, 0Ah
     mov     [bp+var_4], 1
-loc_13004:
+loc_13004::
     sub     ax, ax
     push    ax
     push    ax
@@ -4988,27 +4988,27 @@ loc_13004:
     cmp     ax, 7
     jbe     short loc_13046
     jmp     loc_1315A
-loc_13046:
+loc_13046::
     add     ax, ax
     xchg    ax, bx
     jmp     cs:off_1314A[bx]
-loc_1304E:
+loc_1304E::
     cmp     byte_3B8F2, 0
     jz      short loc_1305C
     mov     [bp+var_6], 2
     jmp     short loc_1306E
     ; align 2
     db 144
-loc_1305C:
+loc_1305C::
     cmp     byte_3FE00, 0
     jz      short loc_1306A
     mov     [bp+var_6], 1
     jmp     short loc_1306E
     ; align 2
     db 144
-loc_1306A:
+loc_1306A::
     mov     [bp+var_6], 0
-loc_1306E:
+loc_1306E::
     mov     al, [bp+var_6]
     cbw
     push    ax
@@ -5041,24 +5041,24 @@ loc_1306E:
     cmp     ax, 2
     jz      short loc_130CA
     jmp     loc_1315A
-loc_130BA:
+loc_130BA::
     call    do_key_restext
     jmp     loc_1315A
-loc_130C2:
+loc_130C2::
     call    do_joy_restext
     jmp     loc_1315A
-loc_130CA:
+loc_130CA::
     call    do_mou_restext
     jmp     loc_1315A
-loc_130D2:
+loc_130D2::
     call    do_mof_restext
     jmp     loc_1315A
-loc_130DA:
+loc_130DA::
     call    do_sonsof_restext
     jmp     short loc_1315A
     ; align 2
     db 144
-loc_130E2:
+loc_130E2::
     mov     ax, offset aRep_0; "rep"
     push    ax
     push    word ptr mainresptr+2
@@ -5088,17 +5088,17 @@ loc_130E2:
     add     sp, 4
     mov     [bp+var_4], 1
     jmp     short loc_13163
-loc_13134:
+loc_13134::
     call    do_mrl_textres
     jmp     short loc_1315A
     ; align 2
     db 144
-loc_1313C:
+loc_1313C::
     call    do_dos_restext
     jmp     short loc_1315A
     ; align 2
     db 144
-loc_13144:
+loc_13144::
     mov     [bp+var_4], 0
     jmp     short loc_1315A
 off_1314A     dw offset loc_13144
@@ -5109,11 +5109,11 @@ off_1314A     dw offset loc_13144
     dw offset loc_13134
     dw offset loc_1313C
     dw offset loc_13144
-loc_1315A:
+loc_1315A::
     cmp     [bp+var_4], 0
     jz      short loc_13163
     jmp     loc_13004
-loc_13163:
+loc_13163::
     push    word ptr miscptr+2
     push    word ptr miscptr
     call    unload_resource
@@ -5201,7 +5201,7 @@ end_hiscore proc far
     add     sp, 2
     mov     [bp+var_68], ax
     mov     [bp+var_66], dx
-loc_131C0:
+loc_131C0::
     mov     ax, 0Fh
     push    ax
     mov     ax, 0C8h ; 'È'
@@ -5224,7 +5224,7 @@ loc_131C0:
     add     sp, 6
     mov     word ptr [bp+var_46], ax
     mov     word ptr [bp+var_46+2], dx
-loc_131FC:
+loc_131FC::
     mov     [bp+var_52], 0FFh
     call    sprite_copy_wnd_to_1_clear
     sub     ax, ax
@@ -5276,7 +5276,7 @@ loc_131FC:
     cmp     gState_total_finish_time, 0
     jnz     short loc_13281
     jmp     loc_13354
-loc_13281:
+loc_13281::
     mov     ax, 1
     push    ax              ; int
     mov     ax, gState_total_finish_time
@@ -5308,10 +5308,10 @@ loc_13281:
     add     sp, 2
     add     ax, offset resID_byte1
     push    ax
-loc_132D4:
+loc_132D4::
     call    copy_string
     add     sp, 6
-loc_132DC:
+loc_132DC::
     sub     ax, ax
     push    ax
     push    dialog_fnt_colour
@@ -5329,7 +5329,7 @@ loc_132DC:
     cmp     gState_penalty, 0
     jnz     short loc_1330D
     jmp     loc_133A7
-loc_1330D:
+loc_1330D::
     mov     ax, offset aPpt ; "ppt"
     push    ax
     push    [bp+var_4C]
@@ -5358,7 +5358,7 @@ loc_1330D:
     jmp     short loc_13380
     ; align 2
     db 144
-loc_13354:
+loc_13354::
     mov     ax, offset aDnf ; "dnf"
     push    ax
     push    [bp+var_4C]
@@ -5375,7 +5375,7 @@ loc_13354:
     push    ax
     call    copy_string
     add     sp, 6
-loc_13380:
+loc_13380::
     sub     ax, ax
     push    ax
     push    dialog_fnt_colour
@@ -5390,12 +5390,12 @@ loc_13380:
     call    hiscore_draw_text
     add     sp, 0Ah
     add     [bp+var_70], 0Ah
-loc_133A7:
+loc_133A7::
     mov     [bp+var_18], 2
     cmp     gameconfig.game_opponenttype, 0
     jnz     short loc_133B5
     jmp     loc_134DC
-loc_133B5:
+loc_133B5::
     cmp     gState_144, 0
     jnz     short loc_1340C
     mov     ax, offset aOlt ; "olt"
@@ -5429,13 +5429,13 @@ loc_133B5:
     jmp     loc_134AA
     ; align 2
     db 144
-loc_1340C:
+loc_1340C::
     cmp     gState_total_finish_time, 0
     jz      short loc_1341C
     mov     ax, gState_total_finish_time
     cmp     gState_144, ax
     jnb     short loc_13466
-loc_1341C:
+loc_1341C::
     mov     ax, offset aOwt ; "owt"
     push    ax
     push    [bp+var_4C]
@@ -5463,7 +5463,7 @@ loc_1341C:
     add     sp, 4
     mov     [bp+var_18], 1
     jmp     short loc_134B5
-loc_13466:
+loc_13466::
     mov     ax, offset aOlt_0; "olt"
     push    ax
     push    [bp+var_4C]
@@ -5489,11 +5489,11 @@ loc_13466:
     push    ax              ; char *
     call    _strcat
     add     sp, 4
-loc_134AA:
+loc_134AA::
     cmp     gState_total_finish_time, 0
     jz      short loc_134B5
     mov     [bp+var_18], 0
-loc_134B5:
+loc_134B5::
     sub     ax, ax
     push    ax
     push    dialog_fnt_colour
@@ -5508,7 +5508,7 @@ loc_134B5:
     call    hiscore_draw_text
     add     sp, 0Ah
     add     [bp+var_70], 0Ah
-loc_134DC:
+loc_134DC::
     cmp     [bp+var_18], 0
     jnz     short loc_134F0
     mov     ax, offset aVict; "VICT"
@@ -5519,13 +5519,13 @@ loc_134DC:
     jmp     short loc_134FB
     ; align 2
     db 144
-loc_134F0:
+loc_134F0::
     mov     ax, offset aOver; "OVER"
     push    ax
     mov     ax, offset aSkidms_2; "skidms"
     push    ax
     mov     ax, offset aSkidover; "skidover"
-loc_134FB:
+loc_134FB::
     push    ax              ; char *
     call    file_load_audiores
     add     sp, 6
@@ -5537,7 +5537,7 @@ loc_134FB:
     cmp     gState_oEndFrame, ax
     jz      short loc_1351D
     mov     [bp+var_16], 0
-loc_1351D:
+loc_1351D::
     mov     ax, offset aAvs ; "avs"
     push    ax
     push    [bp+var_4C]
@@ -5567,9 +5567,9 @@ loc_1351D:
     sub     dh, dh
     mov     di, ax
     jmp     short loc_1356C
-loc_1356A:
+loc_1356A::
     sub     di, di
-loc_1356C:
+loc_1356C::
     mov     ax, 3
     push    ax              ; int
     sub     ax, ax
@@ -5618,7 +5618,7 @@ loc_1356C:
     cmp     gState_impactSpeed, 0
     jnz     short loc_135ED
     jmp     loc_1368B
-loc_135ED:
+loc_135ED::
     mov     ax, offset aImp ; "imp"
     push    ax
     push    [bp+var_4C]
@@ -5679,7 +5679,7 @@ loc_135ED:
     call    hiscore_draw_text
     add     sp, 0Ah
     add     [bp+var_70], 0Ah
-loc_1368B:
+loc_1368B::
     mov     ax, offset aTop ; "top"
     push    ax
     push    [bp+var_4C]
@@ -5782,15 +5782,15 @@ loc_1368B:
     push    ax
     call    hiscore_draw_text
     add     sp, 0Ah
-loc_1379A:
+loc_1379A::
     cmp     [bp+var_16], 0
     jnz     short loc_137A3
     jmp     loc_138FF
-loc_137A3:
+loc_137A3::
     test    byte_43966, 4
     jz      short loc_137AD
     jmp     loc_1384B
-loc_137AD:
+loc_137AD::
     mov     ax, word_40D40
     mov     word_40D3A, ax
     mov     ax, end_hiscore_random
@@ -5809,7 +5809,7 @@ loc_137AD:
     shl     bx, 1
     mov     ax, word_3BCDE[bx]
     mov     word_40D40, ax
-loc_137E0:
+loc_137E0::
     call    get_super_random
     cwd
     mov     cx, 3
@@ -5822,7 +5822,7 @@ loc_137E0:
     shl     bx, 1
     mov     ax, word_3BCDE[bx]
     mov     word_40D44, ax
-loc_13801:
+loc_13801::
     cmp     [bp+var_18], 1
     jnz     short loc_1382A
     cmp     gState_total_finish_time, 0
@@ -5835,20 +5835,20 @@ loc_13801:
     jmp     short loc_13835
     ; align 2
     db 144
-loc_1381E:
+loc_1381E::
     call    get_super_random
     cwd
     mov     cx, 2
     jmp     short loc_13833
     ; align 2
     db 144
-loc_1382A:
+loc_1382A::
     call    get_super_random
     cwd
     mov     cx, 4
-loc_13833:
+loc_13833::
     idiv    cx
-loc_13835:
+loc_13835::
     mov     end_hiscore_random, dx
     mov     ax, word_40D3C
     cmp     dx, ax
@@ -5857,7 +5857,7 @@ loc_13835:
     shl     bx, 1
     mov     ax, word_3BCE4[bx]
     mov     end_hiscore_random, ax
-loc_1384B:
+loc_1384B::
     cmp     [bp+var_18], 1
     jnz     short loc_138B6
     mov     al, gameconfig.game_opponenttype
@@ -5890,19 +5890,19 @@ nosmart
     jmp     short loc_138AC
     ; align 2
     db 144
-loc_138A0:
+loc_138A0::
     call    get_kevinrandom
     add     ax, gState_frame
 smart
     and     ax, 1
 nosmart
-loc_138AC:
+loc_138AC::
     mov     end_hiscore_random, ax
     mov     [bp+var_6A], 76h ; 'v'
     jmp     short loc_138FF
     ; align 2
     db 144
-loc_138B6:
+loc_138B6::
     mov     al, gameconfig.game_opponenttype
     add     al, 30h ; '0'
     mov     byte ptr aOpp2lose+3, al
@@ -5929,7 +5929,7 @@ smart
 nosmart
     mov     end_hiscore_random, ax
     mov     [bp+var_6A], 64h ; 'd'
-loc_138FF:
+loc_138FF::
     mov     [bp+var_6E], 0
     mov     ax, offset g_path_buf
     push    ax              ; char *
@@ -5962,7 +5962,7 @@ loc_138FF:
     push    ax
     push    word ptr mainresptr+2
     push    word ptr mainresptr
-loc_1394E:
+loc_1394E::
     call    locate_text_res
     add     sp, 6
     push    dx
@@ -5982,7 +5982,7 @@ loc_1394E:
     add     sp, 4
     mov     word ptr [bp+var_4A], ax
     mov     word ptr [bp+var_4A+2], dx
-loc_1397F:
+loc_1397F::
     mov     ax, word ptr [bp+var_4A]
     or      ax, word ptr [bp+var_4A+2]
     jz      short loc_139B6
@@ -5990,9 +5990,9 @@ loc_1397F:
     jmp     short loc_1398D
     ; align 2
     db 144
-loc_1398C:
+loc_1398C::
     inc     di
-loc_1398D:
+loc_1398D::
     cmp     di, 385h
     jge     short loc_139A6
     les     bx, td14_elem_map_main
@@ -6001,15 +6001,15 @@ loc_1398D:
     cmp     es:[bx+di], al
     jz      short loc_1398C
     mov     [bp+var_6E], 0FFh
-loc_139A6:
+loc_139A6::
     push    word ptr [bp+var_4A+2]
     push    word ptr [bp+var_4A]
     call    mmgr_release
     add     sp, 4
     jmp     short loc_139BA
-loc_139B6:
+loc_139B6::
     mov     [bp+var_6E], 0FFh
-loc_139BA:
+loc_139BA::
     cmp     [bp+var_6E], 0FFh
     jz      short loc_139E1
     sub     ax, ax
@@ -6027,7 +6027,7 @@ loc_139BA:
     or      al, al
     jz      short loc_139E1
     mov     [bp+var_6E], 0FFh
-loc_139E1:
+loc_139E1::
     cmp     [bp+var_6E], 0
     jnz     short loc_13A0F
     cmp     gState_total_finish_time, 0
@@ -6042,11 +6042,11 @@ loc_139E1:
     cmp     es:[bx+16Ah], ax
     jbe     short loc_13A0F
     mov     [bp+var_6E], 1
-loc_13A0F:
+loc_13A0F::
     mov     [bp+var_8E], 0
     mov     [bp+var_42], 1Eh
     mov     [bp+var_14], 1
-loc_13A1D:
+loc_13A1D::
     cmp     [bp+var_16], 0
     jz      short loc_13A42
     cmp     [bp+var_6E], 2
@@ -6058,11 +6058,11 @@ loc_13A1D:
     mov     [bp+var_selectedmenu], 1
     mov     [bp+var_14], 1
     jmp     loc_13FDA
-loc_13A42:
+loc_13A42::
     cmp     [bp+var_16], 0
     jnz     short loc_13A4B
     jmp     loc_13F48
-loc_13A4B:
+loc_13A4B::
     mov     byte ptr aOp01+3, 31h ; '1'
     mov     ax, offset aOp01; "op01"
     push    ax
@@ -6138,28 +6138,28 @@ loc_13A4B:
     jmp     short loc_13B31
     ; align 2
     db 144
-loc_13B2C:
+loc_13B2C::
     mov     [bp+var_7A], 3
-loc_13B31:
+loc_13B31::
     sub     di, di
     jmp     loc_13CAF
-loc_13B36:
+loc_13B36::
     cmp     [bp+var_18], 2
     jnz     short loc_13B42
     mov     ax, offset aD4a ; "d4a"
     jmp     short loc_13B57
     ; align 2
     db 144
-loc_13B42:
+loc_13B42::
     mov     al, [bp+var_6A]
     mov     [bp+var_12], al
     mov     [bp+var_11], 31h ; '1'
     mov     al, byte ptr word_40D40
-loc_13B4F:
+loc_13B4F::
     add     al, 61h ; 'a'
     mov     [bp+var_10], al
     lea     ax, [bp+var_12]
-loc_13B57:
+loc_13B57::
     push    ax
     push    [bp+var_66]
     push    [bp+var_68]
@@ -6167,12 +6167,12 @@ loc_13B57:
     add     sp, 6
     mov     word ptr [bp+var_86], ax
     mov     word ptr [bp+var_86+2], dx
-loc_13B6E:
+loc_13B6E::
     push    word ptr fontnptr+2
     push    word ptr fontnptr
     call    font_set_fontdef2
     add     sp, 4
-loc_13B7E:
+loc_13B7E::
     les     bx, [bp+var_86]
     inc     word ptr [bp+var_86]
     mov     al, es:[bx]
@@ -6182,7 +6182,7 @@ loc_13B7E:
     or      al, al
     jz      short loc_13B97
     jmp     loc_13C92
-loc_13B97:
+loc_13B97::
     mov     bx, [bp+var_80]
     add     bx, bp
     mov     byte ptr [bx-3Ch], 0
@@ -6202,21 +6202,21 @@ loc_13B97:
     jge     short loc_13C1A
     mov     [bp+var_5C], 0
     jmp     short loc_13BF3
-loc_13BD0:
+loc_13BD0::
     mov     al, [bp+var_6A]
     mov     [bp+var_12], al
     mov     [bp+var_11], 32h ; '2'
     mov     al, byte ptr end_hiscore_random
     jmp     loc_13B4F
-loc_13BE0:
+loc_13BE0::
     mov     al, [bp+var_6A]
     mov     [bp+var_12], al
     mov     [bp+var_11], 33h ; '3'
     mov     al, byte ptr word_40D44
     jmp     loc_13B4F
-loc_13BF0:
+loc_13BF0::
     inc     [bp+var_5C]
-loc_13BF3:
+loc_13BF3::
     mov     ax, [bp+var_80]
     cmp     [bp+var_5C], ax
     jge     short loc_13C10
@@ -6229,22 +6229,22 @@ loc_13BF3:
     jmp     short loc_13BF0
     ; align 2
     db 144
-loc_13C10:
+loc_13C10::
     mov     ax, [bp+var_8A]
     add     [bp+var_50], ax
     jmp     short loc_13C86
     ; align 2
     db 144
-loc_13C1A:
+loc_13C1A::
     mov     bx, [bp+var_40]
     mov     resID_byte1[bx], 0
     push    [bp+var_70]
-loc_13C25:
+loc_13C25::
     mov     ax, 8
     push    ax
-loc_13C29:
+loc_13C29::
     mov     ax, 0AC74h
-loc_13C2C:
+loc_13C2C::
     push    ax
     call    font_draw_text
     add     sp, 6
@@ -6253,12 +6253,12 @@ loc_13C2C:
     jnz     short loc_13C46
     mov     [bp+var_5C], 1
     jmp     short loc_13C4B
-loc_13C46:
+loc_13C46::
     mov     [bp+var_5C], 0
-loc_13C4B:
+loc_13C4B::
     mov     [bp+var_40], 0
     jmp     short loc_13C67
-loc_13C52:
+loc_13C52::
     mov     bx, [bp+var_5C]
     add     bx, bp
     mov     al, [bx-3Ch]
@@ -6266,7 +6266,7 @@ loc_13C52:
     inc     [bp+var_40]
     mov     resID_byte1[bx], al
     inc     [bp+var_5C]
-loc_13C67:
+loc_13C67::
     mov     ax, [bp+var_80]
     cmp     [bp+var_5C], ax
     jl      short loc_13C52
@@ -6277,43 +6277,43 @@ loc_13C67:
     call    font_op2
     add     sp, 2
     mov     [bp+var_50], ax
-loc_13C86:
+loc_13C86::
     mov     [bp+var_80], 1
     mov     [bp+var_3C], 20h ; ' '
     jmp     short loc_13CA0
     ; align 2
     db 144
-loc_13C92:
+loc_13C92::
     mov     bx, [bp+var_80]
     inc     [bp+var_80]
     add     bx, bp
     mov     al, [bp+var_3E]
     mov     [bx-3Ch], al
-loc_13CA0:
+loc_13CA0::
     cmp     [bp+var_3E], 0
     jz      short loc_13CA9
     jmp     loc_13B7E
-loc_13CA9:
+loc_13CA9::
     call    font_set_fontdef
     inc     di
-loc_13CAF:
+loc_13CAF::
     cmp     [bp+var_7A], di
     jle     short loc_13CD0
     mov     ax, di
     or      ax, ax
     jnz     short loc_13CBD
     jmp     loc_13B36
-loc_13CBD:
+loc_13CBD::
     cmp     ax, 1
     jnz     short loc_13CC5
     jmp     loc_13BD0
-loc_13CC5:
+loc_13CC5::
     cmp     ax, 2
     jnz     short loc_13CCD
     jmp     loc_13BE0
-loc_13CCD:
+loc_13CCD::
     jmp     loc_13B6E
-loc_13CD0:
+loc_13CD0::
     cmp     [bp+var_40], 0
     jz      short loc_13D06
     push    word ptr fontnptr+2
@@ -6330,12 +6330,12 @@ loc_13CD0:
     call    font_draw_text
     add     sp, 6
     call    font_set_fontdef
-loc_13D06:
+loc_13D06::
     mov     [bp+var_14], 0
     cmp     [bp+var_6E], 0
     jg      short loc_13D13
     jmp     loc_13FDA
-loc_13D13:
+loc_13D13::
     mov     [bp+var_6E], 0
     mov     [bp+var_14], 1
     sub     ax, ax
@@ -6373,7 +6373,7 @@ loc_13D13:
     call    check_input
     mov     [bp+var_70], 1
     call    sprite_copy_2_to_1_2
-loc_13D83:
+loc_13D83::
     push    word_407D0
     push    word_407CE
     mov     ax, 59Ah
@@ -6402,12 +6402,12 @@ loc_13D83:
     cmp     byte ptr es:[bx], 0
     jnz     short loc_13DD3
     mov     [bp+var_8E], 0
-loc_13DD3:
+loc_13DD3::
     mov     al, [bp+var_6C]
     cmp     [bp+var_8E], al
     jnz     short loc_13DDF
     jmp     loc_13EA5
-loc_13DDF:
+loc_13DDF::
     mov     al, [bp+var_8E]
     mov     [bp+var_6C], al
     cbw
@@ -6463,16 +6463,16 @@ loc_13DDF:
     jmp     short loc_13EA0
     ; align 2
     db 144
-loc_13E8A:
+loc_13E8A::
     push    [bp+var_90]
     push    [bp+var_8C]
     push    word ptr [bp+var_56+2]
     push    word ptr [bp+var_56]
     call    shape2d_op_unk5
     add     sp, 8
-loc_13EA0:
+loc_13EA0::
     call    mouse_draw_transparent_check
-loc_13EA5:
+loc_13EA5::
     push    di
     call    input_checking
     add     sp, 2
@@ -6483,13 +6483,13 @@ loc_13EA5:
     jz      short loc_13EBF
     cmp     si, 1Bh
     jnz     short loc_13EC4
-loc_13EBF:
+loc_13EBF::
     mov     [bp+var_70], 0
-loc_13EC4:
+loc_13EC4::
     cmp     [bp+var_70], 0
     jz      short loc_13ECD
     jmp     loc_13D83
-loc_13ECD:
+loc_13ECD::
     call    sprite_copy_wnd_to_1
     sub     ax, ax
     push    ax
@@ -6537,7 +6537,7 @@ loc_13ECD:
     call near ptr enter_hiscore
     add     sp, 8
     jmp     loc_13FDA
-loc_13F48:
+loc_13F48::
     cmp     [bp+var_6E], 0
     jle     short loc_13F84
     call    check_input
@@ -6559,7 +6559,7 @@ loc_13F48:
     mov     [bp+var_6E], 0
     mov     [bp+var_52], 0FEh ; 'þ'
     jmp     short loc_13FDA
-loc_13F84:
+loc_13F84::
     call    mouse_draw_opaque_check
     cmp     [bp+var_6E], 0FFh
     jnz     short loc_13FD6
@@ -6577,7 +6577,7 @@ loc_13F84:
     add     sp, 6
     sub     ax, ax
     push    ax
-loc_13FB2:
+loc_13FB2::
     push    dialog_fnt_colour
     mov     ax, 32h ; '2'
     push    ax
@@ -6587,20 +6587,20 @@ loc_13FB2:
     add     sp, 2
     push    ax
     mov     ax, 0AC74h
-loc_13FCA:
+loc_13FCA::
     push    ax
-loc_13FCB:
+loc_13FCB::
     call    hiscore_draw_text
-loc_13FD0:
+loc_13FD0::
     add     sp, 0Ah
     jmp     short loc_13FDA
     ; align 2
     db 144
-loc_13FD6:
+loc_13FD6::
     push    cs
-loc_13FD7:
+loc_13FD7::
     call near ptr highscore_text_unk
-loc_13FDA:
+loc_13FDA::
     mov     [bp+var_selectedmenu], 1
     mov     [bp+var_78], 1
     call    sub_29772
@@ -6609,12 +6609,12 @@ loc_13FDA:
     jz      short loc_13FF9
     cmp     [bp+var_6E], 0FFh
     jnz     short loc_14002
-loc_13FF9:
+loc_13FF9::
     mov     [bp+var_9C], 0FFDCh
     jmp     short loc_14058
     ; align 2
     db 144
-loc_14002:
+loc_14002::
     mov     [bp+var_9C], 0
     cmp     [bp+var_14], 0
     jz      short loc_14014
@@ -6622,9 +6622,9 @@ loc_14002:
     jmp     short loc_14017
     ; align 2
     db 144
-loc_14014:
+loc_14014::
     mov     ax, offset aBhi ; "bhi"
-loc_14017:
+loc_14017::
     push    ax
     push    [bp+var_4C]
     push    [bp+var_4E]
@@ -6650,7 +6650,7 @@ loc_14017:
     push    [bp+var_7E]
     call    draw_button
     add     sp, 14h
-loc_14058:
+loc_14058::
     sub     ax, ax
     push    ax
     push    word_407F8
@@ -6680,9 +6680,9 @@ loc_14058:
     jz      short loc_140A4
     mov     ax, offset aBra ; "bra"
     jmp     short loc_140A7
-loc_140A4:
+loc_140A4::
     mov     ax, offset aBdr ; "bdr"
-loc_140A7:
+loc_140A7::
     push    ax
     push    [bp+var_4C]
     push    [bp+var_4E]
@@ -6735,7 +6735,7 @@ loc_140A7:
     call    draw_button
     add     sp, 14h
     sub     di, di
-loc_14130:
+loc_14130::
     mov     ax, di
     shl     ax, 1
     mov     [bp+var_9E], ax
@@ -6758,7 +6758,7 @@ loc_14130:
     call    check_input
     mov     al, [bp+var_52]
     cbw
-loc_1416E:
+loc_1416E::
     push    ax
     push    word ptr wndsprite+2
     push    word ptr wndsprite
@@ -6766,7 +6766,7 @@ loc_1416E:
     add     sp, 6
     mov     [bp+var_52], 0FEh ; 'þ'
     call    sprite_copy_2_to_1_2
-loc_14188:
+loc_14188::
     mov     al, [bp+var_78]
     cmp     [bp+var_selectedmenu], al
     jz      short loc_141DC
@@ -6792,7 +6792,7 @@ loc_14188:
     call    mouse_draw_transparent_check
     call    timer_get_delta_alt
     call    sub_29772
-loc_141DC:
+loc_141DC::
     push    word_407D0
     push    word_407CE
     mov     ax, offset hiscore_buttons_y2
@@ -6812,13 +6812,13 @@ loc_141DC:
     cmp     [bp+var_14], 0
     jz      short loc_1420F
     jmp     loc_14337
-loc_1420F:
+loc_1420F::
     cmp     [bp+var_18], 2
     jnz     short loc_14218
     jmp     loc_14337
-loc_14218:
+loc_14218::
     add     [bp+var_42], ax
-loc_1421B:
+loc_1421B::
     cmp     [bp+var_42], 1Eh
     jl      short loc_14241
     sub     [bp+var_42], 1Eh
@@ -6830,14 +6830,14 @@ loc_1421B:
     mov     es, [bp+var_58]
     cmp     byte ptr es:[bx], 0
     jnz     short loc_14241
-loc_1423C:
+loc_1423C::
     mov     [bp+var_8E], 0
-loc_14241:
+loc_14241::
     mov     al, [bp+var_6C]
     cmp     [bp+var_8E], al
     jnz     short loc_1424D
     jmp     loc_14337
-loc_1424D:
+loc_1424D::
     mov     al, [bp+var_8E]
     mov     [bp+var_6C], al
     cbw
@@ -6893,15 +6893,15 @@ loc_1424D:
     jmp     short loc_1430E
     ; align 2
     db 144
-loc_142F8:
+loc_142F8::
     push    [bp+var_90]
-loc_142FC:
+loc_142FC::
     push    [bp+var_8C]
     push    word ptr [bp+var_56+2]
     push    word ptr [bp+var_56]
     call    shape2d_op_unk5
     add     sp, 8
-loc_1430E:
+loc_1430E::
     push    [bp+var_90]
     push    [bp+var_8C]
     mov     ax, offset aOp01; "op01"
@@ -6915,12 +6915,12 @@ loc_1430E:
     call    shape2d_op_unk5
     add     sp, 8
     call    mouse_draw_transparent_check
-loc_14337:
+loc_14337::
     cmp     [bp+var_16], 0
     jz      short loc_14343
     cmp     [bp+var_6E], 0FFh
     jnz     short loc_1436C
-loc_14343:
+loc_14343::
     mov     ax, (offset hiscore_buttons_y2+2); references the last three y pos in the array
     push    ax
     mov     ax, (offset hiscore_buttons_y1+2); ditto
@@ -6933,18 +6933,18 @@ loc_14343:
     push    ax
     call    mouse_multi_hittest
     add     sp, 0Ah
-loc_14360:
+loc_14360::
     mov     [bp+var_menuhit], al
     cmp     al, 0FFh
     jz      short loc_14395
     inc     al
     jmp     short loc_14391
-loc_1436C:
+loc_1436C::
     mov     ax, offset hiscore_buttons_y2
     push    ax
     mov     ax, offset hiscore_buttons_y1
     push    ax
-loc_14374:
+loc_14374::
     lea     ax, [bp+var_9A]
     push    ax
     lea     ax, [bp+var_64]
@@ -6956,9 +6956,9 @@ loc_14374:
     mov     [bp+var_menuhit], al
     cmp     al, 0FFh
     jz      short loc_14395
-loc_14391:
+loc_14391::
     mov     [bp+var_selectedmenu], al
-loc_14395:
+loc_14395::
     push    [bp+var_72]
     call    input_checking
     add     sp, 2
@@ -6966,7 +6966,7 @@ loc_14395:
     or      si, si
     jnz     short loc_143A9
     jmp     loc_14188
-loc_143A9:
+loc_143A9::
     cmp     ax, 0Dh         ; enter
     jz      short loc_143C6
     cmp     ax, 20h ; ' '   ; space
@@ -6974,13 +6974,13 @@ loc_143A9:
     cmp     ax, 4B00h
     jnz     short loc_143BB
     jmp     loc_1447A
-loc_143BB:
+loc_143BB::
     cmp     ax, 4D00h
     jnz     short loc_143C3
     jmp     loc_144A4
-loc_143C3:
+loc_143C3::
     jmp     loc_14188
-loc_143C6:
+loc_143C6::
     cmp     [bp+var_selectedmenu], 0
     jnz     short loc_1440C
     call    sprite_copy_wnd_to_1
@@ -7004,12 +7004,12 @@ loc_143C6:
     jz      short loc_14404
     mov     [bp+var_6E], 0
     jmp     loc_13A1D
-loc_14404:
+loc_14404::
     mov     [bp+var_6E], 2
     jmp     loc_13A1D
     ; align 2
     db 144
-loc_1440C:
+loc_1440C::
     call    audio_unload
     cmp     [bp+var_16], 0
     jz      short loc_14425
@@ -7017,14 +7017,14 @@ loc_1440C:
     push    [bp+var_1C]
     call    mmgr_release
     add     sp, 4
-loc_14425:
+loc_14425::
     cmp     video_flag5_is0, 0
     jz      short loc_1443A
     push    word ptr [bp+var_46+2]
     push    word ptr [bp+var_46]
     call    sprite_free_wnd
     add     sp, 4
-loc_1443A:
+loc_1443A::
     push    word ptr wndsprite+2
     push    word ptr wndsprite
     call    sprite_free_wnd
@@ -7035,7 +7035,7 @@ loc_1443A:
     push    [bp+var_68]
     call    unload_resource
     add     sp, 4
-loc_1445F:
+loc_1445F::
     push    [bp+var_4C]
     push    [bp+var_4E]
     call    unload_resource
@@ -7050,39 +7050,39 @@ loc_1445F:
     retf
     ; align 2
     db 144
-loc_1447A:
+loc_1447A::
     cmp     [bp+var_16], 0
     jz      short loc_14486
     cmp     [bp+var_6E], 0FFh
     jnz     short loc_14496
-loc_14486:
+loc_14486::
     cmp     [bp+var_selectedmenu], 1
     jg      short loc_1449D
-loc_1448D:
+loc_1448D::
     mov     [bp+var_selectedmenu], 3
     jmp     loc_14188
     ; align 2
     db 144
-loc_14496:
+loc_14496::
     cmp     [bp+var_selectedmenu], 0
     jz      short loc_1448D
-loc_1449D:
+loc_1449D::
     dec     [bp+var_selectedmenu]
     jmp     loc_14188
-loc_144A4:
+loc_144A4::
     cmp     [bp+var_selectedmenu], 3
     jge     short loc_144B2
     inc     [bp+var_selectedmenu]
     jmp     loc_14188
-loc_144B2:
+loc_144B2::
     cmp     [bp+var_16], 0
     jz      short loc_144BE
     cmp     [bp+var_6E], 0FFh
     jnz     short loc_144C6
-loc_144BE:
+loc_144BE::
     mov     [bp+var_selectedmenu], 1
     jmp     loc_14188
-loc_144C6:
+loc_144C6::
     mov     [bp+var_selectedmenu], 0
     jmp     loc_14188
     pop     si
@@ -7127,7 +7127,7 @@ security_check proc far
     call    file_load_resfile
     add     sp, 2
     mov     [bp+var_40C], ax
-loc_144F8:
+loc_144F8::
     mov     [bp+var_40A], dx
     mov     ax, offset aCop_0; "cop"
     push    ax
@@ -7145,7 +7145,7 @@ loc_144F8:
     push    ax
     push    [bp+var_40A]
     push    [bp+var_40C]
-loc_14528:
+loc_14528::
     call    locate_text_res
     add     sp, 6
     push    dx
@@ -7158,12 +7158,12 @@ loc_14528:
     push    ax
     lea     ax, [bp+var_400]
     push    ax              ; char *
-loc_14547:
+loc_14547::
     call    _strcat
-loc_1454C:
+loc_1454C::
     add     sp, 4
     sub     si, si
-loc_14551:
+loc_14551::
     mov     al, resID_byte1[si]
     mov     [bp+si+var_406], al
     inc     si
@@ -7206,27 +7206,27 @@ loc_14551:
     push    [bp+var_424]
     mov     ax, offset resID_byte1
     push    ax
-loc_145CA:
+loc_145CA::
     call    font_draw_text
-loc_145CF:
+loc_145CF::
     add     sp, 6
     mov     al, [bp+var_402]
     mov     resID_byte1, al
     mov     al, [bp+var_401]
     mov     resID_byte2, al
-loc_145E0:
+loc_145E0::
     push    [bp+var_41E]
     push    [bp+var_420]
     mov     ax, offset resID_byte1
     push    ax
     call    font_draw_text
     add     sp, 6
-loc_145F4:
+loc_145F4::
     mov     ax, offset aA00 ; "a00"
     push    ax
     push    [bp+var_40A]
     push    [bp+var_40C]
-loc_14600:
+loc_14600::
     call    locate_text_res
     add     sp, 6
     push    dx
@@ -7235,21 +7235,21 @@ loc_14600:
     push    ax
     call    copy_string
     add     sp, 6
-loc_14616:
+loc_14616::
     mov     ax, [bp+var_41C]
     mov     dx, [bp+var_41A]
-loc_1461E:
+loc_1461E::
     mov     [bp+var_428], ax
     mov     [bp+var_426], dx
     mov     ax, offset resID_byte1
     push    ax              ; char *
     call    _strlen
     add     sp, 2
-loc_14632:
+loc_14632::
     mov     [bp+var_408], ax
     mov     [bp+var_43E], 0
     mov     [bp+var_40E], 0
-loc_14641:
+loc_14641::
     mov     ax, (offset terraincenterpos+22h)
     cwd
     push    dx              ; int
@@ -7263,7 +7263,7 @@ loc_14641:
     add     sp, 0Ch
     sub     si, si
     jmp     short loc_1468D
-loc_14664:
+loc_14664::
     mov     al, [bp+si+var_43E]
     cbw
     mov     bx, ax
@@ -7280,18 +7280,18 @@ nosmart
     jmp     short loc_14688
     ; align 2
     db 144
-loc_14684:
+loc_14684::
     mov     al, [bp+si+var_43E]
-loc_14688:
+loc_14688::
     mov     [bp+si+var_43E], al
-loc_1468C:
+loc_1468C::
     inc     si
-loc_1468D:
+loc_1468D::
     cmp     [bp+si+var_43E], 0
     jnz     short loc_14664
     mov     ax, offset resID_byte1
     push    ax
-loc_14698:
+loc_14698::
     lea     ax, [bp+var_43E]
     push    ax              ; char *
     call    _strcmp
@@ -7300,52 +7300,52 @@ loc_14698:
     jnz     short loc_146B0
     mov     passed_security, 1
     jmp     short loc_146B4
-loc_146B0:
+loc_146B0::
     inc     [bp+var_40E]
-loc_146B4:
+loc_146B4::
     cmp     passed_security, 0
     jnz     short loc_146C5
     cmp     [bp+var_40E], 3
     jz      short loc_146C5
-loc_146C2:
+loc_146C2::
     jmp     loc_14641
-loc_146C5:
+loc_146C5::
     call    sub_275C6
     call    mouse_draw_transparent_check
-loc_146CF:
+loc_146CF::
     push    [bp+var_40A]
-loc_146D3:
+loc_146D3::
     push    [bp+var_40C]
-loc_146D7:
+loc_146D7::
     call    unload_resource
-loc_146DC:
+loc_146DC::
     add     sp, 4
     pop     si
     mov     sp, bp
-loc_146E2:
+loc_146E2::
     pop     bp
     retf
 security_check endp
 set_default_car proc far
 
     mov     gameconfig.game_playercarid, 43h ; 'C'
-loc_146E9:
+loc_146E9::
     mov     gameconfig.game_playercarid+1, 4Fh ; 'O'
-loc_146EE:
+loc_146EE::
     mov     gameconfig.game_playercarid+2, 55h ; 'U'
-loc_146F3:
+loc_146F3::
     mov     gameconfig.game_playercarid+3, 4Eh ; 'N'
-loc_146F8:
+loc_146F8::
     mov     gameconfig.game_playermaterial, 0
-loc_146FD:
+loc_146FD::
     mov     gameconfig.game_opponenttype, 0
-loc_14702:
+loc_14702::
     mov     gameconfig.game_opponentmaterial, 0
-loc_14707:
+loc_14707::
     mov     gameconfig.game_playertransmission, 1
-loc_1470C:
+loc_1470C::
     mov     gameconfig.game_opponentcarid, 0FFh
-locret_14711:
+locret_14711::
     retf
 set_default_car endp
 seg000 ends
