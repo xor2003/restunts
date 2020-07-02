@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -288,9 +288,9 @@ loc_3878C:
     cmp     byte ptr [bx+4], 0
     jz      short loc_387B2
     mov     si, [bx+4]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     shl     si, 1
     shl     si, 1
     mov     ax, [bx+si+5]
@@ -356,9 +356,9 @@ loc_3881C:
     mov     ax, [bx]
     mov     dx, [bx+2]
     mov     si, [bx+4]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     shl     si, 1
     shl     si, 1
     mov     [bx+si+5], ax
@@ -433,9 +433,9 @@ loc_388C5:
 loc_388D8:
     mov     bx, [bp+var_4]
     mov     al, byte ptr [bp+arg_0]
-smart
+;smart
     and     al, 0Fh
-nosmart
+;nosmart
     inc     al
 loc_388E2:
     mov     [bx+47h], al
@@ -519,17 +519,17 @@ loc_38992:
     mov     ax, [bx]
     mov     dx, [bx+2]
     mov     si, [bx+32h]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     shl     si, 1
     shl     si, 1
     mov     [bx+si+33h], ax
     mov     [bx+si+35h], dx
     mov     si, [bx+32h]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     mov     al, [bp+var_2]
     dec     al
     mov     [bx+si+43h], al
@@ -609,9 +609,9 @@ loc_38A44:
     mov     al, [bx+22h]
     mov     byte_42A03, al
 loc_38A54:
-smart
+;smart
     and     byte_42A02, 7Fh
-nosmart
+;nosmart
     push    [bp+arg_0]
     mov     ax, 728Eh
     push    ax
@@ -682,9 +682,9 @@ sub_38AC4 proc far
     mov     ax, seg dseg
     mov     ds, ax
     mov     si, [bp+arg_0]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     shl     si, 1
     shl     si, 1
     mov     bx, [bp+arg_2]
@@ -835,9 +835,9 @@ sub_38BEA proc far
     mov     [bp+var_2], ax
     test    [bp+arg_2], 100h
     jz      short loc_38C0D
-smart
+;smart
     or      byte ptr [bp+arg_2], 80h
-nosmart
+;nosmart
 loc_38C0D:
     mov     al, byte ptr [bp+arg_2]
     cbw
@@ -992,9 +992,9 @@ loc_38D30:
     imul    [bp+arg_0]
     mov     bx, ax
     mov     al, byte ptr [bp+arg_0]
-smart
+;smart
     and     al, 0Fh
-nosmart
+;nosmart
     inc     al
     mov     [bx-7DBDh], al
 loc_38D43:
@@ -1837,9 +1837,9 @@ loc_39480:
     les     bx, [bp+arg_2]
     mov     al, es:[bx]
     sub     ah, ah
-smart
+;smart
     and     ax, 7Fh
-nosmart
+;nosmart
     sub     dx, dx
     mov     cx, [si]
     mov     bx, [si+2]
@@ -1895,7 +1895,7 @@ loc_394DA:
     pop     es
     push    ds
     mov     ds, dx
-    repne movsw
+    rep movsw
     jnb     short loc_39511
     movsb
 loc_39511:
@@ -1999,9 +1999,9 @@ loc_395F4:
     les     bx, [bp+arg_2]
     mov     al, es:[bx]
     sub     ah, ah
-smart
+;smart
     and     ax, 7Fh
-nosmart
+;nosmart
     sub     dx, dx
     mov     cx, [si+6]
     mov     bx, [si+8]
@@ -2308,9 +2308,9 @@ loc_39880:
     inc     byte ptr [bx+29h]
     sub     ah, ah
     mov     si, ax
-smart
+;smart
     and     si, 7
-nosmart
+;nosmart
     mov     bx, word ptr [bp+var_6]
     mov     al, es:[bx+si+3Bh]
     mov     bx, [bp+var_8]

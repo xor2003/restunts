@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -191,7 +191,7 @@ ported_select_cliprect_rotate_ proc far
     push    ds
     pop     es
     mov     cx, 9
-    repne movsw
+    rep movsw
     push    cs
     call near ptr ported_polyinfo_reset_
     mov     ax, [bp+arg_cliprectptr]
@@ -234,9 +234,9 @@ ported_select_cliprect_rotate_ proc far
     push    [bp+var_vec2.vx]
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     pop     si
     pop     di
     mov     sp, bp
@@ -1933,9 +1933,9 @@ loc_25F0C:
     mov     ax, select_rect_rc.rc_left
     cmp     [si+POINT2D.x2], ax
     jge     short loc_25F1A
-smart
+;smart
     or      [bp+var_flags], 4
-nosmart
+;nosmart
     jmp     short loc_25F25
     ; align 2
     db 144
@@ -1943,9 +1943,9 @@ loc_25F1A:
     mov     ax, select_rect_rc.rc_right
     cmp     [si+POINT2D.x2], ax
     jle     short loc_25F25
-smart
+;smart
     or      [bp+var_flags], 8
-nosmart
+;nosmart
 loc_25F25:
     mov     al, [bp+var_flags]
     cbw
@@ -2315,10 +2315,10 @@ ported_mat_rot_zxy_ proc far
 loc_2621C:
     test    [bp+arg_angleX], 3FFh
     jz      short loc_26236
-smart
+;smart
     nop
     or      si, 2
-nosmart
+;nosmart
     push    [bp+arg_angleX]
     mov     ax, offset mat_x_rot
     push    ax
@@ -2327,14 +2327,14 @@ nosmart
 loc_26236:
     test    [bp+arg_angleY], 3FFh
     jz      short loc_26285
-smart
+;smart
     nop
     or      si, 1
-nosmart
+;nosmart
     mov     ax, [bp+arg_angleY]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     cmp     ax, mat_y_rot_angle
     jnz     short loc_26252
 loc_2624D:
@@ -2342,9 +2342,9 @@ loc_2624D:
     jmp     short loc_26285
 loc_26252:
     mov     ax, [bp+arg_angleY]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     cmp     ax, 100h
     jz      short loc_26282
     cmp     ax, 200h
@@ -2357,9 +2357,9 @@ nosmart
     call    mat_rot_y
     add     sp, 4
     mov     ax, [bp+arg_angleY]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     mat_y_rot_angle, ax
     jmp     short loc_2624D
     ; align 2

@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -1347,14 +1347,14 @@ loc_227C5:
 loc_227C8:
     call    get_kb_or_joy_flags
     mov     si, ax
-smart
+;smart
     and     si, 33h
-nosmart
+;nosmart
 loc_227D2:
     mov     di, elapsed_time2
-smart
+;smart
     and     di, 3Fh
-nosmart
+;nosmart
     mov     al, byte_40D6A
     mov     byte_44292[di], al
     mov     byte_442EA[di], 1
@@ -1371,10 +1371,10 @@ loc_227EF:
     add     sp, 2
     or      ax, ax
     jz      short loc_22803
-smart
+;smart
     nop
     or      si, 10h
-nosmart
+;nosmart
 loc_22803:
     mov     ax, 2Ch ; ','
     push    ax
@@ -1382,10 +1382,10 @@ loc_22803:
     add     sp, 2
     or      ax, ax
     jz      short loc_22817
-smart
+;smart
     nop
     or      si, 20h
-nosmart
+;nosmart
 loc_22817:
     mov     ax, 5DCh
     imul    framespersec
@@ -1489,7 +1489,7 @@ loc_2286C:
     push    ds
     mov     ds, dx
     mov     cx, 230h
-    repne movsw
+    rep movsw
     pop     ds
     pop     di
     pop     si
@@ -1955,7 +1955,7 @@ ported_file_load_replay_ proc far
     push    ds
     mov     ds, dx
     mov     cx, 0Dh         ; copies 13 words from the rpl to gameconfig
-    repne movsw
+    rep movsw
     pop     ds
     mov     g_is_busy, 0
     sub     ax, ax
@@ -1981,7 +1981,7 @@ ported_file_write_replay_ proc far
     mov     di, bx
     mov     si, offset gameconfig
     mov     cx, 0Dh
-    repne movsw
+    rep movsw
     pop     si
     mov     ax, gameconfig.game_recordedframes
     add     ax, 724h        ; offset of .rpl kb. event block
@@ -3311,9 +3311,9 @@ replay_unk proc far
     push    di
     push    si
     mov     si, state.game_frame
-smart
+;smart
     and     si, 3Fh
-nosmart
+;nosmart
     cmp     byte_442EA[si], 0
     jnz     short loc_23AB1
     jmp     loc_23B45
@@ -3324,9 +3324,9 @@ loc_23AB1:
     mov     ax, state.playerstate.car_speed2
     mov     cl, 0Ah
     shr     ax, cl
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     mov     [bp+var_8], al
     cbw
     mov     bx, ax
@@ -3965,9 +3965,9 @@ loc_24082:
     call    polarAngle
     add     sp, 4
     add     ax, 80h ; '€'
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     cl, 8
     shr     ax, cl
     or      ax, ax
@@ -4482,7 +4482,7 @@ loc_24548:
     push    ss
     pop     es
     mov     cx, 0Dh
-    repne movsw
+    rep movsw
     pop     di
     pop     si
     les     bx, td14_elem_map_main

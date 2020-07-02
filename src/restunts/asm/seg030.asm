@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -78,7 +78,7 @@ loc_39CDE:
     sub     di, cx
     xchg    di, si
     shr     cx, 1
-    repne movsw
+    rep movsw
     adc     cx, cx
     repne movsb
     mov     ax, 5Ch ; '\'
@@ -119,7 +119,7 @@ loc_39D2C:
     dec     di
     mov     cx, bx
     shr     cx, 1
-    repne movsw
+    rep movsw
     adc     cx, cx
     repne movsb
     mov     ax, 5Ch ; '\'
@@ -157,7 +157,7 @@ loc_39D72:
     dec     di
     mov     cx, bx
     shr     cx, 1
-    repne movsw
+    rep movsw
     adc     cx, cx
     repne movsb
     mov     di, offset audio_filetemp
@@ -196,7 +196,7 @@ loc_39DBF:
     dec     di
     mov     cx, bx
     shr     cx, 1
-    repne movsw
+    rep movsw
     adc     cx, cx
     repne movsb
     mov     si, offset audio_filetemp
@@ -218,7 +218,7 @@ loc_39E01:
     mov     cx, bx
     shr     cx, 1
 loc_39E05:
-    repne movsw
+    rep movsw
     adc     cx, cx
 loc_39E09:
     repne movsb

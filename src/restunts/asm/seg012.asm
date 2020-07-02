@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -420,16 +420,16 @@ ported_polarAngle_ proc far
     mov     cx, [bp+arg_x]
     or      dx, dx
     jge     short loc_2EA63
-smart
+;smart
     or      di, 8
-nosmart
+;nosmart
     neg     dx
 loc_2EA63:
     or      cx, cx
     jge     short loc_2EA6C
-smart
+;smart
     or      di, 4
-nosmart
+;nosmart
     neg     cx
 loc_2EA6C:
     cmp     dx, cx
@@ -437,9 +437,9 @@ loc_2EA6C:
     jz      short loc_2EA8F
     xchg    dx, cx
 loc_2EA74:
-smart
+;smart
     or      di, 2
-nosmart
+;nosmart
 loc_2EA77:
     xor     ax, ax
     div     cx
@@ -1506,9 +1506,9 @@ parse_shape2d_helper2 proc far
     rcr     dx, 1
     shr     bx, 1
     rcr     dx, 1
-smart
+;smart
     and     ax, 0Fh
-nosmart
+;nosmart
     pop     bp
     retf
 word_2F354     dw 0
@@ -3340,9 +3340,9 @@ video_set_mode4 proc far
     mov     ax, 40h ; '@'
     mov     es, ax
     mov     ax, es:10h
-smart
+;smart
     and     ax, 0FFCFh
-nosmart
+;nosmart
     or      ax, 20h
     mov     es:10h, ax
     mov     ah, 0
@@ -3453,9 +3453,9 @@ loc_3012F:
     mov     ax, 40h ; '@'
     mov     es, ax
     mov     ax, es:10h
-smart
+;smart
     and     ax, 0FFCFh
-nosmart
+;nosmart
     or      ax, 30h
     mov     es:10h, ax
     mov     al, 3
@@ -3548,9 +3548,9 @@ loc_301FD:
     mov     word ptr timerintr+2, 0
     sti
     in      al, 61h         ; PC/XT PPI port B bits:
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     out     61h, al         ; PC/XT PPI port B bits:
     mov     al, 0B6h ; '¶'
     out     43h, al         ; Timer 8253-5 (AT: 8254.2).
@@ -3574,9 +3574,9 @@ loc_30231:
     mov     word ptr es:22h, cs
 loc_3024A:
     in      al, 21h         ; Interrupt controller, 8259A.
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     out     21h, al         ; Interrupt controller, 8259A.
     sti
     mov     al, dl
@@ -3615,18 +3615,18 @@ loc_30281:
     mov     ax, word ptr dword_3F874+2
     mov     es:22h, ax
     in      al, 21h         ; Interrupt controller, 8259A.
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     out     21h, al         ; Interrupt controller, 8259A.
     sti
     mov     al, 0
     out     40h, al         ; Timer 8253-5 (AT: 8254.2).
     out     40h, al         ; Timer 8253-5 (AT: 8254.2).
     in      al, 61h         ; PC/XT PPI port B bits:
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     out     61h, al         ; PC/XT PPI port B bits:
     retf
 audio_stop_unk endp
@@ -3809,9 +3809,9 @@ set_bios_mode3 proc far
     mov     ax, 40h ; '@'
     mov     es, ax
     mov     ax, es:10h
-smart
+;smart
     and     ax, 0FFCFh
-nosmart
+;nosmart
     or      ax, 10h
     mov     es:10h, ax
     mov     ah, 0
@@ -3841,9 +3841,9 @@ loc_30412:
     mov     bx, [bp+arg_0]
     or      bl, bl
     jz      short loc_30441
-smart
+;smart
     and     bx, 7Fh
-nosmart
+;nosmart
     mov     [bp+arg_0], bx
     mov     bl, callbackflags[bx]
 loc_30429:
@@ -3964,9 +3964,9 @@ loc_304DB:
     jmp     short loc_304F6
     db 144
 loc_304ED:
-smart
+;smart
     and     bx, 0Fh
-nosmart
+;nosmart
     shl     bx, 1
     mov     ax, [bx+4372h]
 loc_304F6:
@@ -4087,9 +4087,9 @@ loc_305E8:
     jz      short loc_305F9
     in      al, dx          ; Game I/O port
     not     al
-smart
+;smart
     and     al, 30h
-nosmart
+;nosmart
 loc_305F9:
     or      ax, cx
     retf
@@ -4131,17 +4131,17 @@ loc_3063F:
     test    al, 2
     jz      short loc_3062A
     mov     joyflag2, cx
-smart
+;smart
     and     bl, 1
-nosmart
+;nosmart
     jnz     short loc_3062A
     jmp     short loc_30658
     db 144
 loc_3064F:
     mov     joyflag1, cx
-smart
+;smart
     and     bl, 2
-nosmart
+;nosmart
     jnz     short loc_3063F
 loc_30658:
     sti
@@ -4275,9 +4275,9 @@ loc_30789:
 loc_3079A:
     in      al, dx          ; Game I/O port
     and     al, joybutton
-smart
+;smart
     and     al, 30h
-nosmart
+;nosmart
     xor     al, 30h
     or      joyinput, al
     mov     al, joyinput
@@ -4304,9 +4304,9 @@ sub_307D2 proc far
     push    bp
     mov     bp, sp
     mov     bx, [bp+arg_0]
-smart
+;smart
     and     bx, 0Fh
-nosmart
+;nosmart
     mov     al, byte_3FB38[bx]
     xor     ah, ah
     pop     bp
@@ -4401,9 +4401,9 @@ ported_kb_exit_handler_ proc far
     mov     bx, old_kb_intr_bios_seg
     mov     es:5Ah, bx
     mov     al, es:417h
-smart
+;smart
     and     al, 0F0h
-nosmart
+;nosmart
     mov     es:417h, al
 loc_308C1:
     mov     al, ah
@@ -4431,9 +4431,9 @@ ported_kb_int9_handler_ proc far
     pop     ax
     test    al, 80h
     jz      short loc_308F4
-smart
+;smart
     and     al, 7Fh
-nosmart
+;nosmart
     jmp     loc_30992       ; .. do some stuff, then end
 loc_308EA:
     mov     al, 20h ; ' '
@@ -4494,9 +4494,9 @@ loc_3096C:
     xor     al, al
     cmp     ah, 85h ; '…'
     jb      short loc_30978
-smart
+;smart
     and     ah, 7Fh
-nosmart
+;nosmart
 loc_30978:
     jmp     short loc_30935
 loc_3097A:
@@ -4841,9 +4841,9 @@ ported_file_decomp_rle_ proc far
     mov     si, [bp+arg_srcoff]; Reset source pos
     add     si, 9
     mov     dx, [bp+var_esclen]
-smart
+;smart
     and     dx, 7Fh         ; Escape codes length mask
-nosmart
+;nosmart
     add     si, dx
     mov     [bp+arg_srcoff], si; Skip escape codes
     cmp     byte ptr [bp+var_esclen], 80h ; '€'; Skip seq pass flag
@@ -4896,9 +4896,9 @@ ported_file_decomp_rle_single_ proc near
     xor     ax, ax
     rep stosw
     mov     cl, [bp-12h]
-smart
+;smart
     and     cx, 7Fh
-nosmart
+;nosmart
     lea     si, [bp-11h]
     lea     di, [bp-11Ch]
     xor     ax, ax
@@ -5249,9 +5249,9 @@ fd_not_found:
     mov     al, [si]
     test    al, 80h
     jz      short decompress_subfile
-smart
+;smart
     and     ax, 7Fh
-nosmart
+;nosmart
     mov     [bp+var_passes], ax
     add     si, 4
 decompress_subfile:
@@ -5498,9 +5498,9 @@ _found_resource:
     add     ax, [bx]
     adc     dx, [bx+2]
     mov     bx, ax
-smart
+;smart
     and     bx, 0Fh
-nosmart
+;nosmart
     shr     dx, 1
     rcr     ax, 1
     shr     dx, 1
@@ -7599,9 +7599,9 @@ loc_31FE8:
 loc_32002:
     mov     [bp+var_E], ax
     mov     [bp+var_10], si
-smart
+;smart
     or      [bp+var_7D0], 1
-nosmart
+;nosmart
     jmp     short loc_32015
     ; align 2
     db 144
@@ -7626,10 +7626,10 @@ nosmart
     arg_2 = word ptr 8
     arg_4 = byte ptr 10
 loc_32010:
-smart
-smart
+;smart
+;smart
     and     [bp+var_7D0], 2
-nosmart
+;nosmart
 loc_32015:
     mov     ax, [di+0Ah]
     add     ax, [di+16h]
@@ -7643,9 +7643,9 @@ loc_32025:
 loc_3202D:
     mov     [bp+var_12], ax
     mov     [bp+var_14], si
-smart
+;smart
     or      [bp+var_7D0], 2
-nosmart
+;nosmart
     jmp     short loc_32040
     db 144
     var_7D0 = word ptr -2000
@@ -7669,10 +7669,10 @@ nosmart
     arg_2 = word ptr 8
     arg_4 = byte ptr 10
 loc_3203B:
-smart
-smart
+;smart
+;smart
     and     [bp+var_7D0], 1
-nosmart
+;nosmart
 loc_32040:
     mov     ax, [di+2]
     cmp     ax, bx
@@ -7955,9 +7955,9 @@ loc_32260:
     cmp     dl, 9
     jnz     short loc_3226F
     add     word_40330, 10h
-smart
+;smart
     and     word_40330, 0FFF0h
-nosmart
+;nosmart
 loc_3226F:
     jmp     loc_321D1
     pop     ax
@@ -8444,9 +8444,9 @@ video_on_exit proc far
     mov     es, ax
     mov     al, byte_403F3
     mov     es:10h, al
-smart
+;smart
     and     al, 30h
-nosmart
+;nosmart
     cmp     al, 30h ; '0'
     jnz     short loc_32606
     xor     ax, ax
@@ -8560,9 +8560,9 @@ ported_file_get_shape2d_ proc far
     add     ax, es:[bx]
     adc     dx, es:[bx+2]
     mov     bx, ax
-smart
+;smart
     and     bx, 0Fh
-nosmart
+;nosmart
     shr     dx, 1
     rcr     ax, 1
     shr     dx, 1
@@ -8613,9 +8613,9 @@ ported_sin_fast_ proc far
 code_sin_fast_main:
     mov     bl, ah
     xor     ah, ah
-smart
+;smart
     and     bx, 3           ; constrain angles to [0, 2pi]
-nosmart
+;nosmart
     shl     bx, 1
     jmp     cs:off_326F2[bx]
 off_326F2     dw offset loc_326FA
@@ -9294,9 +9294,9 @@ loc_32B0D:
     mov     di, [bp+var_8]
     mov     es, [bp+var_A]
     mov     al, [si+SHAPE2D.s2d_unk6]; unk6 = is flipped
-smart
+;smart
     and     al, 0F0h
-nosmart
+;nosmart
     jnz     short loc_32B4E
     mov     al, [si+SHAPE2D.s2d_unk5]; (unk4 >> 4) = fliptype, 1..3
     shr     al, 1
@@ -9773,9 +9773,9 @@ ported_file_decomp_vle_ proc far
     mov     al, [si+4]
     xor     ah, ah
     mov     [bp+var_codlen], ax
-smart
+;smart
     and     ax, 7Fh
-nosmart
+;nosmart
     add     si, 5
     mov     [bp+var_codoff], si
     lea     cx, callbackflags2+72h
@@ -9856,9 +9856,9 @@ pad_lens:
     jmp     loc_32F27
 loc_32E5C:
     mov     si, dx
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     mov     cl, [bp+si+var_lengths]
     cmp     cl, 8
     ja      short len_gt_8bit
@@ -9965,9 +9965,9 @@ loc_32F16:
     retf
 loc_32F27:
     mov     si, dx
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     mov     cl, [bp+si+var_lengths]
     cmp     cl, 8
     ja      short loc_32F83
@@ -10086,9 +10086,9 @@ ported_video_get_status_ proc far
 
     mov     dx, 3DAh
     in      al, dx          ; Video status bits:
-smart
+;smart
     and     al, 8
-nosmart
+;nosmart
     xor     ah, ah
     retf
     ; align 2
@@ -10578,9 +10578,9 @@ loc_3336E:
     mov     bx, [bx]
     mov     ah, byte ptr word_4031E
     mov     cl, bl
-smart
+;smart
     and     cl, 7
-nosmart
+;nosmart
     rol     ah, cl
     mov     cx, dx
     mov     dl, byte ptr word_40320
@@ -11046,9 +11046,9 @@ loc_336E8:
     xor     ah, ah
     mov     bx, [bp+var_16]
 loc_33701:
-smart
+;smart
     and     bx, 3
-nosmart
+;nosmart
     mov     al, cs:byte_33652[bx]
     sub     cx, ax
     jle     short loc_33724
@@ -11195,9 +11195,9 @@ video_set_mode_13h proc far
     mov     ax, 40h ; '@'
     mov     es, ax
     mov     ax, es:10h
-smart
+;smart
     and     ax, 0FFCFh
-nosmart
+;nosmart
     or      ax, 10h
     mov     es:10h, ax
     mov     ah, 0Bh
@@ -14116,9 +14116,9 @@ loc_34BC0:
     mov     bx, [bx]
     mov     ah, byte ptr word_4031E
     mov     cl, bl
-smart
+;smart
     and     cl, 7
-nosmart
+;nosmart
     rol     ah, cl
     mov     cx, dx
     sub     cx, bx
@@ -18813,9 +18813,9 @@ loc_360B4:
 loc_360BC:
     mov     si, [bp+var_srcshapeoff]
     mov     ah, [bx+si+SHAPE2D.s2d_unk3]
-smart
+;smart
     and     ah, 0Fh
-nosmart
+;nosmart
     jz      short loc_360EF
     mov     di, [bp+var_dstshapeoff]
     add     di, 10h
@@ -18890,18 +18890,18 @@ loc_36114:
     mov     ds, dx
     mov     al, [si+SHAPE2D.s2d_unk6]
 loc_36137:
-smart
+;smart
     and     al, 0F0h
-nosmart
+;nosmart
     jnz     short loc_3614E
     mov     bl, [si+SHAPE2D.s2d_unk5]
     shr     bl, 1
     shr     bl, 1
     shr     bl, 1
     shr     bl, 1
-smart
+;smart
     and     bl, 0Fh
-nosmart
+;nosmart
     mov     [bp+var_val], bl
     jnz     short loc_3615D
 loc_3614E:

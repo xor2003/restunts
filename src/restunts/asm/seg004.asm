@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -2007,9 +2007,9 @@ loc_1F3C9:
     add     sp, 4
     sub     ax, 100h
     neg     ax
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     cx, 18h
     imul    cx
     mov     si, ax
@@ -2618,9 +2618,9 @@ loc_1F992:
     xor     ax, [bx]
     mov     cl, 8
     sar     ax, cl
-smart
+;smart
     and     ax, 1
-nosmart
+;nosmart
     add     terrainHeight, ax
     jmp     short loc_1F9D9
 loc_1F9C4:
@@ -2650,9 +2650,9 @@ loc_1F9E3:
     neg     ax
     add     ax, [bp+var_elemOrient]
     add     ax, [bp+var_wallOrientMod]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     wallOrientation, ax
     mov     ax, [bp+var_elemOrient]
     or      ax, ax
@@ -5758,16 +5758,16 @@ loc_21697:
     add     bx, word ptr trackdata18
     mov     es, word ptr trackdata18+2
     mov     al, es:[bx]
-smart
+;smart
     and     al, 0Fh         ; mask out the high nibble
-nosmart
+;nosmart
     mov     [bp+var_subTOIBlock], al
     mov     bx, [bp+var_A]
     add     bx, word ptr trackdata18
     mov     al, es:[bx]
-smart
+;smart
     and     al, 10h         ; 5th bit (low to high)
-nosmart
+;nosmart
     mov     [bp+var_connCheckFlag], al
     mov     bx, [bp+var_C]
     mov     ax, bx

@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -634,9 +634,9 @@ loc_1A393:
     call    polarAngle
     add     sp, 4
     neg     ax
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_angY], ax
     mov     ax, [bp+var_vec5.vz]
     sub     ax, [bp+var_vec4.vz]
@@ -654,9 +654,9 @@ nosmart
     push    ax
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_angX], ax
 loc_1A3E9:
     cmp     [bp+var_E0], 1
@@ -690,19 +690,19 @@ loc_1A40A:
     jmp     loc_1A303
 loc_1A434:
     mov     ax, [bp+var_angY2]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_angY], ax
     mov     ax, [bp+var_angX2]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_angX], ax
     mov     ax, [bp+var_angZ2]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_E0], ax
     sub     ax, ax
     push    ax
@@ -761,9 +761,9 @@ loc_1A4D6:
 loc_1A4E4:
     mov     bx, state.game_frame
 loc_1A4E8:
-smart
+;smart
     and     bx, 0Fh
-nosmart
+;nosmart
     mov     al, byte_3C0C6[bx]
     mov     [bp+var_E4], al
     sub     ax, ax
@@ -775,9 +775,9 @@ nosmart
     call    select_cliprect_rotate
     add     sp, 0Ah
     mov     [bp+var_52], ax
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
 loc_1A512:
     mov     cl, 7
     shr     ax, cl
@@ -801,7 +801,7 @@ loc_1A512:
     push    ss
     pop     es
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     di
     pop     si
     mov     [bp+var_vec6.vx], 0
@@ -842,9 +842,9 @@ loc_1A5BA:
     mov     si, word_3BE34[bx]
     add     si, [bp+var_angY]
     add     si, run_game_random
-smart
+;smart
     and     si, 3FFh
-nosmart
+;nosmart
     cmp     si, 87h ; '‡'
     jl      short loc_1A5DD
     cmp     si, 379h
@@ -3286,9 +3286,9 @@ loc_1BE8D:
     sub     ax, ax
     push    ax
     mov     ax, [bp+var_12A]
-smart
+;smart
     and     ax, 0F800h
-nosmart
+;nosmart
     push    ax
     push    cs
     call near ptr transformed_shape_add_for_sort
@@ -3840,9 +3840,9 @@ loc_1C35F:
 loc_1C369:
     mov     si, [bp+arg_2]
     add     si, 200h
-smart
+;smart
     and     si, 3FFh
-nosmart
+;nosmart
     sub     si, 400h
     mov     bx, [bp+arg_rectptr]
     mov     ax, [bp+arg_4]
@@ -4387,9 +4387,9 @@ loc_1C852:
     call    polarAngle
     add     sp, 4
     mov     si, ax
-smart
+;smart
     and     si, 3FFh
-nosmart
+;nosmart
     mov     [bp+var_26], 2
     jmp     short loc_1C8F0
     ; align 2
@@ -6093,10 +6093,10 @@ load_skybox proc far
     push    si
     test    [bp+arg_0], 8
     jz      short loc_1D7B6
-smart
-smart
+;smart
+;smart
     and     [bp+arg_0], 7
-nosmart
+;nosmart
     jmp     loc_1D88E
 loc_1D7B6:
     cmp     byte_3B8F6, 0
@@ -6583,9 +6583,9 @@ loc_1DBF7:
     jle     short loc_1DC44
     mov     [bp+var_2A6], 0
     mov     ax, state.opponentstate.car_rotate.vx
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_2C], ax
     mov     [bp+var_2A4], 0
     mov     ax, [bp+var_2A0]
@@ -6629,9 +6629,9 @@ loc_1DC7D:
     call    polarAngle
     add     sp, 4
     neg     ax
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_2C], ax
     mov     ax, [bp+var_2]
     sub     ax, [bp+var_3A]
@@ -6648,9 +6648,9 @@ nosmart
     push    ax
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_2A4], ax
 loc_1DCD1:
     cmp     timertestflag_copy, 0

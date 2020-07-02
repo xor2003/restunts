@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
 .stack 8000
     include structs.inc
     include custom.inc

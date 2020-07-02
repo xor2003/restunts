@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -615,9 +615,9 @@ loc_3A29A:
     dec     di
     or      ax, ax
     jnz     short loc_3A290
-smart
+;smart
     and     di, 0FFh
-nosmart
+;nosmart
     jmp     short loc_3A2B2
     ; align 2
     db 144

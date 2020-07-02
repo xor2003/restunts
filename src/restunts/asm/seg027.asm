@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -2120,7 +2120,7 @@ loc_380CE:
     pop     es
     push    ds
     mov     ds, dx
-    repne movsw
+    rep movsw
     pop     ds
     mov     [bp+var_18], 4
     mov     ax, bx

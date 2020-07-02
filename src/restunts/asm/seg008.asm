@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -203,7 +203,7 @@ loc_27506:
     lea     di, [bx+di]
     lea     si, [bp+var_40]
     mov     cx, 0Fh
-    repne movsw
+    rep movsw
     pop     si
     mov     al, byte_3B8FC
     sub     ah, ah
@@ -216,7 +216,7 @@ loc_27506:
     lea     di, [bx+di+1Eh]
     lea     si, [bp+var_22]
     mov     cx, 0Fh
-    repne movsw
+    rep movsw
     pop     si
     call    sprite_copy_2_to_1
     push    [bp+arg_4]
@@ -287,7 +287,7 @@ loc_275D8:
     mov     ds, dx
 loc_27626:
     mov     cx, 0Fh
-    repne movsw
+    rep movsw
     pop     ds
     pop     di
     pop     si
@@ -306,7 +306,7 @@ loc_27626:
     push    ds
     mov     ds, dx
     mov     cx, 0Fh
-    repne movsw
+    rep movsw
     pop     ds
     pop     di
     pop     si
@@ -460,9 +460,9 @@ loc_2775A:
 loc_2776C:
     mov     ax, [bp+var_194]
     add     ax, 18h
-smart
+;smart
     and     al, 0F8h
-nosmart
+;nosmart
     mov     [bp+var_194], ax
     cmp     [bp+arg_8], 0FFFFh
     jnz     short loc_27790
@@ -471,9 +471,9 @@ nosmart
     cwd
     sub     ax, dx
     sar     ax, 1
-smart
+;smart
     and     al, 0F8h
-nosmart
+;nosmart
     mov     [bp+arg_8], ax
 loc_27790:
     cmp     [bp+arg_A], 0FFFFh

@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -738,9 +738,9 @@ loc_14C87:
     push    ax
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     state.opponentstate.field_48, ax
 loc_14CD7:
     cmp     state.opponentstate.field_CD, 0
@@ -832,7 +832,7 @@ ported_mat_mul_vector2_ proc far
     push    ds
     mov     ds, dx
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     ds
     push    [bp+arg_outvec]
     lea     ax, [bp+var_mat]
@@ -981,7 +981,7 @@ loc_14E33:
     push    ds
     pop     es
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     si
     cmp     pState_minusRotate_x_1, 0
     jnz     short loc_14E8F
@@ -1030,7 +1030,7 @@ loc_14ECE:
     push    ss
     pop     es
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     si
     jmp     short loc_14F09
     ; align 2
@@ -1523,9 +1523,9 @@ loc_1540C:
     mov     ax, pState_minusRotate_y_1
     neg     ax
     sub     ax, wallOrientation
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_EE], ax
     mov     ax, [bp+var_F2]
     mov     [bp+vec_FC.vz], ax
@@ -1544,9 +1544,9 @@ loc_1543A:
 loc_1544A:
     mov     ax, wallOrientation
     add     ah, 2
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_EE], ax
     mov     [bp+vec_FC.vx], 0FD00h
 loc_1545D:
@@ -1579,9 +1579,9 @@ loc_1546E:
     neg     ax
     mov     si, ax
     sub     si, [bp+var_EE]
-smart
+;smart
     and     si, 3FFh
-nosmart
+;nosmart
     mov     [bp+var_138], 0
     cmp     si, 100h
     jle     short loc_154CA
@@ -1626,9 +1626,9 @@ loc_154FA:
     add     sp, 4
 loc_15513:
     mov     bx, [bp+arg_pState]
-smart
+;smart
     or      [bx+CARSTATE.field_CF], 10h
-nosmart
+;nosmart
     lea     ax, [bp+vecl_1C0]
     mov     [bp+var_DEptrTo1C0], ax
     lea     ax, [bp+vecl_176]
@@ -1917,7 +1917,7 @@ loc_157DC:
     push    ds
     mov     ds, dx
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     lea     ax, [bp+var_MmatFromAngleZ]
@@ -2395,9 +2395,9 @@ loc_15CE8:
     mov     bx, [bp+arg_pState]
     cmp     [bx+di+CARSTATE.car_rc1], 0FAh ; 'ú'
     jle     short loc_15CF7
-smart
+;smart
     or      [bx+CARSTATE.field_CF], 20h
-nosmart
+;nosmart
 loc_15CF7:
     mov     al, [bp+var_wheelIndex]
     cbw
@@ -2729,9 +2729,9 @@ loc_16057:
     push    [bp+var_EE]
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     pState_minusRotate_y_1, ax
     push    ax
     lea     ax, [bp+var_MmatFromAngleZ]
@@ -4365,7 +4365,7 @@ loc_16FB1:
     push    ds
     mov     ds, dx
     mov     cx, 230h
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     mov     ax, offset state.kevinseed
@@ -4443,7 +4443,7 @@ loc_17027:
     mov     di, bx
     mov     si, offset state
     mov     cx, 230h
-    repne movsw
+    rep movsw
     pop     si
 loc_17079:
     inc     state.game_frame
@@ -4663,9 +4663,9 @@ loc_17242:
     cbw
     sar     ax, 1
     sar     ax, 1
-smart
+;smart
     and     ax, 3           ; masks all keys but the steering ones.
-nosmart
+;nosmart
     push    ax
     push    cs
     call near ptr upd_statef20_from_steer_input
@@ -5076,14 +5076,14 @@ loc_175F0:
     call    polarAngle
     add     sp, 4
     mov     si, ax
-smart
+;smart
     and     si, 3FFh
-nosmart
+;nosmart
     mov     ax, state.playerstate.car_rotate.vx
     sub     ax, si
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     si, ax
     cmp     si, 380h
     jg      short loc_17631
@@ -5206,16 +5206,16 @@ loc_17704:
     push    ax
     call    polarAngle
     add     sp, 4
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     state.playerstate.field_48, ax
     cmp     state.playerstate.car_crashBmpFlag, 0
     jnz     short loc_17771
     add     ax, 80h ; '€'
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     cl, 8
     shr     ax, cl
     cmp     ax, 1
@@ -5858,9 +5858,9 @@ loc_17CE1:
     db 144
 loc_17CEA:
     mov     al, [bp+arg_carInputByte]
-smart
+;smart
     and     ax, 3
-nosmart
+;nosmart
     cmp     ax, 1
     jnz     short loc_17CF8
     jmp     loc_17D82
@@ -6660,17 +6660,17 @@ loc_18410:
     cmp     [bx+(CARSTATE.car_surfaceWhl+3)], 1
     jnz     short loc_1843E
 loc_18436:
-smart
+;smart
     or      [bx+CARSTATE.field_CF], 2
-nosmart
+;nosmart
     jmp     short loc_18458
     ; align 2
     db 144
 loc_1843E:
     mov     bx, [bp+arg_cState]
-smart
+;smart
     or      [bx+CARSTATE.field_CF], 4
-nosmart
+;nosmart
     jmp     short loc_18458
 loc_18448:
     mov     bx, [bp+arg_cState]
@@ -6782,9 +6782,9 @@ car_car_speed_adjust_maybe proc far
 loc_1853D:
     mov     ax, [bp+var_2]
     sub     ax, [bp+var_4]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     [bp+var_8], ax
     mov     ah, byte ptr [bp+var_A]
     sub     al, al
@@ -7069,9 +7069,9 @@ upd_statef20_from_steer_input proc far
     mov     ax, state.playerstate.car_speed2
     mov     cl, 0Ah
     shr     ax, cl
-smart
+;smart
     and     al, 0FCh
-nosmart
+;nosmart
     mov     [bp+var_speed2shr0AandFC], al
     cbw
     mov     bx, ax
@@ -7566,9 +7566,9 @@ loc_18BD2:
     jz      short loc_18BF4
     test    [bp+var_16], 1
     jnz     short loc_18C08
-smart
+;smart
     or      [bp+var_16], 1
-nosmart
+;nosmart
     push    [bp+var_2E]
     call    audio_op_unk
     jmp     short loc_18C05
@@ -7587,14 +7587,14 @@ loc_18C08:
     test    [bx+CARSTATE.field_CF], 6
     jz      short loc_18C56
     mov     al, [bp+var_16]
-smart
+;smart
     and     al, 6
-nosmart
+;nosmart
     mov     byte ptr [bp+var_34], al
     mov     al, [bx+CARSTATE.field_CF]
-smart
+;smart
     and     al, 6
-nosmart
+;nosmart
     cmp     al, byte ptr [bp+var_34]
     jz      short loc_18C7B
     test    [bp+var_16], 6
@@ -7779,14 +7779,14 @@ sub_18D60 proc far
     mov     [bp+var_tileElem], al
     les     si, trackdata18
     mov     al, es:[bx+si]
-smart
+;smart
     and     al, 0Fh
-nosmart
+;nosmart
     mov     [bp+var_td18subTOI], al
     mov     al, es:[bx+si]
-smart
+;smart
     and     al, 10h
-nosmart
+;nosmart
     mov     [bp+var_td18connStatus], al
     mov     al, [bp+var_tileElem]
     sub     ah, ah
@@ -7838,9 +7838,9 @@ loc_18DEC:
     mov     al, [bx+TRACKOBJECT.ss_surfaceType]
     mov     byte ptr [bp+var_1A], al
     mov     si, [bp+var_1A]
-smart
+;smart
     and     si, 0FFh
-nosmart
+;nosmart
     mov     bl, [bp+var_16]
     sub     bh, bh
     mov     al, oppnentSped[bx+si]
@@ -8874,7 +8874,7 @@ loc_19779:
     push    ds
     pop     es
     mov     cx, 0Bh
-    repne movsw
+    rep movsw
 loc_1978D:
     pop     si
     pop     di
@@ -8941,7 +8941,7 @@ loc_197D6:
     push    ds
     mov     ds, dx
     mov     cx, 9
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     lea     ax, [bp+var_2C]
@@ -9295,9 +9295,9 @@ loc_19AB9:
     mov     al, byte ptr [bp+arg_0]
     mov     state.field_443[si], al
     mov     al, byte ptr [bp+var_C]
-smart
+;smart
     and     al, 3
-nosmart
+;nosmart
     add     al, byte ptr [bp+var_10]
     mov     state.field_42B[si], al
     mov     ax, si
@@ -9342,9 +9342,9 @@ nosmart
     push    ax
     call    __aFldiv
     add     ax, [bp+var_6]
-smart
+;smart
     and     ah, 3
-nosmart
+;nosmart
     mov     bx, si
     shl     bx, 1
     mov     state.field_35E[bx], ax
@@ -9534,7 +9534,7 @@ loc_19CB3:
     push    ds
     mov     ds, dx
     mov     cx, 184h
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     mov     ax, word ptr td04_aerotable_pl
@@ -9596,7 +9596,7 @@ loc_19D36:
     push    ds
     mov     ds, dx
     mov     cx, 184h
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     mov     ax, word ptr td05_aerotable_op

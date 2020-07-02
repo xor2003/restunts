@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -188,9 +188,9 @@ loc_2CC7E:
     mov     ax, 4CFFh
     int     21h             ; DOS - 2+ - QUIT WITH EXIT CODE (EXIT)
 _no_stack_overflow:
-smart
+;smart
     and     sp, 0FFFEh
-nosmart
+;nosmart
     mov     ss:crtsp1, sp
 loc_2CCA4:
     mov     ss:crtsp2, sp
@@ -326,19 +326,19 @@ loc_2CDB8:
 loc_2CDBD:
     mov     bx, 4
 loc_2CDC0:
-smart
-smart
+;smart
+;smart
     and     crtfilehandles[bx], 0BFh
-nosmart
+;nosmart
     mov     ax, 4400h
 loc_2CDC8:
     int     21h             ; DOS - 2+ - IOCTL - GET DEVICE INFORMATION
     jb      short loc_2CDD6
     test    dl, 80h
     jz      short loc_2CDD6
-smart
+;smart
     or      crtfilehandles[bx], 40h
-nosmart
+;nosmart
 loc_2CDD6:
     dec     bx
     jns     short loc_2CDC0
@@ -624,9 +624,9 @@ loc_2CFBE:
     inc     di
     shl     di, 1
     add     dx, di
-smart
+;smart
     and     dl, 0FEh
-nosmart
+;nosmart
     sub     sp, dx
     mov     ax, sp
     mov     argv, ax
@@ -777,9 +777,9 @@ loc_2D0B9:
     inc     bp              ; bp = number of envirment strings
     xchg    ax, di          ; set ax to number of bytes in environent, di to 0
     inc     ax
-smart
+;smart
     and     al, 0FEh
-nosmart
+;nosmart
     mov     di, bp          ; di = number of environment strings
     shl     bp, 1
     add     ax, bp          ; ax = ((envsize+1)&FFFE) + numstrings*2
@@ -904,9 +904,9 @@ __myalloc proc near
     int     21h             ; DOS - 2+ - ADJUST MEMORY BLOCK SIZE (SETBLOCK)
     pop     ax
     jb      short loc_2D191
-smart
+;smart
     and     al, 0F0h
-nosmart
+;nosmart
     dec     ax
     mov     word_3ED74, ax
 loc_2D187:
@@ -1093,9 +1093,9 @@ __flsbuf proc far
     test    byte ptr [si+6], 40h
     jz      short loc_2D2A0
 loc_2D295:
-smart
+;smart
     or      byte ptr [si+6], 20h
-nosmart
+;nosmart
     mov     ax, 0FFFFh
     jmp     loc_2D3B7
     ; align 2
@@ -1103,13 +1103,13 @@ nosmart
 loc_2D2A0:
     test    byte ptr [si+6], 1
     jnz     short loc_2D295
-smart
+;smart
     or      byte ptr [si+6], 2
-nosmart
-smart
-smart
+;nosmart
+;smart
+;smart
     and     byte ptr [si+6], 0EFh
-nosmart
+;nosmart
     sub     ax, ax
     mov     [si+2], ax
     mov     di, ax
@@ -1265,9 +1265,9 @@ __getbuf proc near
     mov     [bx+4], ax
     or      ax, ax
     jz      short loc_2D402
-smart
+;smart
     or      byte ptr [bx+6], 8
-nosmart
+;nosmart
     mov     bx, [bp+var_2]
     mov     word ptr [bx+2], 200h
     jmp     short loc_2D418
@@ -1275,9 +1275,9 @@ nosmart
     db 144
 loc_2D402:
     mov     bx, [bp+arg_0]
-smart
+;smart
     or      byte ptr [bx+6], 4
-nosmart
+;nosmart
     mov     ax, [bp+var_2]
     inc     ax
     mov     [bx+4], ax
@@ -1352,9 +1352,9 @@ loc_2D476:
     mov     [bx+2], ax
     mov     [si+2], ax
     mov     byte ptr [bx], 1
-smart
+;smart
     or      byte ptr [si+6], 2
-nosmart
+;nosmart
     mov     ax, 1
 loc_2D4AB:
     pop     si
@@ -1449,9 +1449,9 @@ _fflush proc far
     mov     si, [bp+arg_0]
     sub     di, di
     mov     al, [si+6]
-smart
+;smart
     and     al, 3
-nosmart
+;nosmart
     cmp     al, 2
     jnz     short loc_2D5AC
     test    byte ptr [si+6], 8
@@ -1481,9 +1481,9 @@ loc_2D583:
     add     sp, 6
     cmp     ax, [bp+var_4]
     jz      short loc_2D5AC
-smart
+;smart
     or      byte ptr [si+6], 20h
-nosmart
+;nosmart
     mov     di, 0FFFFh
 loc_2D5AC:
     mov     ax, [si+4]
@@ -2678,10 +2678,10 @@ loc_2DF1A:
 loc_2DF1C:
     int     21h             ; DOS - 2+ - MOVE FILE READ/WRITE POINTER (LSEEK)
     jb      short loc_2DF25
-smart
-smart
+;smart
+;smart
     and     byte ptr [bx+3684h], 0FDh
-nosmart
+;nosmart
 loc_2DF25:
     jmp     __dosretax
 _lseek endp
@@ -2894,9 +2894,9 @@ unknown_libname_1 proc far
     mov     bx, [bp+arg_0]
     or      bx, bx
     jz      short loc_2E074
-smart
+;smart
     or      byte ptr [bx-2], 1
-nosmart
+;nosmart
 loc_2E074:
     mov     sp, bp
     pop     bp
@@ -2924,9 +2924,9 @@ unknown_libname_2 proc far
     jmp     short loc_2E0B8
 loc_2E094:
     inc     ax
-smart
+;smart
     and     al, 0FEh
-nosmart
+;nosmart
     mov     word_3EF6E, ax
     mov     word_3EF70, ax
     xchg    ax, si
@@ -2952,9 +2952,9 @@ __amalloc proc near
 
     inc     cx
     jz      short loc_2E0BE
-smart
+;smart
     and     cl, 0FEh
-nosmart
+;nosmart
     cmp     cx, 0FFEEh
     jnb     short loc_2E0BE
     mov     si, [bx+2]
@@ -3048,9 +3048,9 @@ loc_2E16C:
     call near ptr __amlink
     cmp     ax, si
     jz      short loc_2E185
-smart
+;smart
     and     al, 1
-nosmart
+;nosmart
     inc     ax
     inc     ax
     cbw
@@ -3641,18 +3641,18 @@ loc_2E4F3:
     sub     al, 41h ; 'A'
     cmp     al, 1Ah
     sbb     cl, cl
-smart
+;smart
     and     cl, 20h
-nosmart
+;nosmart
     add     al, cl
     add     al, 41h ; 'A'
     xchg    ah, al
     sub     al, 41h ; 'A'
     cmp     al, 1Ah
     sbb     cl, cl
-smart
+;smart
     and     cl, 20h
-nosmart
+;nosmart
     add     al, cl
     add     al, 41h ; 'A'
     cmp     al, ah
@@ -3881,9 +3881,9 @@ loc_2E666:
     mov     word_3F0A0, ax
     mov     word_3F0A2, dx
     mov     ax, dx
-smart
+;smart
     and     ah, 7Fh
-nosmart
+;nosmart
     retf
     db 2
     db 4

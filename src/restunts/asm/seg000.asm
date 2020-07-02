@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg001.inc
@@ -384,7 +384,7 @@ _do_game1:
     push    ds
     pop     es
     mov     cx, 0Dh
-    repne movsw
+    rep movsw
     pop     di
     pop     si
     sub     si, si
@@ -566,7 +566,7 @@ loc_104D2:
     push    ds
     pop     es
     mov     cx, 0Dh
-    repne movsw
+    rep movsw
     pop     di
     pop     si
     sub     si, si
@@ -2310,7 +2310,7 @@ loc_11648:
     lea     di, [bx+si]
     lea     si, [bp+var_38]
     mov     cx, 1Ah
-    repne movsw
+    rep movsw
     inc     [bp+var_3A]
     cmp     [bp+var_3A], 7
     jl      short loc_11648
@@ -2602,7 +2602,7 @@ print_highscore_entry proc far
     push    ds
     mov     ds, dx
     mov     cx, 1Ah
-    repne movsw
+    rep movsw
     pop     ds
     pop     si
     mov     bx, [bp+arg_2]
@@ -2835,7 +2835,7 @@ loc_11AED:
     lea     di, [bx+138h]
     lea     si, [bp+var_36]
     mov     cx, 1Ah
-    repne movsw
+    rep movsw
     call    sprite_copy_wnd_to_1
     push    cs
     call near ptr highscore_text_unk
@@ -2884,7 +2884,7 @@ loc_11AED:
     lea     di, [bx+138h]
     lea     si, [bp+var_36]
     mov     cx, 1Ah
-    repne movsw
+    rep movsw
     call    sprite_copy_wnd_to_1
     push    cs
     call near ptr highscore_text_unk
@@ -2936,7 +2936,7 @@ loc_11BC3:
     push    ds
     mov     ds, bx
     mov     cx, 1Ah
-    repne movsw
+    rep movsw
     pop     ds
     inc     [bp+var_16E]
     cmp     [bp+var_16E], 7
@@ -4800,9 +4800,9 @@ loc_12E6A:
     mov     al, gameconfig.game_playercarid+3
     mov     gameconfig.game_opponentcarid+3, al
     mov     al, gameconfig.game_playermaterial
-smart
+;smart
     and     al, 1
-nosmart
+;nosmart
     xor     al, 1
     mov     gameconfig.game_opponentmaterial, al
     mov     gameconfig.game_opponenttransmission, 0
@@ -5883,9 +5883,9 @@ loc_1384B:
     jz      short loc_138A0
     call    get_kevinrandom
     add     ax, gState_frame
-smart
+;smart
     and     ax, 1
-nosmart
+;nosmart
     add     ax, 2
     jmp     short loc_138AC
     ; align 2
@@ -5893,9 +5893,9 @@ nosmart
 loc_138A0:
     call    get_kevinrandom
     add     ax, gState_frame
-smart
+;smart
     and     ax, 1
-nosmart
+;nosmart
 loc_138AC:
     mov     end_hiscore_random, ax
     mov     [bp+var_6A], 76h ; 'v'
@@ -5924,9 +5924,9 @@ loc_138B6:
     mov     [bp+var_58], dx
     call    get_kevinrandom
     add     ax, gState_frame
-smart
+;smart
     and     ax, 3
-nosmart
+;nosmart
     mov     end_hiscore_random, ax
     mov     [bp+var_6A], 64h ; 'd'
 loc_138FF:
@@ -7268,9 +7268,9 @@ loc_14664:
     cbw
     mov     bx, ax
     mov     al, g_ascii_props[bx]
-smart
+;smart
     and     al, 1
-nosmart
+;nosmart
     mov     [bp+var_440], al
     or      al, al
     jz      short loc_1468C

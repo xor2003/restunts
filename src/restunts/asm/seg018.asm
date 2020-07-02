@@ -1,5 +1,5 @@
 .model medium
-nosmart
+;nosmart
     include structs.inc
     include custom.inc
     include seg000.inc
@@ -71,9 +71,9 @@ kb_shift_checking2 proc far
 loc_36B08:
     mov     es, ax
 loc_36B0A:
-smart
+;smart
     and     byte ptr es:17h, 0DFh; 40h:17h = keyboard shift flags
-nosmart
+;nosmart
 loc_36B10:
     call    kb_checking
 locret_36B15:
